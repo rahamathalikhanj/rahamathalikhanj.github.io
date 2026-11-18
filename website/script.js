@@ -306,58 +306,65 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 6. Interactive Project Discovery & Cost Estimator
+  // 6. Interactive Project Discovery & Cost Estimator (Safely guarded if section is present)
   const estPlatformBtns = document.querySelectorAll('[data-est-type]');
   const estScopeBtns = document.querySelectorAll('[data-est-scope]');
   
-  let selectedPlatform = 'WhatsApp Automation (ConnectAI)';
-  let platformBaseDays = 14;
-  let platformBasePrice = 65000;
+  if (estPlatformBtns.length > 0 && document.getElementById('estTotalPrice')) {
+    let selectedPlatform = 'WhatsApp Automation (ConnectAI)';
+    let platformBaseDays = 14;
+    let platformBasePrice = 65000;
 
-  let selectedScope = 'Turnkey Fast-Track';
-  let scopeMultiplier = 1.0;
-  let scopeDaysAdd = 0;
+    let selectedScope = 'Turnkey Fast-Track';
+    let scopeMultiplier = 1.0;
+    let scopeDaysAdd = 0;
 
-  function updateEstimator() {
-    const totalDays = Math.round((platformBaseDays + scopeDaysAdd) * (scopeMultiplier > 1 ? 1.4 : 1));
+    function updateEstimator() {
+      const priceEl = document.getElementById('estTotalPrice');
+      if (!priceEl) return;
+      const totalDays = Math.round((platformBaseDays + scopeDaysAdd) * (scopeMultiplier > 1 ? 1.4 : 1));
 
-    document.getElementById('estSelectedPlatform').textContent = selectedPlatform;
-    document.getElementById('estSelectedScope').textContent = selectedScope;
-    document.getElementById('estDeliveryTimeline').textContent = `${totalDays} – ${totalDays + 7} Business Days`;
-    document.getElementById('estTotalPrice').textContent = 'Contact with Us';
+      const platformEl = document.getElementById('estSelectedPlatform');
+      if (platformEl) platformEl.textContent = selectedPlatform;
+      const scopeEl = document.getElementById('estSelectedScope');
+      if (scopeEl) scopeEl.textContent = selectedScope;
+      const timelineEl = document.getElementById('estDeliveryTimeline');
+      if (timelineEl) timelineEl.textContent = `${totalDays} – ${totalDays + 7} Business Days`;
+      priceEl.textContent = 'Contact with Us';
 
-    const quoteBtn = document.getElementById('estQuoteBtn');
-    if (quoteBtn) {
-      const msg = `Hi WeeInfo! I would like to get a tailored quote for: ${selectedPlatform} (${selectedScope}). Est Timeline: ${totalDays} business days.`;
-      quoteBtn.href = `https://wa.me/919003610835?text=${encodeURIComponent(msg)}`;
-      quoteBtn.innerHTML = '<i class="fa-brands fa-whatsapp"></i> Contact with Us on WhatsApp';
+      const quoteBtn = document.getElementById('estQuoteBtn');
+      if (quoteBtn) {
+        const msg = `Hi WeeInfo! I would like to get a tailored quote for: ${selectedPlatform} (${selectedScope}). Est Timeline: ${totalDays} business days.`;
+        quoteBtn.href = `https://wa.me/919003610835?text=${encodeURIComponent(msg)}`;
+        quoteBtn.innerHTML = '<i class="fa-brands fa-whatsapp"></i> Contact with Us on WhatsApp';
+      }
     }
+
+    estPlatformBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        estPlatformBtns.forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+        selectedPlatform = btn.getAttribute('data-est-name');
+        platformBaseDays = parseInt(btn.getAttribute('data-days'), 10) || 14;
+        platformBasePrice = parseInt(btn.getAttribute('data-price'), 10) || 65000;
+        updateEstimator();
+      });
+    });
+
+    estScopeBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        estScopeBtns.forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+        selectedScope = btn.getAttribute('data-est-scope-name');
+        scopeMultiplier = parseFloat(btn.getAttribute('data-mult')) || 1.0;
+        scopeDaysAdd = parseInt(btn.getAttribute('data-scope-days'), 10) || 0;
+        updateEstimator();
+      });
+    });
+
+    // Initial estimator run
+    updateEstimator();
   }
-
-  estPlatformBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      estPlatformBtns.forEach(b => b.classList.remove('selected'));
-      btn.classList.add('selected');
-      selectedPlatform = btn.getAttribute('data-est-name');
-      platformBaseDays = parseInt(btn.getAttribute('data-days'), 10) || 14;
-      platformBasePrice = parseInt(btn.getAttribute('data-price'), 10) || 65000;
-      updateEstimator();
-    });
-  });
-
-  estScopeBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      estScopeBtns.forEach(b => b.classList.remove('selected'));
-      btn.classList.add('selected');
-      selectedScope = btn.getAttribute('data-est-scope-name');
-      scopeMultiplier = parseFloat(btn.getAttribute('data-mult')) || 1.0;
-      scopeDaysAdd = parseInt(btn.getAttribute('data-scope-days'), 10) || 0;
-      updateEstimator();
-    });
-  });
-
-  // Initial estimator run
-  updateEstimator();
 
   // 7. FAQ Accordion
   const faqItems = document.querySelectorAll('.faq-item');
