@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fleet Transport Service (FTS Pro) Case Study | Flutter Offline-First Enterprise – Rahamath Alikhan J</title>
+  <meta name="description" content="Technical case study of Fleet Transport Service (FTS Pro & EHS): Enterprise offline-first logistics and vehicle approval platform built with Flutter, Isar DB, and BLoC.">
+  <meta name="keywords" content="FTS Pro, Fleet Management App, Flutter Developer, Offline-First Mobile App, Isar DB, BLoC State Management, Enterprise Mobility, Rahamath Alikhan J">
+  <meta name="author" content="Rahamath Alikhan J">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="theme-color" content="#090D16">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="apple-touch-icon" href="../assets/avatar.png">
+  <link rel="canonical" href="https://rahamathalikhanj.github.io/projects/fts-fleet.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:site_name" content="Rahamath Alikhan J | Senior Software Engineer Portfolio">
+  <meta property="og:title" content="Fleet Transport Service (FTS Pro) Case Study | Flutter Offline-First Enterprise">
+  <meta property="og:description" content="Technical case study of enterprise fleet management and offline-first logistics app built with Flutter and Isar DB by Rahamath Alikhan J.">
+  <meta property="og:url" content="https://rahamathalikhanj.github.io/projects/fts-fleet.html">
+  <meta property="og:image" content="https://rahamathalikhanj.github.io/assets/fts-fleet-app.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fleet Transport Service Case Study – Rahamath Alikhan J">
+  <meta name="twitter:description" content="Enterprise Flutter offline-first architecture: Isar DB, BLoC, and multi-tier fleet telemetry approval workflows.">
+  <meta name="twitter:image" content="https://rahamathalikhanj.github.io/assets/fts-fleet-app.png">
+
+  <!-- JSON-LD BreadcrumbList & TechArticle -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://rahamathalikhanj.github.io/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Projects",
+            "item": "https://rahamathalikhanj.github.io/#projects"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Fleet Transport Service (FTS Pro)",
+            "item": "https://rahamathalikhanj.github.io/projects/fts-fleet.html"
+          }
+        ]
+      },
+      {
+        "@type": "TechArticle",
+        "headline": "Engineering an Offline-First Enterprise Fleet Transport & Logistics App with Flutter and Isar DB",
+        "description": "Technical case study detailing offline-first data replication, vehicle dispatch approval hierarchies, and fleet telemetry tracking by Rahamath Alikhan J.",
+        "image": "https://rahamathalikhanj.github.io/assets/fts-fleet-app.png",
+        "author": {
+          "@type": "Person",
+          "name": "Rahamath Alikhan J",
+          "url": "https://rahamathalikhanj.github.io/"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Rahamath Alikhan J"
+        },
+        "datePublished": "2024-01-18",
+        "dateModified": "2026-11-18",
+        "mainEntityOfPage": "https://rahamathalikhanj.github.io/projects/fts-fleet.html",
+        "dependencies": "Flutter SDK, Dart, Isar Database, BLoC, Background Fetch, RESTful APIs",
+        "proficientTechnologies": ["Flutter", "Dart", "Isar Database", "Offline-First Sync", "BLoC Pattern"]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to main content</a>
+
+  <!-- Sticky Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="../index.html" class="brand-logo" aria-label="Rahamath Alikhan J - Homepage">
+        <div class="brand-avatar-icon">
+          <i class="fa-solid fa-code"></i>
+        </div>
+        <div class="brand-title">
+          <span class="brand-name">Rahamath Alikhan</span>
+          <span class="brand-role"><i class="fa-solid fa-laptop-code"></i> Senior Software Engineer</span>
+        </div>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="../index.html#about" class="nav-link">About</a></li>
+          <li><a href="../index.html#services" class="nav-link">Services</a></li>
+          <li><a href="../index.html#skills" class="nav-link">Skills</a></li>
+          <li><a href="../index.html#projects" class="nav-link active">Projects</a></li>
+          <li><a href="../index.html#experience" class="nav-link">Experience</a></li>
+          <li><a href="../index.html#architecture" class="nav-link">Architecture</a></li>
+          <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="../index.html#contact" class="btn btn-primary btn-sm">Hire Me</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- Case Study Hero -->
+    <section class="case-study-hero" aria-label="Case Study Header">
+      <div class="container">
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumb-nav" aria-label="Breadcrumbs">
+          <a href="../index.html">Home</a>
+          <span class="breadcrumb-separator">/</span>
+          <a href="../index.html#projects">Projects</a>
+          <span class="breadcrumb-separator">/</span>
+          <span style="color:var(--text-main);">Fleet Transport Service (FTS Pro)</span>
+        </nav>
+
+        <span class="section-tag">Enterprise Case Study • Flutter Enterprise</span>
+        <h1 class="case-study-title">Fleet Transport Service (FTS Pro &amp; EHS)</h1>
+        <p class="case-study-subtitle">
+          Engineered an enterprise fleet management and logistics platform featuring multi-level managerial vehicle approval workflows, fuel telemetry auditing, and a 100% offline-first driver application powered by Isar local DB.
+        </p>
+
+        <!-- Meta Bar -->
+        <div class="case-meta-bar">
+          <div class="case-meta-item">
+            <span class="case-meta-label">Client Type</span>
+            <span class="case-meta-value">Enterprise Logistics Client</span>
+          </div>
+          <div class="case-meta-item">
+            <span class="case-meta-label">Role</span>
+            <span class="case-meta-value">Lead Mobile Architect</span>
+          </div>
+          <div class="case-meta-item">
+            <span class="case-meta-label">Platform</span>
+            <span class="case-meta-value">Flutter Enterprise (iOS &amp; Android)</span>
+          </div>
+          <div class="case-meta-item">
+            <span class="case-meta-label">Offline Engine</span>
+            <span class="case-meta-value">Isar Embedded DB + BLoC</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case Study Content Layout -->
+    <div class="container">
+      <div class="case-study-layout">
+        <article class="case-content-body">
+
+          <!-- Overview Block -->
+          <section class="case-block" aria-label="Executive Summary">
+            <h2 class="case-block-title"><i class="fa-solid fa-bullseye"></i> Executive Summary &amp; Operational Context</h2>
+            <p>
+              Corporate logistics and heavy vehicle fleet operations face significant operational hazards when drivers operate in industrial zones, remote depots, and desert transit corridors where cellular signal is nonexistent. Traditional cloud-dependent mobile applications frequently lose driver trip logs, odometer sign-offs, and environmental health &amp; safety (EHS) checklist records during signal dead zones.
+            </p>
+            <p>
+              FTS Pro was commissioned as an enterprise-grade solution to digitize fleet allocation, vehicle inspection sign-offs, pre-trip safety audits, and automated route telemetry. The central technical mandate was an <strong>offline-first architecture</strong>: drivers must be able to log trip events, complete vehicle checklists, and capture digital signatures without network connectivity, with seamless automated background reconciliation once connection is restored.
+            </p>
+            <div class="case-image-frame">
+              <img src="../assets/fts-fleet-app.png" alt="Fleet Transport Service FTS Pro Flutter UI Screenshot" width="800" height="450" loading="lazy">
+            </div>
+          </section>
+
+          <!-- Engineering Architecture Block -->
+          <section class="case-block" aria-label="Technical Architecture">
+            <h2 class="case-block-title"><i class="fa-solid fa-sitemap"></i> Offline-First Architecture &amp; Data Sync</h2>
+            <p>
+              The system implements a local-first reactive model using the high-performance <strong>Isar NoSQL Database</strong> embedded directly within the Flutter engine:
+            </p>
+            <ul class="case-feature-list">
+              <li>
+                <i class="fa-solid fa-hard-drive"></i>
+                <div>
+                  <strong>Local-First Isar Database Storage:</strong> All user actions—start trip, log fuel receipt, odometer checkpoint, damage photo, driver signature—are written immediately to Isar DB with microsecond latency. The UI renders directly from local streams, providing instant response regardless of network quality.
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-arrows-rotate"></i>
+                <div>
+                  <strong>Bi-Directional Sync Queue Engine:</strong> A custom sync worker evaluates network reachability, batches offline transactions into compressed payloads, and coordinates with backend REST APIs using idempotency keys to eliminate duplicate transaction submissions.
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-network-wired"></i>
+                <div>
+                  <strong>Conflict Resolution Matrix:</strong> Implemented deterministic conflict resolution policies (last-write-wins with managerial priority override) ensuring dispatch changes made on the central operations web portal do not overwrite on-duty driver logs.
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Key Technical Accomplishments -->
+          <section class="case-block" aria-label="Key Technical Accomplishments">
+            <h2 class="case-block-title"><i class="fa-solid fa-code-compare"></i> Key Technical Accomplishments</h2>
+            <ul class="case-feature-list">
+              <li>
+                <i class="fa-solid fa-signature"></i>
+                <div>
+                  <strong>Multi-Tier Vehicle Approval Hierarchy:</strong> Engineered dynamic approval workflows where vehicle requests route conditionally through department supervisors, fleet managers, and security gatekeepers based on vehicle class and trip duration.
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-gas-pump"></i>
+                <div>
+                  <strong>Fuel &amp; Odometer Telemetry Auditing:</strong> Integrated camera image capture with local OCR pre-processing to validate odometer readings against fuel receipt inputs, preventing fraudulent mileage entries.
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-route"></i>
+                <div>
+                  <strong>Offline Breadcrumb GPS Logging:</strong> Engineered a lightweight background coordinate buffer that records driver route breadcrumbs locally during disconnection and transmits a smoothed route vector upon signal recovery.
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Production Deliverables -->
+          <section class="case-block" aria-label="Results and Impact">
+            <h2 class="case-block-title"><i class="fa-solid fa-chart-line"></i> Production Deliverables &amp; Impact</h2>
+            <p>
+              FTS Pro transitioned the enterprise client from paper logbooks to a digitized operational standard:
+            </p>
+            <ul class="case-feature-list">
+              <li><i class="fa-solid fa-check-double"></i> <strong>100% Data Retention in Dead Zones:</strong> Zero lost trip logs or safety audits across hundreds of daily long-haul routes.</li>
+              <li><i class="fa-solid fa-check-double"></i> <strong>75% Faster Vehicle Dispatch Approvals:</strong> Automated notifications and mobile sign-offs replaced manual paper requisition forms.</li>
+              <li><i class="fa-solid fa-check-double"></i> <strong>Complete EHS Audit Compliance:</strong> Full digital traceability for all pre-trip safety checklists and incident reports.</li>
+            </ul>
+          </section>
+
+        </article>
+
+        <!-- Sidebar Widgets -->
+        <aside class="case-sidebar" aria-label="Project Information Sidebar">
+          <div class="sidebar-widget">
+            <h3 class="sidebar-widget-title">Technology Stack</h3>
+            <div class="sidebar-pills">
+              <span class="skill-tag flutter-tag">Flutter Framework</span>
+              <span class="skill-tag flutter-tag">Dart</span>
+              <span class="skill-tag flutter-tag">Isar Local Database</span>
+              <span class="skill-tag flutter-tag">BLoC State Management</span>
+              <span class="skill-tag">Offline-First Replication</span>
+              <span class="skill-tag">Background Fetch</span>
+              <span class="skill-tag">Digital Signatures</span>
+              <span class="skill-tag">RESTful APIs</span>
+              <span class="skill-tag">Route Analytics</span>
+            </div>
+          </div>
+
+          <div class="sidebar-widget">
+            <h3 class="sidebar-widget-title">Need a Similar Solution?</h3>
+            <p style="color:var(--text-muted); font-size:0.88rem; line-height:1.6; margin-bottom:1.25rem;">
+              Need an enterprise mobile application that must function without internet connectivity? Let's design an offline-first architecture for your operations.
+            </p>
+            <a href="../index.html#contact" class="btn btn-primary" style="width:100%;"><i class="fa-solid fa-paper-plane"></i> Book Discovery Call</a>
+          </div>
+
+          <div class="sidebar-widget">
+            <h3 class="sidebar-widget-title">All Case Studies</h3>
+            <ul style="list-style:none; display:flex; flex-direction:column; gap:0.6rem; font-size:0.88rem;">
+              <li><a href="vimo-services.html">• Vimo Services Limousine</a></li>
+              <li><a href="ajman-taxi.html">• Ajman Taxi &amp; Sixth Limo Dubai</a></li>
+              <li><a href="roadaider.html">• Road Assistant (Roadaider)</a></li>
+              <li><a href="fts-fleet.html" style="color:var(--flutter-cyan); font-weight:700;">• Fleet Transport Service (FTS Pro)</a></li>
+              <li><a href="woye-transport.html">• Public Booking (Woye Transport)</a></li>
+              <li><a href="railway-digitization.html">• Southern Railway Digitization</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2026 Rahamath Alikhan J. All rights reserved. Senior Software Engineer &amp; Freelance Mobile Application Developer.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

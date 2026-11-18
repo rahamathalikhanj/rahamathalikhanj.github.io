@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enterprise ERP & CRM Operations Suite Case Study | Web & Mobile – Rahamath Alikhan J</title>
+  <meta name="description" content="Technical case study of Enterprise ERP & Custom CRM Operations Suite: Full-stack web dashboard and synchronized mobile platform featuring multi-tenant RBAC, asset inventory, approval hierarchies, and automated billing.">
+  <meta name="keywords" content="Enterprise ERP Development, Custom CRM Software, Full-Stack Web Development, React, Next.js, Flutter ERP, Node.js, FastAPI, PostgreSQL, RBAC, Rahamath Alikhan J">
+  <meta name="author" content="Rahamath Alikhan J">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="theme-color" content="#090D16">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="apple-touch-icon" href="../assets/avatar.png">
+  <link rel="canonical" href="https://rahamathalikhanj.github.io/projects/enterprise-erp-crm.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:site_name" content="Rahamath Alikhan J | Senior Software Engineer Portfolio">
+  <meta property="og:title" content="Enterprise ERP & CRM Operations Suite Case Study | Web & Mobile">
+  <meta property="og:description" content="In-depth case study of custom Enterprise ERP and CRM software platform built with React, Next.js, Flutter, and PostgreSQL by Rahamath Alikhan J.">
+  <meta property="og:url" content="https://rahamathalikhanj.github.io/projects/enterprise-erp-crm.html">
+  <meta property="og:image" content="https://rahamathalikhanj.github.io/assets/fts-fleet-app.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Enterprise ERP & CRM Suite Case Study – Rahamath Alikhan J">
+  <meta name="twitter:description" content="Custom ERP and CRM architecture: Multi-tenant RBAC, web admin portals, and synchronized mobile operational apps.">
+  <meta name="twitter:image" content="https://rahamathalikhanj.github.io/assets/fts-fleet-app.png">
+
+  <!-- JSON-LD BreadcrumbList & TechArticle -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://rahamathalikhanj.github.io/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Projects",
+            "item": "https://rahamathalikhanj.github.io/#projects"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Enterprise ERP & CRM Operations Suite",
+            "item": "https://rahamathalikhanj.github.io/projects/enterprise-erp-crm.html"
+          }
+        ]
+      },
+      {
+        "@type": "TechArticle",
+        "headline": "Architecting an Enterprise ERP & Custom CRM Platform with Web Portals, Mobile Sync & Role-Based Access Control",
+        "description": "Technical case study detailing full-stack web dashboards, cross-platform mobile synchronization, automated invoice generation, and audit logging for enterprise operational management by Rahamath Alikhan J.",
+        "image": "https://rahamathalikhanj.github.io/assets/fts-fleet-app.png",
+        "author": {
+          "@type": "Person",
+          "name": "Rahamath Alikhan J",
+          "url": "https://rahamathalikhanj.github.io/"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Rahamath Alikhan J"
+        },
+        "datePublished": "2024-09-12",
+        "dateModified": "2026-11-18",
+        "mainEntityOfPage": "https://rahamathalikhanj.github.io/projects/enterprise-erp-crm.html",
+        "dependencies": "React.js, Next.js, Flutter, Node.js, FastAPI, PostgreSQL, Docker, Azure",
+        "proficientTechnologies": ["Custom ERP Systems", "Custom CRM Software", "Web Applications", "React.js", "Next.js", "Flutter", "PostgreSQL", "RBAC Security"]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to main content</a>
+
+  <!-- Sticky Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="../index.html" class="brand-logo" aria-label="Rahamath Alikhan J - Homepage">
+        <div class="brand-avatar-icon">
+          <i class="fa-solid fa-code"></i>
+        </div>
+        <div class="brand-title">
+          <span class="brand-name">Rahamath Alikhan</span>
+          <span class="brand-role"><i class="fa-solid fa-laptop-code"></i> Senior Software Engineer</span>
+        </div>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="../index.html#about" class="nav-link">About</a></li>
+          <li><a href="../index.html#services" class="nav-link">Services</a></li>
+          <li><a href="../index.html#skills" class="nav-link">Skills</a></li>
+          <li><a href="../index.html#projects" class="nav-link active">Projects</a></li>
+          <li><a href="../index.html#experience" class="nav-link">Experience</a></li>
+          <li><a href="../index.html#architecture" class="nav-link">Architecture</a></li>
+          <li><a href="../index.html#faq" class="nav-link">FAQ</a></li>
+          <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="../index.html#contact" class="btn btn-primary btn-sm">Hire Me</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- Case Study Hero -->
+    <section class="case-study-hero" aria-label="Case Study Header">
+      <div class="container">
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumb-nav" aria-label="Breadcrumbs">
+          <a href="../index.html">Home</a>
+          <span class="breadcrumb-separator">/</span>
+          <a href="../index.html#projects">Projects</a>
+          <span class="breadcrumb-separator">/</span>
+          <span style="color:var(--text-main);">Enterprise ERP &amp; CRM Operations Suite</span>
+        </nav>
+
+        <span class="section-tag">Enterprise Case Study • Full-Stack Web &amp; Mobile</span>
+        <h1 class="case-study-title">Enterprise ERP &amp; Custom CRM Operations Suite</h1>
+        <p class="case-study-subtitle">
+          Designed and engineered an integrated Enterprise Resource Planning (ERP) and Customer Relationship Management (CRM) platform uniting responsive web admin dashboards with synchronized field mobile apps.
+        </p>
+
+        <!-- Meta Bar -->
+        <div class="case-meta-bar">
+          <div class="case-meta-item">
+            <span class="case-meta-label">System Type</span>
+            <span class="case-meta-value">Custom ERP &amp; CRM Platform</span>
+          </div>
+          <div class="case-meta-item">
+            <span class="case-meta-label">Role</span>
+            <span class="case-meta-value">Lead Full-Stack Systems Architect</span>
+          </div>
+          <div class="case-meta-item">
+            <span class="case-meta-label">Web Portal</span>
+            <span class="case-meta-value">React.js + Next.js + TypeScript</span>
+          </div>
+          <div class="case-meta-item">
+            <span class="case-meta-label">Mobile &amp; Database</span>
+            <span class="case-meta-value">Flutter + PostgreSQL + Azure</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case Study Content Layout -->
+    <div class="container">
+      <div class="case-study-layout">
+        <article class="case-content-body">
+
+          <!-- Overview Block -->
+          <section class="case-block" aria-label="Executive Summary">
+            <h2 class="case-block-title"><i class="fa-solid fa-bullseye"></i> Executive Summary &amp; Enterprise Challenge</h2>
+            <p>
+              Growing enterprises and mid-market organizations frequently suffer from siloed operational tools: sales teams track customer leads on disparate spreadsheets, operations managers handle resource approvals via email threads, and field personnel log maintenance on paper forms. This fragmentation causes missed invoices, duplicate equipment scheduling, and zero real-time visibility for executive leadership.
+            </p>
+            <p>
+              The mandate was to build a unified, high-performance <strong>Enterprise ERP and CRM Suite</strong> that brings together client onboarding, contract lifecycles, inventory and asset tracking, multi-departmental approval chains, and automated billing into a cohesive web and mobile environment.
+            </p>
+            <div class="case-image-frame">
+              <img src="../assets/fts-fleet-app.png" alt="Enterprise ERP Dashboard and Mobile Application UI" width="800" height="450" loading="lazy">
+            </div>
+          </section>
+
+          <!-- Engineering Architecture Block -->
+          <section class="case-block" aria-label="Technical Architecture">
+            <h2 class="case-block-title"><i class="fa-solid fa-sitemap"></i> Multi-Tenant Web &amp; Mobile Architecture</h2>
+            <p>
+              The platform was engineered using a cloud-native microservices architecture designed for high data integrity, strict auditability, and sub-second analytical reporting:
+            </p>
+            <ul class="case-feature-list">
+              <li>
+                <i class="fa-solid fa-desktop"></i>
+                <div>
+                  <strong>Web Admin &amp; Operations Dashboard (Next.js &amp; React):</strong> Server-side rendered (SSR) executive portal with dynamic data grids, Chart.js financial analytics, customer CRM pipelines, inventory management, and bulk CSV/PDF reporting.
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-mobile-screen"></i>
+                <div>
+                  <strong>Field Mobile Application (Flutter):</strong> Synchronized cross-platform mobile companion enabling on-site staff and managers to sign off on resource requisitions, scan asset QR/barcodes, and view customer booking tickets on the fly.
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-user-shield"></i>
+                <div>
+                  <strong>Granular Role-Based Access Control (RBAC):</strong> Multi-tenant security matrix governing permissions across Super Admins, Department Heads, Sales Representatives, and Field Technicians with immutable audit logging.
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Key Technical Accomplishments -->
+          <section class="case-block" aria-label="Key Technical Accomplishments">
+            <h2 class="case-block-title"><i class="fa-solid fa-code-compare"></i> Key Technical Accomplishments</h2>
+            <ul class="case-feature-list">
+              <li>
+                <i class="fa-solid fa-file-invoice-dollar"></i>
+                <div>
+                  <strong>Automated Invoicing &amp; Milestone Billing:</strong> Connected CRM deal stages directly to ERP ledger accounts, automatically generating GST/VAT-compliant PDF invoices upon milestone approval.
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-network-wired"></i>
+                <div>
+                  <strong>Real-Time WebSocket Notification Bus:</strong> Dispatches instant desktop browser alerts and mobile push notifications whenever a requisition requires managerial sign-off or an invoice status changes.
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-database"></i>
+                <div>
+                  <strong>PostgreSQL with Timescale Telemetry:</strong> Optimized relational schemas with automated database partitioning, indexing, and connection pooling to handle millions of historical asset sensor readings and financial records.
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Production Deliverables -->
+          <section class="case-block" aria-label="Results and Impact">
+            <h2 class="case-block-title"><i class="fa-solid fa-chart-line"></i> Production Deliverables &amp; Impact</h2>
+            <p>
+              The unified suite revolutionized operational efficiency across the organization:
+            </p>
+            <ul class="case-feature-list">
+              <li><i class="fa-solid fa-check-double"></i> <strong>65% Reduction in Administrative Overhead:</strong> Automated approval workflows replaced slow paper trails and back-and-forth email loops.</li>
+              <li><i class="fa-solid fa-check-double"></i> <strong>100% Real-Time Asset Visibility:</strong> Executive leadership gained live tracking across thousands of distributed corporate assets and client contracts.</li>
+              <li><i class="fa-solid fa-check-double"></i> <strong>Sub-Second Web Dashboard Query Speeds:</strong> Highly indexed PostgreSQL databases delivered complex financial reports in under 500ms.</li>
+            </ul>
+          </section>
+
+        </article>
+
+        <!-- Sidebar Widgets -->
+        <aside class="case-sidebar" aria-label="Project Information Sidebar">
+          <div class="sidebar-widget">
+            <h3 class="sidebar-widget-title">Technology Stack</h3>
+            <div class="sidebar-pills">
+              <span class="skill-tag featured">Next.js</span>
+              <span class="skill-tag featured">React.js</span>
+              <span class="skill-tag featured">TypeScript</span>
+              <span class="skill-tag flutter-tag">Flutter Mobile</span>
+              <span class="skill-tag">PostgreSQL</span>
+              <span class="skill-tag">FastAPI (Python)</span>
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">Microsoft Azure</span>
+              <span class="skill-tag">RBAC Security</span>
+              <span class="skill-tag">Automated Invoicing</span>
+            </div>
+          </div>
+
+          <div class="sidebar-widget">
+            <h3 class="sidebar-widget-title">Need a Custom CRM or ERP?</h3>
+            <p style="color:var(--text-muted); font-size:0.88rem; line-height:1.6; margin-bottom:1.25rem;">
+              Looking to build custom Enterprise Resource Planning software, an operational CRM, or web admin portals with mobile sync? Let's connect.
+            </p>
+            <a href="../index.html#contact" class="btn btn-primary" style="width:100%;"><i class="fa-solid fa-paper-plane"></i> Book Discovery Call</a>
+          </div>
+
+          <div class="sidebar-widget">
+            <h3 class="sidebar-widget-title">All Case Studies</h3>
+            <ul style="list-style:none; display:flex; flex-direction:column; gap:0.6rem; font-size:0.88rem;">
+              <li><a href="enterprise-erp-crm.html" style="color:var(--android-green); font-weight:700;">• Enterprise ERP &amp; CRM Operations Suite</a></li>
+              <li><a href="service-marketplace.html">• On-Demand Service Marketplace Suite</a></li>
+              <li><a href="ai-mobile-assistant.html">• AI Conversational Mobile Assistant</a></li>
+              <li><a href="vimo-services.html">• Vimo Services Limousine</a></li>
+              <li><a href="ajman-taxi.html">• Ajman Taxi &amp; Sixth Limo Dubai</a></li>
+              <li><a href="roadaider.html">• Road Assistant (Roadaider)</a></li>
+              <li><a href="fts-fleet.html">• Fleet Transport Service (FTS Pro)</a></li>
+              <li><a href="woye-transport.html">• Public Booking (Woye Transport)</a></li>
+              <li><a href="railway-digitization.html">• Southern Railway Digitization</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2026 Rahamath Alikhan J. All rights reserved. Senior Software Engineer &amp; Freelance Mobile Application Developer.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

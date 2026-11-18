@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Road Assistant (Roadaider) Case Study | Native Android & Emergency Dispatch – Rahamath Alikhan J</title>
+  <meta name="description" content="Technical case study of Roadaider: On-demand emergency roadside assistance mobile platform engineered in native Android with background location services, towing dispatch, and Stripe payments.">
+  <meta name="keywords" content="Roadaider, Roadside Assistance App, Android Developer, Java, Android SDK, Foreground Services, Stripe SDK, Mobile Case Study, Rahamath Alikhan J">
+  <meta name="author" content="Rahamath Alikhan J">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="theme-color" content="#090D16">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="apple-touch-icon" href="../assets/avatar.png">
+  <link rel="canonical" href="https://rahamathalikhanj.github.io/projects/roadaider.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:site_name" content="Rahamath Alikhan J | Senior Software Engineer Portfolio">
+  <meta property="og:title" content="Road Assistant (Roadaider) Case Study | Native Android & Emergency Dispatch">
+  <meta property="og:description" content="Technical case study of Roadaider on-demand roadside emergency assistance app by Rahamath Alikhan J.">
+  <meta property="og:url" content="https://rahamathalikhanj.github.io/projects/roadaider.html">
+  <meta property="og:image" content="https://rahamathalikhanj.github.io/assets/roadaider-app.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Roadaider Roadside Assistance Case Study – Rahamath Alikhan J">
+  <meta name="twitter:description" content="Native Android engineering: Background GPS tracking, emergency vehicle dispatch, and Stripe payments.">
+  <meta name="twitter:image" content="https://rahamathalikhanj.github.io/assets/roadaider-app.png">
+
+  <!-- JSON-LD BreadcrumbList & TechArticle -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://rahamathalikhanj.github.io/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Projects",
+            "item": "https://rahamathalikhanj.github.io/#projects"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Roadaider Roadside Assistance",
+            "item": "https://rahamathalikhanj.github.io/projects/roadaider.html"
+          }
+        ]
+      },
+      {
+        "@type": "TechArticle",
+        "headline": "Engineering a Mission-Critical On-Demand Roadside Assistance Mobile Application with Native Android",
+        "description": "Technical case study detailing background service architecture, real-time GPS tracking, and payment orchestration for the Roadaider on-demand emergency assistance platform.",
+        "image": "https://rahamathalikhanj.github.io/assets/roadaider-app.png",
+        "author": {
+          "@type": "Person",
+          "name": "Rahamath Alikhan J",
+          "url": "https://rahamathalikhanj.github.io/"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Rahamath Alikhan J"
+        },
+        "datePublished": "2023-11-20",
+        "dateModified": "2026-11-18",
+        "mainEntityOfPage": "https://rahamathalikhanj.github.io/projects/roadaider.html",
+        "dependencies": "Android SDK, Java, Google Maps SDK, Firebase Cloud Messaging, Retrofit, Stripe SDK",
+        "proficientTechnologies": ["Android Java", "Foreground Services", "Google Maps SDK", "Stripe Payment Gateway", "Firebase Cloud Messaging"]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to main content</a>
+
+  <!-- Sticky Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="../index.html" class="brand-logo" aria-label="Rahamath Alikhan J - Homepage">
+        <div class="brand-avatar-icon">
+          <i class="fa-solid fa-code"></i>
+        </div>
+        <div class="brand-title">
+          <span class="brand-name">Rahamath Alikhan</span>
+          <span class="brand-role"><i class="fa-solid fa-laptop-code"></i> Senior Software Engineer</span>
+        </div>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="../index.html#about" class="nav-link">About</a></li>
+          <li><a href="../index.html#services" class="nav-link">Services</a></li>
+          <li><a href="../index.html#skills" class="nav-link">Skills</a></li>
+          <li><a href="../index.html#projects" class="nav-link active">Projects</a></li>
+          <li><a href="../index.html#experience" class="nav-link">Experience</a></li>
+          <li><a href="../index.html#architecture" class="nav-link">Architecture</a></li>
+          <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="../index.html#contact" class="btn btn-primary btn-sm">Hire Me</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- Case Study Hero -->
+    <section class="case-study-hero" aria-label="Case Study Header">
+      <div class="container">
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumb-nav" aria-label="Breadcrumbs">
+          <a href="../index.html">Home</a>
+          <span class="breadcrumb-separator">/</span>
+          <a href="../index.html#projects">Projects</a>
+          <span class="breadcrumb-separator">/</span>
+          <span style="color:var(--text-main);">Road Assistant (Roadaider)</span>
+        </nav>
+
+        <span class="section-tag">Enterprise Case Study • Native Android</span>
+        <h1 class="case-study-title">Road Assistant (Roadaider) Platform</h1>
+        <p class="case-study-subtitle">
+          Engineered an emergency roadside dispatch mobile application connecting stranded motorists with nearby tow trucks, battery jump-start units, and fuel delivery services with real-time GPS progress.
+        </p>
+
+        <!-- Meta Bar -->
+        <div class="case-meta-bar">
+          <div class="case-meta-item">
+            <span class="case-meta-label">Product Type</span>
+            <span class="case-meta-value">On-Demand Emergency Platform</span>
+          </div>
+          <div class="case-meta-item">
+            <span class="case-meta-label">Role</span>
+            <span class="case-meta-value">Native Android Engineer</span>
+          </div>
+          <div class="case-meta-item">
+            <span class="case-meta-label">Platform</span>
+            <span class="case-meta-value">Native Android (Java &amp; SDK)</span>
+          </div>
+          <div class="case-meta-item">
+            <span class="case-meta-label">Key Systems</span>
+            <span class="case-meta-value">Foreground Location + Stripe + FCM</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case Study Content Layout -->
+    <div class="container">
+      <div class="case-study-layout">
+        <article class="case-content-body">
+
+          <!-- Overview Block -->
+          <section class="case-block" aria-label="Executive Summary">
+            <h2 class="case-block-title"><i class="fa-solid fa-bullseye"></i> Executive Summary &amp; Problem Statement</h2>
+            <p>
+              When a vehicle breaks down on a highway or secluded road, distress levels are acute. Traditional roadside clubs rely on call centers with slow response times and no visual confirmation of tow truck dispatch. Roadaider was designed as an "Uber for roadside assistance", enabling drivers to tap their phone screen, select their vehicle breakdown issue (flat tire, dead battery, engine overheating, fuel runout, or collision towing), receive a transparent upfront quote, and watch their assigned technician approach in real time.
+            </p>
+            <p>
+              The technical challenge centered on maintaining background location services and high-priority push events without battery drain or Android OS task-killer terminations while drivers waited with limited battery charge.
+            </p>
+            <div class="case-image-frame">
+              <img src="../assets/roadaider-app.png" alt="Roadaider Roadside Assistance Android App UI Screenshot" width="800" height="450" loading="lazy">
+            </div>
+          </section>
+
+          <!-- Engineering Architecture Block -->
+          <section class="case-block" aria-label="Technical Architecture">
+            <h2 class="case-block-title"><i class="fa-solid fa-sitemap"></i> Resilient Android Architecture</h2>
+            <p>
+              To ensure the app would operate reliably under stressful emergency conditions, the mobile client was architected using decoupled Android Service components:
+            </p>
+            <ul class="case-feature-list">
+              <li>
+                <i class="fa-solid fa-satellite-dish"></i>
+                <div>
+                  <strong>Foreground Service Location Tracker:</strong> Implemented a sticky Android Foreground Service with an ongoing notification channel. This prevented the Android operating system from killing location polling when users locked their screens or switched to emergency phone calls.
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-map-pin"></i>
+                <div>
+                  <strong>High-Precision Geolocation Fallback:</strong> Employed Google Play Services Fused Location Provider with multi-source fallback (GPS, Wi-Fi triangulation, and cell tower IDs) to lock customer coordinates even under heavy tree canopies or overpasses.
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-shield-virus"></i>
+                <div>
+                  <strong>Defensive Crash Isolation:</strong> Encapsulated network and mapping dependencies inside decoupled manager classes, ensuring that transient map rendering errors never crash the core emergency call and SMS fallback capabilities.
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Key Technical Accomplishments -->
+          <section class="case-block" aria-label="Key Technical Accomplishments">
+            <h2 class="case-block-title"><i class="fa-solid fa-code-compare"></i> Key Technical Accomplishments</h2>
+            <ul class="case-feature-list">
+              <li>
+                <i class="fa-solid fa-truck-pickup"></i>
+                <div>
+                  <strong>Vehicle Type &amp; Tonnage Matching:</strong> Engineered input validation and vehicle model selectors to ensure heavy SUVs and electric vehicles (EVs) are automatically assigned flatbed tow trucks rather than standard wheel-lift hooks.
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-receipt"></i>
+                <div>
+                  <strong>Upfront Transparent Fare Engine:</strong> Integrated automated distance-based pricing formulas with Stripe pre-authorization holds, preventing price gouging and ensuring drivers and technicians agree on pricing before dispatch.
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-bullhorn"></i>
+                <div>
+                  <strong>High-Priority FCM Notifications:</strong> Configured Firebase Cloud Messaging with wake-lock triggers, waking the client device to display critical dispatch status transitions ("Technician Dispatched", "1 km Away", "Arrived").
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Production Deliverables -->
+          <section class="case-block" aria-label="Results and Impact">
+            <h2 class="case-block-title"><i class="fa-solid fa-chart-line"></i> Production Impact &amp; Deliverables</h2>
+            <p>
+              The platform enabled rapid emergency response for thousands of stranded drivers:
+            </p>
+            <ul class="case-feature-list">
+              <li><i class="fa-solid fa-check-double"></i> <strong>Average Dispatch Time Under 4 Minutes:</strong> Automated GPS matching drastically reduced wait times compared to traditional phone call centers.</li>
+              <li><i class="fa-solid fa-check-double"></i> <strong>Zero Lost Dispatches:</strong> Guaranteed delivery of status alerts through sticky foreground service notifications.</li>
+              <li><i class="fa-solid fa-check-double"></i> <strong>High User Trust:</strong> Transparent upfront pricing and live technician tracking reduced customer cancellation rates by 65%.</li>
+            </ul>
+          </section>
+
+        </article>
+
+        <!-- Sidebar Widgets -->
+        <aside class="case-sidebar" aria-label="Project Information Sidebar">
+          <div class="sidebar-widget">
+            <h3 class="sidebar-widget-title">Technology Stack</h3>
+            <div class="sidebar-pills">
+              <span class="skill-tag featured">Java</span>
+              <span class="skill-tag featured">Android SDK</span>
+              <span class="skill-tag">Foreground Services</span>
+              <span class="skill-tag">Fused Location Provider</span>
+              <span class="skill-tag">Google Maps SDK</span>
+              <span class="skill-tag">Stripe Gateway</span>
+              <span class="skill-tag">Firebase FCM</span>
+              <span class="skill-tag">RESTful APIs</span>
+              <span class="skill-tag">SQLite</span>
+            </div>
+          </div>
+
+          <div class="sidebar-widget">
+            <h3 class="sidebar-widget-title">Need a Similar Solution?</h3>
+            <p style="color:var(--text-muted); font-size:0.88rem; line-height:1.6; margin-bottom:1.25rem;">
+              Building an on-demand service app or emergency dispatch platform? Let's engineer a resilient solution tailored to your operational needs.
+            </p>
+            <a href="../index.html#contact" class="btn btn-primary" style="width:100%;"><i class="fa-solid fa-paper-plane"></i> Book Discovery Call</a>
+          </div>
+
+          <div class="sidebar-widget">
+            <h3 class="sidebar-widget-title">All Case Studies</h3>
+            <ul style="list-style:none; display:flex; flex-direction:column; gap:0.6rem; font-size:0.88rem;">
+              <li><a href="vimo-services.html">• Vimo Services Limousine</a></li>
+              <li><a href="ajman-taxi.html">• Ajman Taxi &amp; Sixth Limo Dubai</a></li>
+              <li><a href="roadaider.html" style="color:var(--android-green); font-weight:700;">• Road Assistant (Roadaider)</a></li>
+              <li><a href="fts-fleet.html">• Fleet Transport Service (FTS Pro)</a></li>
+              <li><a href="woye-transport.html">• Public Booking (Woye Transport)</a></li>
+              <li><a href="railway-digitization.html">• Southern Railway Digitization</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2026 Rahamath Alikhan J. All rights reserved. Senior Software Engineer &amp; Freelance Mobile Application Developer.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

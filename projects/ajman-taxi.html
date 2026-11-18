@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajman Taxi & Sixth Limo Dubai Case Study | Flutter iOS & Android – Rahamath Alikhan J</title>
+  <meta name="description" content="Technical case study of Ajman Taxi, Sixth Limo & Fytch: High-scale Dubai ride-hailing and limousine mobility platform engineered in Flutter, BLoC, Riverpod, Google Maps, and WebSockets.">
+  <meta name="keywords" content="Ajman Taxi, Dubai Technologies, Freelance Flutter Developer, Flutter iOS and Android, BLoC, Riverpod, Google Maps SDK, WebSockets, Mobility Case Study, Rahamath Alikhan J">
+  <meta name="author" content="Rahamath Alikhan J">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="theme-color" content="#090D16">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="apple-touch-icon" href="../assets/avatar.png">
+  <link rel="canonical" href="https://rahamathalikhanj.github.io/projects/ajman-taxi.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:site_name" content="Rahamath Alikhan J | Senior Software Engineer Portfolio">
+  <meta property="og:title" content="Ajman Taxi & Sixth Limo Dubai Case Study | Flutter iOS & Android">
+  <meta property="og:description" content="In-depth technical case study of Ajman Taxi and Dubai luxury ride-hailing apps built with Flutter, Riverpod, and WebSockets by Rahamath Alikhan J.">
+  <meta property="og:url" content="https://rahamathalikhanj.github.io/projects/ajman-taxi.html">
+  <meta property="og:image" content="https://rahamathalikhanj.github.io/assets/ajman-taxi-app.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ajman Taxi Dubai Case Study – Rahamath Alikhan J">
+  <meta name="twitter:description" content="Flutter cross-platform mobility platform: Real-time driver tracking, WebSockets, and multi-gateway payments in UAE.">
+  <meta name="twitter:image" content="https://rahamathalikhanj.github.io/assets/ajman-taxi-app.png">
+
+  <!-- JSON-LD BreadcrumbList & TechArticle -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://rahamathalikhanj.github.io/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Projects",
+            "item": "https://rahamathalikhanj.github.io/#projects"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Ajman Taxi Dubai",
+            "item": "https://rahamathalikhanj.github.io/projects/ajman-taxi.html"
+          }
+        ]
+      },
+      {
+        "@type": "TechArticle",
+        "headline": "Architecting an Enterprise Ride-Hailing Platform in Dubai with Flutter, WebSockets & Automated CI/CD",
+        "description": "Technical case study examining cross-platform architecture, live telemetry tracking, state management, and GitLab CI/CD release engineering for Dubai Technologies by Rahamath Alikhan J.",
+        "image": "https://rahamathalikhanj.github.io/assets/ajman-taxi-app.png",
+        "author": {
+          "@type": "Person",
+          "name": "Rahamath Alikhan J",
+          "url": "https://rahamathalikhanj.github.io/"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Rahamath Alikhan J"
+        },
+        "datePublished": "2024-05-10",
+        "dateModified": "2026-11-18",
+        "mainEntityOfPage": "https://rahamathalikhanj.github.io/projects/ajman-taxi.html",
+        "dependencies": "Flutter SDK, Dart, BLoC, Riverpod, Google Maps SDK, WebSockets, Stripe, PayPal, GitLab CI/CD",
+        "proficientTechnologies": ["Flutter", "Dart", "BLoC State Management", "Riverpod", "Google Maps SDK", "WebSockets"]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to main content</a>
+
+  <!-- Sticky Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="../index.html" class="brand-logo" aria-label="Rahamath Alikhan J - Homepage">
+        <div class="brand-avatar-icon">
+          <i class="fa-solid fa-code"></i>
+        </div>
+        <div class="brand-title">
+          <span class="brand-name">Rahamath Alikhan</span>
+          <span class="brand-role"><i class="fa-solid fa-laptop-code"></i> Senior Software Engineer</span>
+        </div>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="../index.html#about" class="nav-link">About</a></li>
+          <li><a href="../index.html#services" class="nav-link">Services</a></li>
+          <li><a href="../index.html#skills" class="nav-link">Skills</a></li>
+          <li><a href="../index.html#projects" class="nav-link active">Projects</a></li>
+          <li><a href="../index.html#experience" class="nav-link">Experience</a></li>
+          <li><a href="../index.html#architecture" class="nav-link">Architecture</a></li>
+          <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="../index.html#contact" class="btn btn-primary btn-sm">Hire Me</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- Case Study Hero -->
+    <section class="case-study-hero" aria-label="Case Study Header">
+      <div class="container">
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumb-nav" aria-label="Breadcrumbs">
+          <a href="../index.html">Home</a>
+          <span class="breadcrumb-separator">/</span>
+          <a href="../index.html#projects">Projects</a>
+          <span class="breadcrumb-separator">/</span>
+          <span style="color:var(--text-main);">Ajman Taxi &amp; Sixth Limo Dubai</span>
+        </nav>
+
+        <span class="section-tag">Enterprise Case Study • Flutter Cross-Platform</span>
+        <h1 class="case-study-title">Ajman Taxi, Sixth Limo &amp; Fytch Mobility Platform</h1>
+        <p class="case-study-subtitle">
+          Engineered multi-brand cross-platform mobility applications operating in Dubai and the UAE, serving thousands of daily passenger commutes with real-time WebSocket ride tracking and automated CI/CD release pipelines.
+        </p>
+
+        <!-- Meta Bar -->
+        <div class="case-meta-bar">
+          <div class="case-meta-item">
+            <span class="case-meta-label">Client / Market</span>
+            <span class="case-meta-value">Dubai Technologies, UAE</span>
+          </div>
+          <div class="case-meta-item">
+            <span class="case-meta-label">Role</span>
+            <span class="case-meta-value">Lead Mobile Engineer</span>
+          </div>
+          <div class="case-meta-item">
+            <span class="case-meta-label">Platform</span>
+            <span class="case-meta-value">Flutter Cross-Platform (iOS &amp; Android)</span>
+          </div>
+          <div class="case-meta-item">
+            <span class="case-meta-label">State &amp; Realtime</span>
+            <span class="case-meta-value">BLoC + Riverpod + WebSockets</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case Study Content Layout -->
+    <div class="container">
+      <div class="case-study-layout">
+        <article class="case-content-body">
+
+          <!-- Overview Block -->
+          <section class="case-block" aria-label="Executive Summary">
+            <h2 class="case-block-title"><i class="fa-solid fa-bullseye"></i> Executive Summary &amp; Scope</h2>
+            <p>
+              Dubai Technologies, a prominent mobility and IoT solutions leader in the United Arab Emirates, operated separate transportation divisions: municipal taxi fleets (Ajman Taxi), luxury executive limousine services (Sixth Limo), and on-demand courier/dispatch networks (Fytch). The client required a unified, highly extensible mobile application platform that could run flawlessly across both iOS and Android while supporting white-label brand switching, distinct fare tariffs, and dynamic peak-time dispatch.
+            </p>
+            <p>
+              Operating in extreme road density conditions with stringent government telemetry reporting, the application required continuous bi-directional communication with dispatch servers, ultra-precise map navigation across UAE highway interchanges, and frictionless checkout via Stripe, PayPal, and Google Pay.
+            </p>
+            <div class="case-image-frame">
+              <img src="../assets/ajman-taxi-app.png" alt="Ajman Taxi Dubai Flutter App UI Screenshot" width="800" height="450" loading="lazy">
+            </div>
+          </section>
+
+          <!-- Engineering Architecture Block -->
+          <section class="case-block" aria-label="Technical Architecture">
+            <h2 class="case-block-title"><i class="fa-solid fa-sitemap"></i> Cross-Platform Flutter Architecture</h2>
+            <p>
+              To maintain absolute parity between iOS and Android while enabling code reuse exceeding 85%, the solution was structured around a modular Flutter architecture combining <strong>BLoC</strong> for global workflow states and <strong>Riverpod</strong> for reactive dependency scoping:
+            </p>
+            <ul class="case-feature-list">
+              <li>
+                <i class="fa-solid fa-code-branch"></i>
+                <div>
+                  <strong>BLoC State Management for Trip Lifecycles:</strong> The core booking and ride session states (Requesting, Dispatched, Arrived, In-Transit, Completed) were implemented as an event-driven Finite State Machine (FSM) using <code>flutter_bloc</code>. This prevented invalid state transitions and race conditions during intermittent 4G/5G handoffs.
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-network-wired"></i>
+                <div>
+                  <strong>Bidirectional WebSockets Stream:</strong> Implemented a resilient WebSocket client featuring exponential backoff reconnection and message queueing. Real-time telemetry frames from driver units update vehicle markers on the passenger map with sub-300ms latency.
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-palette"></i>
+                <div>
+                  <strong>White-Label Multi-Tenant Theming:</strong> Designed a centralized design token layer that dynamically injects branding assets, color palettes, and localization strings (Arabic RTL and English LTR) based on the target build flavor.
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Technical Accomplishments -->
+          <section class="case-block" aria-label="Key Technical Accomplishments">
+            <h2 class="case-block-title"><i class="fa-solid fa-code-compare"></i> Key Technical Accomplishments</h2>
+            <ul class="case-feature-list">
+              <li>
+                <i class="fa-solid fa-map"></i>
+                <div>
+                  <strong>Dual Map Provider Integration:</strong> Interfaced with both Google Maps SDK and HERE Maps APIs, enabling intelligent fallback when map tile quotas or regional satellite data varied between Dubai, Sharjah, and Ajman.
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-money-bill-wave"></i>
+                <div>
+                  <strong>Multi-Gateway Payment Orchestration:</strong> Implemented a unified payment abstraction layer wrapping Stripe Elements, PayPal Vault, and native Google Pay / Apple Pay tokens with automated localized VAT tax computation.
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-gears"></i>
+                <div>
+                  <strong>GitLab CI/CD Automated Build Pipeline:</strong> Configured automated GitLab CI runners to run linting, widget tests, generate iOS IPA and Android App Bundles (AAB), and auto-deploy staging builds to Firebase App Distribution and production builds to the Google Play Console.
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-language"></i>
+                <div>
+                  <strong>Comprehensive Arabic RTL Localization:</strong> Architected complete Right-to-Left (RTL) layout mirroring, custom Arabic typography rendering, and culture-specific date/currency formatting across all user interaction touchpoints.
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Production Impact -->
+          <section class="case-block" aria-label="Results and Impact">
+            <h2 class="case-block-title"><i class="fa-solid fa-chart-line"></i> Production Deliverables &amp; Impact</h2>
+            <p>
+              The platform delivered scalable performance across all targeted UAE mobility sectors:
+            </p>
+            <ul class="case-feature-list">
+              <li><i class="fa-solid fa-check-double"></i> <strong>Over 99.7% Telemetry Delivery Rate:</strong> Drivers and riders maintained continuous position awareness even across complex tunnel and highway transit corridors.</li>
+              <li><i class="fa-solid fa-check-double"></i> <strong>40% Reduction in Release Overhead:</strong> Automated CI/CD pipelines cut new version deployment cycles from days to minutes.</li>
+              <li><i class="fa-solid fa-check-double"></i> <strong>Single Codebase Maintenance:</strong> Allowed a unified mobile engineering team to maintain iOS and Android applications with zero code duplication.</li>
+            </ul>
+          </section>
+
+        </article>
+
+        <!-- Sidebar Widgets -->
+        <aside class="case-sidebar" aria-label="Project Information Sidebar">
+          <div class="sidebar-widget">
+            <h3 class="sidebar-widget-title">Technology Stack</h3>
+            <div class="sidebar-pills">
+              <span class="skill-tag flutter-tag">Flutter Framework</span>
+              <span class="skill-tag flutter-tag">Dart</span>
+              <span class="skill-tag flutter-tag">BLoC</span>
+              <span class="skill-tag flutter-tag">Riverpod</span>
+              <span class="skill-tag">WebSockets</span>
+              <span class="skill-tag">Google Maps SDK</span>
+              <span class="skill-tag">HERE Maps API</span>
+              <span class="skill-tag">Stripe / Google Pay</span>
+              <span class="skill-tag">PayPal SDK</span>
+              <span class="skill-tag">GitLab CI/CD</span>
+              <span class="skill-tag">Arabic RTL Support</span>
+            </div>
+          </div>
+
+          <div class="sidebar-widget">
+            <h3 class="sidebar-widget-title">Need a Similar Solution?</h3>
+            <p style="color:var(--text-muted); font-size:0.88rem; line-height:1.6; margin-bottom:1.25rem;">
+              Planning a cross-platform Flutter application with live maps, WebSockets, or multi-currency payments? Reach out for a technical consultation.
+            </p>
+            <a href="../index.html#contact" class="btn btn-primary" style="width:100%;"><i class="fa-solid fa-paper-plane"></i> Book Discovery Call</a>
+          </div>
+
+          <div class="sidebar-widget">
+            <h3 class="sidebar-widget-title">All Case Studies</h3>
+            <ul style="list-style:none; display:flex; flex-direction:column; gap:0.6rem; font-size:0.88rem;">
+              <li><a href="vimo-services.html">• Vimo Services Limousine</a></li>
+              <li><a href="ajman-taxi.html" style="color:var(--flutter-cyan); font-weight:700;">• Ajman Taxi &amp; Sixth Limo Dubai</a></li>
+              <li><a href="roadaider.html">• Road Assistant (Roadaider)</a></li>
+              <li><a href="fts-fleet.html">• Fleet Transport Service (FTS Pro)</a></li>
+              <li><a href="woye-transport.html">• Public Booking (Woye Transport)</a></li>
+              <li><a href="railway-digitization.html">• Southern Railway Digitization</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2026 Rahamath Alikhan J. All rights reserved. Senior Software Engineer &amp; Freelance Mobile Application Developer.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

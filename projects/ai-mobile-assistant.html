@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI-Powered Conversational Mobile Assistant Case Study | LLMs & Flutter – Rahamath Alikhan J</title>
+  <meta name="description" content="Technical case study of AI-Powered Conversational Mobile Assistant: Intelligent mobile app integration with high-speed LLM APIs (Groq, OpenAI), RAG context retrieval, and automated service booking workflows.">
+  <meta name="keywords" content="AI Mobile App Development, LLM API Integration, Groq API Flutter, OpenAI Flutter, RAG Architecture, AI Chatbot Mobile App, Freelance Flutter Developer, Rahamath Alikhan J">
+  <meta name="author" content="Rahamath Alikhan J">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="theme-color" content="#090D16">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="apple-touch-icon" href="../assets/avatar.png">
+  <link rel="canonical" href="https://rahamathalikhanj.github.io/projects/ai-mobile-assistant.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:site_name" content="Rahamath Alikhan J | Senior Software Engineer Portfolio">
+  <meta property="og:title" content="AI-Powered Conversational Mobile Assistant Case Study | LLMs & Flutter">
+  <meta property="og:description" content="Technical case study of high-speed LLM API integration and conversational AI assistant for mobile apps by Rahamath Alikhan J.">
+  <meta property="og:url" content="https://rahamathalikhanj.github.io/projects/ai-mobile-assistant.html">
+  <meta property="og:image" content="https://rahamathalikhanj.github.io/assets/avatar.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI-Powered Mobile Assistant Case Study – Rahamath Alikhan J">
+  <meta name="twitter:description" content="High-speed LLM APIs, RAG context retrieval, and conversational UI integrated into cross-platform mobile apps.">
+  <meta name="twitter:image" content="https://rahamathalikhanj.github.io/assets/avatar.png">
+
+  <!-- JSON-LD BreadcrumbList & TechArticle -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://rahamathalikhanj.github.io/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Projects",
+            "item": "https://rahamathalikhanj.github.io/#projects"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "AI-Powered Conversational Mobile Assistant",
+            "item": "https://rahamathalikhanj.github.io/projects/ai-mobile-assistant.html"
+          }
+        ]
+      },
+      {
+        "@type": "TechArticle",
+        "headline": "Integrating High-Speed LLM APIs, RAG Context Retrieval & Conversational Workflows into Mobile Apps",
+        "description": "Technical case study detailing streaming token responses, local RAG vector retrieval, and automated app action triggers using Flutter, FastAPI, and LLM APIs by Rahamath Alikhan J.",
+        "image": "https://rahamathalikhanj.github.io/assets/avatar.png",
+        "author": {
+          "@type": "Person",
+          "name": "Rahamath Alikhan J",
+          "url": "https://rahamathalikhanj.github.io/"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Rahamath Alikhan J"
+        },
+        "datePublished": "2024-08-05",
+        "dateModified": "2026-11-18",
+        "mainEntityOfPage": "https://rahamathalikhanj.github.io/projects/ai-mobile-assistant.html",
+        "dependencies": "Flutter SDK, Dart, Groq LLM API, OpenAI API, FastAPI, Vector Embeddings, Server-Sent Events",
+        "proficientTechnologies": ["Flutter", "LLM APIs", "RAG Architecture", "FastAPI", "Server-Sent Events", "Smart Automation"]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to main content</a>
+
+  <!-- Sticky Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="../index.html" class="brand-logo" aria-label="Rahamath Alikhan J - Homepage">
+        <div class="brand-avatar-icon">
+          <i class="fa-solid fa-code"></i>
+        </div>
+        <div class="brand-title">
+          <span class="brand-name">Rahamath Alikhan</span>
+          <span class="brand-role"><i class="fa-solid fa-laptop-code"></i> Senior Software Engineer</span>
+        </div>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="../index.html#about" class="nav-link">About</a></li>
+          <li><a href="../index.html#services" class="nav-link">Services</a></li>
+          <li><a href="../index.html#skills" class="nav-link">Skills</a></li>
+          <li><a href="../index.html#projects" class="nav-link active">Projects</a></li>
+          <li><a href="../index.html#experience" class="nav-link">Experience</a></li>
+          <li><a href="../index.html#architecture" class="nav-link">Architecture</a></li>
+          <li><a href="../index.html#faq" class="nav-link">FAQ</a></li>
+          <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="../index.html#contact" class="btn btn-primary btn-sm">Hire Me</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- Case Study Hero -->
+    <section class="case-study-hero" aria-label="Case Study Header">
+      <div class="container">
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumb-nav" aria-label="Breadcrumbs">
+          <a href="../index.html">Home</a>
+          <span class="breadcrumb-separator">/</span>
+          <a href="../index.html#projects">Projects</a>
+          <span class="breadcrumb-separator">/</span>
+          <span style="color:var(--text-main);">AI-Powered Conversational Mobile Assistant</span>
+        </nav>
+
+        <span class="section-tag">Enterprise Case Study • Applied AI &amp; Mobile</span>
+        <h1 class="case-study-title">AI-Powered Conversational Mobile Assistant &amp; Workflow Bot</h1>
+        <p class="case-study-subtitle">
+          Architected a real-time conversational mobile AI assistant leveraging ultra-fast LLM APIs (Groq &amp; OpenAI), RAG contextual knowledge retrieval, and automated in-app action dispatching.
+        </p>
+
+        <!-- Meta Bar -->
+        <div class="case-meta-bar">
+          <div class="case-meta-item">
+            <span class="case-meta-label">Domain</span>
+            <span class="case-meta-value">Applied Generative AI &amp; Mobile</span>
+          </div>
+          <div class="case-meta-item">
+            <span class="case-meta-label">Role</span>
+            <span class="case-meta-value">Lead Full-Stack AI Engineer</span>
+          </div>
+          <div class="case-meta-item">
+            <span class="case-meta-label">AI Engine</span>
+            <span class="case-meta-value">Groq LLM / OpenAI API + RAG</span>
+          </div>
+          <div class="case-meta-item">
+            <span class="case-meta-label">Client Interface</span>
+            <span class="case-meta-value">Flutter Streaming UI + Server-Sent Events</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case Study Content Layout -->
+    <div class="container">
+      <div class="case-study-layout">
+        <article class="case-content-body">
+
+          <!-- Overview Block -->
+          <section class="case-block" aria-label="Executive Summary">
+            <h2 class="case-block-title"><i class="fa-solid fa-bullseye"></i> Executive Summary &amp; AI Integration Objective</h2>
+            <p>
+              Users interacting with complex mobile platforms (such as service booking, logistics tracking, or enterprise knowledge databases) frequently drop off when navigating dense multi-step menu hierarchies. Integrating conversational artificial intelligence allows users to speak or type naturally (e.g., <em>"Book an emergency plumber to check a pipe leak at 3 PM today and use my saved card"</em>) and have the system interpret intent, verify slot availability, and trigger in-app checkout automatically.
+            </p>
+            <p>
+              The challenge was to achieve sub-second latency, avoid hallucinated pricing or policy information, and deliver a smooth token-by-token streaming chat interface on iOS and Android devices without draining battery or CPU.
+            </p>
+            <div class="case-image-frame">
+              <img src="../assets/avatar.png" alt="AI Conversational Mobile Assistant UI Screenshot" width="800" height="450" loading="lazy" style="max-height:300px; object-fit:contain; background:#0B0F19; padding:2rem;">
+            </div>
+          </section>
+
+          <!-- Engineering Architecture Block -->
+          <section class="case-block" aria-label="Technical Architecture">
+            <h2 class="case-block-title"><i class="fa-solid fa-sitemap"></i> High-Speed LLM &amp; RAG Architecture</h2>
+            <p>
+              The solution implements an end-to-end streaming architecture powered by low-latency inference:
+            </p>
+            <ul class="case-feature-list">
+              <li>
+                <i class="fa-solid fa-bolt-lightning"></i>
+                <div>
+                  <strong>Ultra-Fast Token Streaming via Groq &amp; OpenAI:</strong> Connected the Flutter mobile front-end to high-speed LPU inference endpoints (Groq Llama-3 / OpenAI GPT-4o-mini) via Server-Sent Events (SSE), delivering immediate word-by-word streaming responses under 350ms Time-To-First-Token (TTFT).
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-book-atlas"></i>
+                <div>
+                  <strong>Retrieval-Augmented Generation (RAG) Guardrails:</strong> Integrated a FastAPI vector search backend that injects verified product catalogs, pricing rules, and FAQ knowledge bases into the model context, guaranteeing 0% hallucinated rates for business-critical data.
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-robot"></i>
+                <div>
+                  <strong>Tool Calling &amp; In-App Action Dispatch:</strong> Leveraged structured JSON function calling. When the AI detects user booking intent, it returns validated arguments directly to the Flutter state management engine (BLoC/Riverpod) to automatically navigate to the booking confirmation screen.
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Key Technical Accomplishments -->
+          <section class="case-block" aria-label="Key Technical Accomplishments">
+            <h2 class="case-block-title"><i class="fa-solid fa-code-compare"></i> Key Technical Accomplishments</h2>
+            <ul class="case-feature-list">
+              <li>
+                <i class="fa-solid fa-sliders"></i>
+                <div>
+                  <strong>Contextual Session Memory:</strong> Built lightweight local conversation caching with SQLite, enabling users to resume multi-turn conversations seamlessly across app restarts.
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-microphone"></i>
+                <div>
+                  <strong>Speech-to-Text &amp; Voice Commands:</strong> Integrated Whisper API voice transcription, allowing hands-free voice-driven booking for on-the-go users.
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-shield"></i>
+                <div>
+                  <strong>Cost &amp; Rate-Limit Optimization:</strong> Architected smart semantic prompt compression and Redis response caching, cutting external API token costs by 45%.
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Production Deliverables -->
+          <section class="case-block" aria-label="Results and Impact">
+            <h2 class="case-block-title"><i class="fa-solid fa-chart-line"></i> Production Deliverables &amp; Impact</h2>
+            <p>
+              The AI integration elevated customer engagement and operational speed:
+            </p>
+            <ul class="case-feature-list">
+              <li><i class="fa-solid fa-check-double"></i> <strong>70% Faster Task Completion:</strong> Users booking via conversational AI completed orders in less than 30 seconds compared to 2 minutes via traditional menus.</li>
+              <li><i class="fa-solid fa-check-double"></i> <strong>Sub-400ms Streaming Latency:</strong> Real-time streaming provided an instant human-like conversational experience.</li>
+              <li><i class="fa-solid fa-check-double"></i> <strong>Turnkey Startup Integration:</strong> Architecture packaged as an extensible module ready to drop into any Flutter or Android app.</li>
+            </ul>
+          </section>
+
+        </article>
+
+        <!-- Sidebar Widgets -->
+        <aside class="case-sidebar" aria-label="Project Information Sidebar">
+          <div class="sidebar-widget">
+            <h3 class="sidebar-widget-title">Technology Stack</h3>
+            <div class="sidebar-pills">
+              <span class="skill-tag flutter-tag">Flutter Framework</span>
+              <span class="skill-tag flutter-tag">Dart</span>
+              <span class="skill-tag ai-tag">Groq LLM API</span>
+              <span class="skill-tag ai-tag">OpenAI API</span>
+              <span class="skill-tag">RAG Architecture</span>
+              <span class="skill-tag">FastAPI (Python)</span>
+              <span class="skill-tag">Server-Sent Events</span>
+              <span class="skill-tag">Function Calling</span>
+              <span class="skill-tag">Whisper Speech-to-Text</span>
+            </div>
+          </div>
+
+          <div class="sidebar-widget">
+            <h3 class="sidebar-widget-title">Want to Add AI to Your App?</h3>
+            <p style="color:var(--text-muted); font-size:0.88rem; line-height:1.6; margin-bottom:1.25rem;">
+              Looking to integrate LLMs, smart conversational assistants, or AI automation into your Flutter or Android application? Let's discuss possibilities.
+            </p>
+            <a href="../index.html#contact" class="btn btn-primary" style="width:100%;"><i class="fa-solid fa-paper-plane"></i> Book Discovery Call</a>
+          </div>
+
+          <div class="sidebar-widget">
+            <h3 class="sidebar-widget-title">All Case Studies</h3>
+            <ul style="list-style:none; display:flex; flex-direction:column; gap:0.6rem; font-size:0.88rem;">
+              <li><a href="service-marketplace.html">• On-Demand Service Marketplace Suite</a></li>
+              <li><a href="ai-mobile-assistant.html" style="color:var(--accent-purple); font-weight:700;">• AI Conversational Mobile Assistant</a></li>
+              <li><a href="vimo-services.html">• Vimo Services Limousine</a></li>
+              <li><a href="ajman-taxi.html">• Ajman Taxi &amp; Sixth Limo Dubai</a></li>
+              <li><a href="roadaider.html">• Road Assistant (Roadaider)</a></li>
+              <li><a href="fts-fleet.html">• Fleet Transport Service (FTS Pro)</a></li>
+              <li><a href="woye-transport.html">• Public Booking (Woye Transport)</a></li>
+              <li><a href="railway-digitization.html">• Southern Railway Digitization</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2026 Rahamath Alikhan J. All rights reserved. Senior Software Engineer &amp; Freelance Mobile Application Developer.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
