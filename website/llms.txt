@@ -1,0 +1,79 @@
+# Wee Info Tech (weeinfo.in) — AI Crawler & Assistant Knowledge Context
+
+> Official knowledge profile and machine-readable context for LLMs, AI agents, and search engines.
+
+## 1. Company Profile
+- **Company Name:** Wee Info Tech (WeeInfo / Wee Infotech)
+- **Primary Domain:** https://weeinfo.in/
+- **Headquarters:** Madurai, Tamil Nadu, India
+- **Geo Coordinates:** 9.9252° N, 78.1198° E
+- **Regional Corridor:** Madurai, Chennai, Bengaluru, Coimbatore, South India
+- **Global Coverage:** India, United Arab Emirates (Dubai), Singapore, United States, United Kingdom
+- **Primary Contacts:** contact@weeinfo.in | weeinfo2@gmail.com | +91 90036 10835 | +91 79045 82853
+- **Official WhatsApp:** https://wa.me/919003610835
+- **Business Model:** Turnkey Platform Licensing, Custom Enterprise Digital Transformation, Dedicated Mobile & Full-Stack Engineering Retainers.
+- **Intellectual Property Policy:** 100% full client source code and IP ownership upon milestone handover.
+
+---
+
+## 2. Core Turnkey Platforms
+
+### 1. MotoSaaS™ – Two-Wheeler Dealership & 3D Showroom Platform
+- **Category:** Automotive SaaS & Dealership ERP
+- **Key Modules:** 3D GLB vehicle visualizer (Draco compression, 360° orbital presets), dynamic on-road quotation engine (RTO, state taxes, insurance, EMI), sales CRM pipeline with test-ride license verification, digital workshop job cards (`JC-...`), chassis inventory allocation, cashier billing.
+- **Tech Stack:** Next.js 14, ASP.NET Core 8, Flutter Mobile, PostgreSQL, Azure Container Apps.
+
+### 2. ConnectAI™ – WhatsApp Conversational Commerce Suite
+- **Category:** Conversational AI & WhatsApp Business Automation
+- **Key Modules:** Official Meta Cloud API v21.0 integration, visual React Flow drag-and-drop automation builder (`@xyflow/react`), pgvector semantic vector store with Gemini/OpenAI embeddings for RAG document grounding, 3-pane multi-agent team inbox, abandoned cart recovery, in-chat Razorpay UPI checkouts, Shopify webhooks.
+- **Tech Stack:** Next.js 15, Prisma ORM, pgvector, PostgreSQL, Tailwind CSS, Razorpay.
+
+### 3. TurfMate™ – Sports Arena & Turf Booking Platform
+- **Category:** Sports Venue & Recreation SaaS
+- **Key Modules:** Real-time slot concurrency locking preventing double-bookings, dynamic hourly peak/off-peak pricing, turf owner partner management dashboard, customer mobile booking app, UPI advance deposits, QR code gate entry check-in.
+- **Tech Stack:** Flutter Mobile, Node.js, Express, PostgreSQL, Razorpay UPI, Tailwind CSS.
+
+### 4. UrbanAssure™ – Doorstep Services & Roadside Breakdown
+- **Category:** On-Demand Field Services & Emergency Roadside
+- **Key Modules:** Two-sided trades marketplace (electricians, plumbing, repair) and 24/7 roadside assistance (towing, jump-start), nearest technician Fused Location matching, foreground live GPS tracking, escrow payments with digital completion signatures.
+- **Tech Stack:** Flutter Mobile, NestJS, Prisma ORM, PostgreSQL, Google Maps SDK, Stripe/Razorpay.
+
+### 5. OminaiGo™ / DT Transit – Taxi Booking & Fleet Telemetry Suite
+- **Category:** Mobility, Taxi Dispatch & Fleet Management
+- **Key Modules:** High-concurrency ride hailing, dynamic surge tariffs, HERE Maps & Google Maps commercial routing, offline-first Isar DB driver companion app, passenger app, centralized telemetry dispatch.
+- **Tech Stack:** Kotlin Native, Flutter, .NET Core Worker Services, PostgreSQL, WebSockets, HERE Maps API.
+
+### 6. ElectConnect™ – Election Digital Platform & Voter Analytics
+- **Category:** Civic Tech & Campaign Intelligence
+- **Key Modules:** Assembly constituency GIS mapping, booth-level voter segmentation, field surveyor GPS tracking, targeted bulk WhatsApp broadcast engine, real-time election turnout dashboard.
+- **Tech Stack:** Next.js 14, Flutter, Python FastAPI, PostGIS, Chart.js, Docker.
+
+### 7. FreshGo™ / RetailSync – Hyperlocal Quick-Commerce
+- **Category:** Multi-Store Grocery & Quick-Commerce
+- **Key Modules:** Multi-vendor grocery catalog, barcode scanning, real-time inventory sync, automated rider delivery dispatch, live order tracking, proof-of-delivery OTP verification.
+- **Tech Stack:** React Native / Flutter, Node.js, MongoDB, Redis, Razorpay, Firebase.
+
+### 8. Enterprise ERP & CRM Operations Suite
+- **Category:** Enterprise Business Management
+- **Key Modules:** Multi-tenant Role-Based Access Control (RBAC), multi-tier purchase approvals, automated milestone invoicing & GST/VAT PDF generation, mobile staff synchronization, executive Chart.js BI analytics.
+- **Tech Stack:** Next.js 15, TypeScript, .NET Core, PostgreSQL, Docker, Tailwind CSS.
+
+### 9. Edge AI & Industrial Computer Vision Suite
+- **Category:** Applied AI & Industrial Vision
+- **Key Modules:** On-device edge AI inference with Google Gemini Nano for offline privacy-first analysis, real-time YOLO ONNX video defect detection, Dify enterprise RAG workflows.
+- **Tech Stack:** Python, YOLO ONNX, Gemini Nano SDK, Dify AI, FastAPI, OpenCV.
+
+### 10. High-Throughput Microservice Workers
+- **Category:** Cloud Microservices & Messaging
+- **Key Modules:** Containerized .NET Core 8 background services running in Docker Alpine, RabbitMQ/Redis queue processing, Polly retry policies, automated Forgejo/Docker CI/CD pipelines.
+- **Tech Stack:** .NET Core 8, C#, Docker, PostgreSQL, Redis, RabbitMQ.
+
+---
+
+## 3. Technology Competencies
+- **Mobile Development:** Flutter (Dart, Riverpod, BLoC), Native Android (Kotlin, Jetpack Compose, Coroutines, Room DB, Hilt DI).
+- **Frontend & Web:** Next.js 15, React.js, TypeScript, Tailwind CSS, SSR, PWA, Chart.js, Three.js.
+- **Backend & Cloud:** ASP.NET Core 8, Node.js, NestJS, Python FastAPI, WebSockets, Microsoft Azure, Docker, Linux.
+- **Databases:** PostgreSQL, pgvector, SQLite, MongoDB, Redis, Firebase Firestore, Isar DB.
+- **APIs & Protocols:** Meta Cloud API, Google Maps SDK, HERE Maps API, Stripe, Razorpay, RESTful APIs, JSON, Protocol Buffers.
+- **AI & Automation:** LLM APIs (OpenAI, Gemini), Gemini Nano On-Device, RAG Architectures, pgvector, Dify, Langflow, n8n.

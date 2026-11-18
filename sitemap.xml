@@ -63,4 +63,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Wee Info Tech Enterprise Platforms Subsite -->
+  <url>
+    <loc>https://rahamathalikhanj.github.io/website/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
 </urlset>

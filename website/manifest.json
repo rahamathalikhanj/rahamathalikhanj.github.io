@@ -1,0 +1,21 @@
+{
+  "name": "Wee Info Tech | AI-Driven Digital Platforms & Solutions",
+  "short_name": "WeeInfo",
+  "description": "Turnkey AI platforms, custom mobile apps, and cloud enterprise architectures by Wee Info Tech.",
+  "start_url": "/website/index.html",
+  "display": "standalone",
+  "background_color": "#080821",
+  "theme_color": "#0CC3E4",
+  "icons": [
+    {
+      "src": "assets/turfmate_product_logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/wee_infotech_logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
