@@ -137,23 +137,6 @@ document.addEventListener('DOMContentLoaded', () => {
       techStack: ["Flutter iOS/Android", "NestJS Backend", "Prisma ORM", "PostgreSQL", "Google Maps SDK", "Stripe / Razorpay"],
       deliverables: ["Customer Service App", "Technician Companion App", "Admin Dispatch Console", "NestJS REST API"]
     },
-    ominaigo: {
-      title: "OminaiGo™ / DT Transit – Taxi & Fleet Telemetry Suite",
-      badge: "Transportation & Telemetry",
-      client: "Dubai Technologies UAE & On-Demand Fleets",
-      image: "assets/ajman-taxi-app.png",
-      tagline: "High-Concurrency Ride Hailing, Dynamic Surge Tariffs, HERE Maps SDK & Telemetry Dispatch",
-      overview: "OminaiGo is an enterprise-grade ride-hailing and fleet management platform engineered for municipal transit authorities and corporate limousine fleets. Built to sustain tens of thousands of simultaneous trips with real-time WebSocket telemetry, dynamic geofenced surge calculations, wheelchair-accessible vehicle options, and automated driver payout settlements.",
-      highlights: [
-        "Bidirectional WebSocket Telemetry with sub-second vehicle coordinate streaming and route snapping.",
-        "HERE Maps & Google Maps SDK integration for commercial vehicle routing and toll avoidance.",
-        "Offline-First Driver Companion App utilizing Isar embedded database for intermittent connectivity in desert/rural transit.",
-        "Multi-Tier Supervisory Vehicle Sign-offs, fuel consumption logs, and digital safety checklists.",
-        "Enterprise Dispatch Dashboard with heatmaps, driver shifts, and Stripe/Card on-file payment processing."
-      ],
-      techStack: ["Kotlin Native", "Flutter", ".NET Core Worker Services", "PostgreSQL", "WebSockets", "HERE Maps API"],
-      deliverables: ["Passenger Mobile App", "Driver Companion App", "Dispatcher Web Console", "Background Telemetry Worker"]
-    },
     electconnect: {
       title: "ElectConnect™ – Election Digital Platform & Voter Analytics",
       badge: "Civic Tech & Analytics",
@@ -337,18 +320,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function updateEstimator() {
     const totalDays = Math.round((platformBaseDays + scopeDaysAdd) * (scopeMultiplier > 1 ? 1.4 : 1));
-    const totalPriceINR = Math.round(platformBasePrice * scopeMultiplier);
-    const totalPriceUSD = Math.round(totalPriceINR / 85);
 
     document.getElementById('estSelectedPlatform').textContent = selectedPlatform;
     document.getElementById('estSelectedScope').textContent = selectedScope;
     document.getElementById('estDeliveryTimeline').textContent = `${totalDays} – ${totalDays + 7} Business Days`;
-    document.getElementById('estTotalPrice').textContent = `₹${totalPriceINR.toLocaleString('en-IN')} / ~$${totalPriceUSD.toLocaleString('en-US')}`;
+    document.getElementById('estTotalPrice').textContent = 'Contact with Us';
 
     const quoteBtn = document.getElementById('estQuoteBtn');
     if (quoteBtn) {
-      const msg = `Hi WeeInfo! I would like to get a quote for: ${selectedPlatform} (${selectedScope}). Est Delivery: ${totalDays} days.`;
+      const msg = `Hi WeeInfo! I would like to get a tailored quote for: ${selectedPlatform} (${selectedScope}). Est Timeline: ${totalDays} business days.`;
       quoteBtn.href = `https://wa.me/919003610835?text=${encodeURIComponent(msg)}`;
+      quoteBtn.innerHTML = '<i class="fa-brands fa-whatsapp"></i> Contact with Us on WhatsApp';
     }
   }
 

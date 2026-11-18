@@ -60,7 +60,6 @@ Through **Wee Info Tech** (https://weeinfo.in/ or https://rahamathalikhanj.githu
 - **ConnectAI™**: Enterprise WhatsApp conversational commerce platform (Meta Cloud API, pgvector RAG AI chatbot, visual React Flow builder, in-chat UPI checkout).
 - **TurfMate™**: Sports arena and turf slot booking platform with real-time locking, dynamic hourly pricing, partner portal, and QR gate verification.
 - **UrbanAssure™**: Two-sided on-demand doorstep service marketplace & 24/7 roadside breakdown assistance.
-- **OminaiGo™ / DT Transit**: High-concurrency taxi booking, surge pricing, and telemetry dispatch suite.
 - **ElectConnect™**: Assembly constituency mapping, booth-level voter segmentation, and WhatsApp campaign broadcaster.
 - **FreshGo™ / RetailSync**: Hyperlocal grocery marketplace with multi-store inventory sync and automated rider dispatch.
 - **Enterprise ERP & Operations Suite**: Multi-tenant RBAC, automated invoicing, warehouse inventory, and staff companion apps.
