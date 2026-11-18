@@ -1,0 +1,22 @@
+{
+  "name": "Rahamath Alikhan J | Senior Software Engineer & Freelance Mobile Developer",
+  "short_name": "Rahamath Alikhan",
+  "description": "Senior Software Engineer & Freelance Mobile Application Developer specializing in Flutter, Native Android (Kotlin, Jetpack Compose), Backend APIs, and Clean Architecture.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#090D16",
+  "theme_color": "#090D16",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    },
+    {
+      "src": "/assets/avatar.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

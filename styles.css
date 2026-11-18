@@ -1201,8 +1201,860 @@ footer {
   font-size: 0.9rem;
 }
 
+/* -------------------------------------------------------------
+   Freelance Services Section (#services)
+   ------------------------------------------------------------- */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.service-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem 2rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-normal);
+  backdrop-filter: blur(16px);
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--flutter-cyan);
+  box-shadow: 0 15px 35px -10px rgba(1, 181, 246, 0.2);
+}
+
+.service-card.featured {
+  border-color: rgba(0, 200, 83, 0.4);
+  background: linear-gradient(180deg, rgba(17, 24, 39, 0.85) 0%, rgba(11, 25, 20, 0.85) 100%);
+}
+
+.service-card.featured:hover {
+  border-color: var(--android-green);
+  box-shadow: 0 15px 35px -10px rgba(0, 200, 83, 0.25);
+}
+
+.service-badge {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: rgba(1, 181, 246, 0.1);
+  color: var(--flutter-cyan);
+  border: 1px solid rgba(1, 181, 246, 0.3);
+}
+
+.service-card.featured .service-badge {
+  background: rgba(0, 200, 83, 0.1);
+  color: var(--android-green);
+  border-color: rgba(0, 200, 83, 0.3);
+}
+
+.service-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  margin-bottom: 1.25rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-color);
+}
+
+.service-title {
+  font-size: 1.35rem;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+}
+
+.service-description {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.service-features {
+  list-style: none;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.service-features li {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.service-features li i {
+  color: var(--android-green);
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}
+
+.service-footer {
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Engagement Models */
+.engagement-section {
+  margin-top: 3rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+}
+
+.engagement-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.engagement-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.engagement-subtitle {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.engagement-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.engagement-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+  transition: all var(--transition-normal);
+}
+
+.engagement-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--flutter-cyan);
+}
+
+.engagement-pill {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--android-green);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.engagement-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.engagement-desc {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+/* -------------------------------------------------------------
+   Cloud Infrastructure & Applied AI (#cloud-ai)
+   ------------------------------------------------------------- */
+.cloud-ai-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.cloud-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem 2rem;
+  backdrop-filter: blur(16px);
+  transition: all var(--transition-normal);
+}
+
+.cloud-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-purple);
+  box-shadow: 0 15px 35px -10px rgba(139, 92, 246, 0.2);
+}
+
+.cloud-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.cloud-icon-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.cloud-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  background: rgba(139, 92, 246, 0.12);
+  color: var(--accent-purple);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.cloud-icon.devops-icon {
+  background: rgba(1, 181, 246, 0.12);
+  color: var(--flutter-cyan);
+  border-color: rgba(1, 181, 246, 0.3);
+}
+
+.env-pill {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.env-pill.production {
+  background: rgba(0, 200, 83, 0.12);
+  color: var(--android-green);
+  border: 1px solid rgba(0, 200, 83, 0.3);
+}
+
+.env-pill.exploratory {
+  background: rgba(139, 92, 246, 0.12);
+  color: var(--accent-purple);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.distinction-banner {
+  background: rgba(17, 24, 39, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 4px solid var(--flutter-cyan);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.75rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.distinction-banner i {
+  color: var(--flutter-cyan);
+  font-size: 1.3rem;
+  margin-top: 0.2rem;
+}
+
+.distinction-text {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.distinction-text strong {
+  color: #FFF;
+}
+
+/* -------------------------------------------------------------
+   Dual Triggers for Projects Showcase
+   ------------------------------------------------------------- */
+.case-study-link {
+  color: var(--flutter-cyan);
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-sm);
+  background: rgba(1, 181, 246, 0.08);
+  border: 1px solid rgba(1, 181, 246, 0.25);
+  transition: all var(--transition-fast);
+}
+
+.case-study-link:hover {
+  background: rgba(1, 181, 246, 0.18);
+  border-color: var(--flutter-cyan);
+  color: #FFF;
+  transform: translateY(-1px);
+}
+
+/* -------------------------------------------------------------
+   Local Presence Box & Location SEO (#contact)
+   ------------------------------------------------------------- */
+.local-presence-box {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  margin: 2.5rem auto 0;
+  max-width: 850px;
+  text-align: left;
+}
+
+.local-presence-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
+}
+
+.presence-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #FFF;
+}
+
+.coords-badge {
+  font-family: var(--font-code);
+  font-size: 0.78rem;
+  color: var(--android-green);
+  background: rgba(0, 200, 83, 0.1);
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(0, 200, 83, 0.25);
+}
+
+.presence-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.presence-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.presence-label {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.presence-val {
+  font-size: 0.92rem;
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+/* -------------------------------------------------------------
+   Individual Case Study Page Layouts
+   ------------------------------------------------------------- */
+.case-study-hero {
+  padding: 8rem 0 3.5rem;
+  background: linear-gradient(180deg, rgba(9, 13, 22, 0.9) 0%, rgba(17, 24, 39, 0.6) 100%);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.breadcrumb-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.breadcrumb-nav a {
+  color: var(--text-muted);
+}
+
+.breadcrumb-nav a:hover {
+  color: var(--flutter-cyan);
+}
+
+.breadcrumb-separator {
+  color: var(--text-dim);
+}
+
+.case-study-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.case-study-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  max-width: 800px;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.case-meta-bar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.25rem;
+  padding: 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  margin-top: 1.5rem;
+}
+
+.case-meta-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.case-meta-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+
+.case-meta-value {
+  font-size: 0.95rem;
+  color: #FFF;
+  font-weight: 600;
+}
+
+.case-study-layout {
+  padding: 4rem 0 6rem;
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.case-content-body {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.case-block {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  backdrop-filter: blur(16px);
+}
+
+.case-block-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  color: #FFF;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.case-block-title i {
+  color: var(--android-green);
+  font-size: 1.3rem;
+}
+
+.case-block p {
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+.case-block p:last-child {
+  margin-bottom: 0;
+}
+
+.case-image-frame {
+  width: 100%;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  margin: 1.5rem 0;
+  background: #000;
+}
+
+.case-image-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.case-feature-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.case-feature-list li {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.case-feature-list li i {
+  color: var(--flutter-cyan);
+  font-size: 1rem;
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+}
+
+.case-feature-list li strong {
+  color: #FFF;
+}
+
+.case-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: sticky;
+  top: 100px;
+}
+
+.sidebar-widget {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  backdrop-filter: blur(16px);
+}
+
+.sidebar-widget-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.75rem;
+}
+
+.sidebar-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.hero-subtagline {
+  font-size: 1.05rem;
+  color: var(--android-green);
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  border-left: 3px solid var(--android-green);
+  padding-left: 0.75rem;
+}
+
+/* -------------------------------------------------------------
+   4-Stage Engineering Workflow
+   ------------------------------------------------------------- */
+.workflow-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.workflow-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.75rem;
+  position: relative;
+  transition: all var(--transition-normal);
+  backdrop-filter: blur(16px);
+}
+
+.workflow-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--flutter-cyan);
+}
+
+.workflow-step-num {
+  font-family: var(--font-code);
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--android-green);
+  background: rgba(0, 200, 83, 0.1);
+  border: 1px solid rgba(0, 200, 83, 0.3);
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.workflow-step-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  color: #FFF;
+}
+
+.workflow-step-desc {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+/* Trust & IP Guarantee Badges */
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+}
+
+.trust-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all var(--transition-fast);
+}
+
+.trust-card:hover {
+  border-color: var(--android-green);
+  background: rgba(0, 200, 83, 0.05);
+}
+
+.trust-icon {
+  font-size: 1.5rem;
+  color: var(--android-green);
+  flex-shrink: 0;
+}
+
+.trust-info strong {
+  display: block;
+  font-size: 0.95rem;
+  color: #FFF;
+  margin-bottom: 0.15rem;
+}
+
+.trust-info span {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+/* -------------------------------------------------------------
+   FAQ Section (#faq) & Accordion
+   ------------------------------------------------------------- */
+.faq-container {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  margin-bottom: 1rem;
+  overflow: hidden;
+  transition: all var(--transition-fast);
+}
+
+.faq-item:hover, .faq-item.active {
+  border-color: var(--flutter-cyan);
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 1.4rem 1.6rem;
+  color: #FFF;
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  transition: color var(--transition-fast);
+  font-family: var(--font-main);
+}
+
+.faq-question:hover {
+  color: var(--flutter-cyan);
+}
+
+.faq-icon {
+  font-size: 0.95rem;
+  color: var(--android-green);
+  transition: transform var(--transition-normal);
+  flex-shrink: 0;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+  color: var(--flutter-cyan);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0 1.6rem;
+}
+
+.faq-item.active .faq-answer {
+  padding: 0 1.6rem 1.5rem;
+}
+
+.faq-answer p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* -------------------------------------------------------------
+   Industry Verticals & Domain Expertise
+   ------------------------------------------------------------- */
+.verticals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.vertical-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-normal);
+  backdrop-filter: blur(16px);
+}
+
+.vertical-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--flutter-cyan);
+  box-shadow: 0 10px 25px -5px rgba(1, 181, 246, 0.2);
+}
+
+.vertical-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.vertical-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #FFF;
+}
+
+.vertical-desc {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.vertical-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.vertical-pill {
+  font-size: 0.72rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-color);
+  color: var(--text-dim);
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+}
+
+/* WhatsApp Button */
+.btn-whatsapp {
+  background: #25D366;
+  color: #000;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.btn-whatsapp:hover {
+  background: #20BA5A;
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+}
+
 /* Responsive Styles */
 @media (max-width: 992px) {
+  .case-study-layout {
+    grid-template-columns: 1fr;
+  }
+  .case-sidebar {
+    position: static;
+  }
   .hero-grid {
     grid-template-columns: 1fr;
   }

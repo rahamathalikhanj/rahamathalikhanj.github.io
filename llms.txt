@@ -1,0 +1,56 @@
+# Rahamath Alikhan J - Senior Software Engineer & Freelance Mobile Application Developer
+
+> Official Portfolio & Technical Profile: https://rahamathalikhanj.github.io/
+> Primary Role: Senior Software Engineer & Freelance Mobile & Web Application Developer
+> Official Tagline: "Building Scalable Software Solutions – From Mobile Applications (Flutter, Android & iOS) and Full-Stack Web Apps to Enterprise CRM, ERP Systems & AI-Powered Products."
+> Location: Madurai, Tamil Nadu, India (Coordinates: 9.9252° N, 78.1198° E)
+> Experience: 9+ Years in Software Engineering, 5+ Years Native Android, 4.6+ Years Flutter Cross-Platform
+> Contact: rahamathalikhanj@gmail.com | +91-7904582853 | WhatsApp: https://wa.me/917904582853
+> LinkedIn: https://linkedin.com/in/rahamath-ali-khan
+> GitHub: https://github.com/rahamathalikhanj
+
+## Core Competencies & Technology Stack
+- **Native Android Engineering**: Kotlin, Jetpack Compose, Java, Coroutines & Flow, Hilt / Dagger DI, Room DB, Android SDK, Material 3, Foreground Services.
+- **Cross-Platform Flutter**: Dart, Riverpod, BLoC State Management, Isar DB, iOS App Store deployment, Google Play Console release, Platform Channels.
+- **Full-Stack Web Development**: React.js, Next.js, TypeScript, Tailwind CSS, HTML5/CSS3, Server-Side Rendering (SSR), Progressive Web Apps (PWA).
+- **Enterprise CRM & ERP Systems**: Role-Based Access Control (RBAC), Multi-Tenant Architectures, Executive Admin Dashboards, Automated Invoicing, Audit Logs, Requisition Approval Hierarchies, Inventory & Asset Management.
+- **Backend & Cloud Systems**: RESTful APIs, FastAPI (Python), Node.js, .NET Core, WebSockets, PostgreSQL, SQLite, Firebase Firestore, Microsoft Azure, Docker Containers, GitLab CI/CD, GitHub Actions.
+- **Software Architecture**: 3-Tier Clean Architecture, MVVM, Repository Pattern, Modular App Design, Unidirectional Data Flow, Offline-First Synchronization.
+- **Applied AI & Automation**: LLM APIs (OpenAI, Gemini), RAG (Retrieval-Augmented Generation) Architectures, Prompt Engineering, Dify Workflows, Langflow, n8n Automation.
+
+## Verified Industry Case Studies
+1. **Enterprise ERP & CRM Operations Suite**: Full-stack web dashboard (Next.js, React) paired with synchronized mobile companion app for multi-department approvals, asset tracking, and automated billing.
+   Link: https://rahamathalikhanj.github.io/projects/enterprise-erp-crm.html
+2. **On-Demand Service Marketplace & Partner Suite**: Two-sided customer booking app and service provider companion app built with Flutter, Riverpod, Firebase, and Stripe Connect.
+   Link: https://rahamathalikhanj.github.io/projects/service-marketplace.html
+3. **AI-Powered Conversational Mobile Assistant**: High-speed conversational mobile AI assistant powered by streaming LLM APIs (Groq & OpenAI), contextual RAG vector search, and function calling.
+   Link: https://rahamathalikhanj.github.io/projects/ai-mobile-assistant.html
+4. **Public Booking – Vimo Services (Singapore)**: Premium limousine, wheelchair-accessible transport, and corporate chauffeur platform built with native Android (Kotlin, Jetpack Compose, HERE Maps, Stripe).
+   Link: https://rahamathalikhanj.github.io/projects/vimo-services.html
+5. **Ajman Taxi, Sixth Limo & Fytch (Dubai Technologies, UAE)**: Multi-brand cross-platform mobility platform operating in Dubai & UAE with live WebSocket driver tracking and automated GitLab CI/CD pipelines.
+   Link: https://rahamathalikhanj.github.io/projects/ajman-taxi.html
+6. **Road Assistant (Roadaider)**: On-demand emergency roadside dispatch application connecting stranded drivers with towing trucks, battery jump-starts, and fuel delivery via foreground services and Stripe holds.
+   Link: https://rahamathalikhanj.github.io/projects/roadaider.html
+7. **Fleet Transport Service (FTS Pro & EHS)**: Enterprise logistics and fleet approval management platform featuring a 100% offline-first driver app powered by Isar local database.
+   Link: https://rahamathalikhanj.github.io/projects/fts-fleet.html
+8. **Public Booking (Woye Transport Ethiopia)**: Ride-hailing and driver tracking mobile application optimized for low-bandwidth 3G/4G network conditions and budget Android devices.
+   Link: https://rahamathalikhanj.github.io/projects/woye-transport.html
+9. **Signal & Telecom Asset Digitization (Southern Railway, India)**: Enterprise GIS mobile application for digitizing railway trackside signals, cable routes, and relay rooms with sub-meter GPS accuracy.
+   Link: https://rahamathalikhanj.github.io/projects/railway-digitization.html
+
+## Service Offerings & Engagement Models
+- **Custom Enterprise CRM & ERP Systems**: End-to-end business operations platforms connecting web admin portals with mobile workforce apps.
+- **Full-Stack Web Applications (React & Next.js)**: High-speed responsive web dashboards, customer portals, and internal tools.
+- **Cross-Platform Flutter Development (iOS & Android)**: Production apps with smooth 60fps animations, offline sync, and unified codebase.
+- **Native Android Application Development**: Deep hardware, sensor, and GIS integration with Kotlin and Jetpack Compose.
+- **Backend APIs & Real-Time Cloud Infrastructure**: High-throughput FastAPI/Node.js backends, WebSockets, Docker, and Azure cloud hosting.
+- **MVP Development for Startups**: Rapid turnaround (3–6 weeks) from concept wireframes to App Store & Play Store approval.
+- **Dedicated Retainer / Senior Mobile Lead**: Embedded engineering leadership on monthly retainers.
+- **Architecture & Code Audit**: Profiling memory leaks, refactoring legacy codebases to Clean Architecture, and resolving crash rates.
+- **IP Ownership & Guarantees**: 100% code & IP ownership transferred to clients; strict Non-Disclosure Agreements (NDA) honored.
+
+## Geographic Service Regions
+- **South India Tech Corridor**: Madurai, Chennai, Bengaluru (Bangalore), Coimbatore, Trichy, Salem, Hosur, Tamil Nadu, Karnataka, Kerala.
+- **PAN-India**: Hyderabad, Mumbai, Pune, Delhi-NCR, Kolkata.
+- **International Hubs**: United Arab Emirates (Dubai, Abu Dhabi, Ajman), Singapore, Doha (Qatar), Saudi Arabia (Riyadh), US, and Europe Remote.
+

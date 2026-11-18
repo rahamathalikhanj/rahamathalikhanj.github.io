@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSkillsSearch();
   initProjectsFilter();
   initModals();
+  initFaqAccordion();
 });
 
 /* 1. Navbar Scroll & Active Highlights */
@@ -238,6 +239,7 @@ function initModals() {
       client: 'Singapore Limousine & Wheelchair Transport Services',
       type: 'Native Android Application (Kotlin)',
       img: 'assets/vimo-app.png',
+      url: 'projects/vimo-services.html',
       summary: 'Premium chauffeur and limousine booking platform for corporate transportation, airport transfers, wedding charters, wheelchair-accessible transport, and special event bookings.',
       features: [
         'End-to-end native Android app built using Kotlin, Jetpack Compose, Hilt, and MVVM architecture.',
@@ -252,6 +254,7 @@ function initModals() {
       client: 'Dubai Technologies, UAE',
       type: 'Flutter Cross-Platform Mobility Platform',
       img: 'assets/ajman-taxi-app.png',
+      url: 'projects/ajman-taxi.html',
       summary: 'Comprehensive taxi-booking platform for on-demand and scheduled rides in Dubai and UAE, catering to corporate and individual customers.',
       features: [
         'Built with Flutter, BLoC, and Riverpod state management for high performance across iOS and Android.',
@@ -266,6 +269,7 @@ function initModals() {
       client: 'Roadaider On-Demand Platform',
       type: 'Native Android (Java)',
       img: 'assets/roadaider-app.png',
+      url: 'projects/roadaider.html',
       summary: 'On-demand roadside assistance mobile app enabling users to request emergency towing, battery jump-starts, fuel delivery, and flat tire service.',
       features: [
         'Native Android developed in Java with robust background service tracking.',
@@ -279,6 +283,7 @@ function initModals() {
       client: 'Enterprise Mobility Client',
       type: 'Flutter Enterprise Offline-First App',
       img: 'assets/fts-fleet-app.png',
+      url: 'projects/fts-fleet.html',
       summary: 'Enterprise fleet transport management solution featuring multi-level vehicle approval matrices, maintenance tracking, and an offline-first driver app.',
       features: [
         'Offline-first driver app utilizing Isar local DB for offline data persistence in poor signal zones.',
@@ -291,6 +296,7 @@ function initModals() {
       client: 'Woye Transport, Ethiopia',
       type: 'Native Android (Java & Jetpack Compose)',
       img: 'assets/ajman-taxi-app.png',
+      url: 'projects/woye-transport.html',
       summary: 'On-demand ride-hailing app with real-time driver tracking and secure payments tailored for transport infrastructure in Ethiopia.',
       features: [
         'Native Java code coupled with Jetpack Compose for modern UI components.',
@@ -303,11 +309,54 @@ function initModals() {
       client: 'Southern Railway, India',
       type: 'Native Android GIS App',
       img: 'assets/fts-fleet-app.png',
+      url: 'projects/railway-digitization.html',
       summary: 'Enterprise mobile app for digitizing railway signal infrastructure, telecom cabling, and station assets using map-based GIS visual asset tracking.',
       features: [
         'GIS map asset visualization of railway signals, relay rooms, and track switches.',
         'Offline survey mode for field engineers with SQLite local sync.',
         'High accuracy GPS location tag for railway asset logging.'
+      ]
+    },
+    marketplace: {
+      title: 'On-Demand Service Marketplace & Partner Suite',
+      client: 'Two-Sided Marketplace Platform',
+      type: 'Dual-App Flutter Suite (Customer + Partner)',
+      img: 'assets/vimo-app.png',
+      url: 'projects/service-marketplace.html',
+      summary: 'Complete two-sided on-demand marketplace ecosystem featuring a Customer Booking App and a dedicated Service Provider/Partner App with live dispatching and Stripe payouts.',
+      features: [
+        'Customer App with real-time slot booking, technician discovery, and Stripe checkout.',
+        'Partner Provider App with audio-visual job alerts, accept/decline toggles, and earnings ledger.',
+        'Firebase Firestore real-time synchronization and Cloud Functions escrow releases.',
+        'In-app encrypted chat and customer phone masking for privacy.'
+      ]
+    },
+    aiassistant: {
+      title: 'AI Conversational Mobile Assistant & Bot',
+      client: 'Applied Generative AI Solution',
+      type: 'Flutter Mobile App with LLM APIs & RAG',
+      img: 'assets/avatar.png',
+      url: 'projects/ai-mobile-assistant.html',
+      summary: 'High-speed conversational mobile AI assistant powered by streaming LLM APIs (Groq & OpenAI), contextual RAG vector search, and automated booking function calls.',
+      features: [
+        'Sub-400ms word-by-word streaming token response using Server-Sent Events (SSE).',
+        'Retrieval-Augmented Generation (RAG) vector guardrails eliminating hallucinations.',
+        'Structured function calling that triggers in-app navigation and automated booking actions.',
+        'Voice speech-to-text integration for hands-free mobile interaction.'
+      ]
+    },
+    erpcrm: {
+      title: 'Enterprise ERP & Custom CRM Operations Suite',
+      client: 'Corporate Enterprise & Logistics',
+      type: 'Full-Stack Web Portal (Next.js/React) + Mobile App',
+      img: 'assets/fts-fleet-app.png',
+      url: 'projects/enterprise-erp-crm.html',
+      summary: 'Comprehensive Enterprise Resource Planning and CRM software suite uniting responsive Next.js/React web admin portals with a synchronized mobile app for staff and management.',
+      features: [
+        'Responsive Web Admin Portal built with Next.js, React, TypeScript, and Chart.js analytics.',
+        'Multi-tenant Role-Based Access Control (RBAC) with granular security permissions and audit trails.',
+        'Synchronized cross-platform mobile companion app for field inspections and mobile approvals.',
+        'Automated milestone invoicing, PDF report generation, and real-time WebSocket alerts.'
       ]
     }
   };
@@ -339,7 +388,8 @@ function initModals() {
             ${data.features.map(f => `<li>${f}</li>`).join('')}
           </ul>
 
-          <div style="display:flex; justify-content:flex-end;">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; padding-top:1rem; border-top:1px solid var(--border-color);">
+            <a href="${data.url}" class="case-study-link" style="padding:0.5rem 1rem;"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open Full Case Study Page</a>
             <button class="btn btn-secondary btn-sm" id="closeDetailBtn">Close</button>
           </div>
         `;
@@ -350,6 +400,32 @@ function initModals() {
         if (closeDetailBtn) {
           closeDetailBtn.addEventListener('click', () => closeModal(projectModal));
         }
+      }
+    });
+  });
+}
+
+/* 7. FAQ Accordion Handler */
+function initFaqAccordion() {
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    const questionBtn = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer');
+    if (!questionBtn || !answer) return;
+
+    questionBtn.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+      
+      // Close all items
+      faqItems.forEach(otherItem => {
+        otherItem.classList.remove('active');
+        const otherAnswer = otherItem.querySelector('.faq-answer');
+        if (otherAnswer) otherAnswer.style.maxHeight = null;
+      });
+
+      if (!isActive) {
+        item.classList.add('active');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
       }
     });
   });
