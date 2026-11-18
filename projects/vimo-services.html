@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vimo Services – Singapore Limousine & Transport App Case Study | Rahamath Alikhan</title>
+  <meta name="description" content="Technical case study on Vimo Services: a native Android luxury chauffeur and wheelchair-accessible transport booking platform built with Kotlin, Jetpack Compose, HERE Maps and Stripe.">
+  <meta name="author" content="Rahamath Alikhan J">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="theme-color" content="#0b1220">
+  <link rel="canonical" href="https://rahamathalikhanj.github.io/projects/vimo-services.html">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:site_name" content="Rahamath Alikhan J | Portfolio">
+  <meta property="og:title" content="Vimo Services – Singapore Limousine & Transport App Case Study">
+  <meta property="og:description" content="Technical case study on Vimo Services: native Android luxury chauffeur and accessible wheelchair booking platform built with Kotlin, Jetpack Compose, HERE Maps and Stripe.">
+  <meta property="og:url" content="https://rahamathalikhanj.github.io/projects/vimo-services.html">
+  <meta property="og:image" content="https://rahamathalikhanj.github.io/assets/vimo-app.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Vimo Services – Singapore Limousine & Transport App Case Study">
+  <meta name="twitter:description" content="Native Android luxury chauffeur and accessible wheelchair booking platform built with Kotlin, Jetpack Compose, HERE Maps and Stripe.">
+  <meta name="twitter:image" content="https://rahamathalikhanj.github.io/assets/vimo-app.png">
+
+  <!-- JSON-LD Structured Data: Breadcrumbs & TechArticle -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://rahamathalikhanj.github.io/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Projects",
+            "item": "https://rahamathalikhanj.github.io/#projects"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Vimo Services Case Study",
+            "item": "https://rahamathalikhanj.github.io/projects/vimo-services.html"
+          }
+        ]
+      },
+      {
+        "@type": "TechArticle",
+        "@id": "https://rahamathalikhanj.github.io/projects/vimo-services.html#article",
+        "headline": "Vimo Services: Premium Chauffeur & Accessible Mobility Platform",
+        "description": "Technical case study detailing architecture, implementation, and results of the native Android Vimo Services application.",
+        "image": "https://rahamathalikhanj.github.io/assets/vimo-app.png",
+        "author": {
+          "@type": "Person",
+          "@id": "https://rahamathalikhanj.github.io/#person",
+          "name": "Rahamath Alikhan J",
+          "jobTitle": "Senior Software Engineer"
+        },
+        "publisher": {
+          "@type": "Person",
+          "@id": "https://rahamathalikhanj.github.io/#person",
+          "name": "Rahamath Alikhan J"
+        },
+        "mainEntityOfPage": "https://rahamathalikhanj.github.io/projects/vimo-services.html"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to main content</a>
+
+  <!-- Sticky Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="../#hero" class="brand-logo">
+        <div class="brand-avatar-icon">
+          <i class="fa-solid fa-code"></i>
+        </div>
+        <div class="brand-title">
+          <span class="brand-name">Rahamath Alikhan</span>
+          <span class="brand-role"><i class="fa-solid fa-code"></i> Senior Software Engineer</span>
+        </div>
+      </a>
+
+      <ul class="nav-links" id="navLinks" aria-label="Main navigation">
+        <li><a href="../#about" class="nav-link">About</a></li>
+        <li><a href="../#services" class="nav-link">Services</a></li>
+        <li><a href="../#skills" class="nav-link">Skills</a></li>
+        <li><a href="../#projects" class="nav-link active">Projects</a></li>
+        <li><a href="../#experience" class="nav-link">Experience</a></li>
+        <li><a href="../#architecture" class="nav-link">Architecture</a></li>
+        <li><a href="../#cloud-ai" class="nav-link">Cloud &amp; AI</a></li>
+        <li><a href="../#education" class="nav-link">Education</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="../#contact" class="btn btn-primary btn-sm">Hire Me</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    <div class="container">
+      
+      <!-- Breadcrumb Navigation -->
+      <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+        <ol class="breadcrumb-list">
+          <li><a href="../"><i class="fa-solid fa-house"></i> Home</a></li>
+          <li class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></li>
+          <li><a href="../#projects">Projects</a></li>
+          <li class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></li>
+          <li class="breadcrumb-current" aria-current="page">Vimo Services</li>
+        </ol>
+      </nav>
+
+      <!-- Case Study Header -->
+      <header class="case-study-header">
+        <span class="case-study-tag"><i class="fa-brands fa-android"></i> Native Android Mobility Platform</span>
+        <h1 class="case-study-title">Vimo Services: Premium Chauffeur &amp; Accessible Mobility Platform</h1>
+        <p class="section-subtitle" style="text-align:left; margin:0;">High-reliability booking and live telemetry system for executive corporate transport and specialized wheelchair-accessible services in Singapore.</p>
+
+        <div class="case-study-meta-bar">
+          <div class="case-study-meta-item">
+            <span class="case-study-meta-label">Client Domain</span>
+            <span class="case-study-meta-value">Singapore Limousine &amp; Medical Transport</span>
+          </div>
+          <div class="case-study-meta-item">
+            <span class="case-study-meta-label">Role</span>
+            <span class="case-study-meta-value">Lead Android Software Engineer</span>
+          </div>
+          <div class="case-study-meta-item">
+            <span class="case-study-meta-label">Platform Stack</span>
+            <span class="case-study-meta-value">Native Android (Kotlin &amp; Jetpack Compose)</span>
+          </div>
+          <div class="case-study-meta-item">
+            <span class="case-study-meta-label">Architecture</span>
+            <span class="case-study-meta-value">Clean Architecture + MVVM + Hilt</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Case Study Layout Grid -->
+      <div class="case-study-layout">
+        
+        <!-- Left Main Content Column -->
+        <div class="case-study-main">
+          
+          <div class="case-study-hero-img-box">
+            <img src="../assets/vimo-app.png" alt="Vimo Services limousine and wheelchair transport booking mobile application user interface screenshot" width="1200" height="630">
+          </div>
+
+          <section class="case-study-section">
+            <h2><i class="fa-solid fa-circle-info" style="color:var(--flutter-cyan);"></i> Project Overview</h2>
+            <p>
+              Vimo Services is an enterprise-grade mobile application designed to meet the strict demands of Singapore's executive transportation and specialized mobility sectors. It supports on-demand luxury chauffeur hailing, pre-scheduled corporate airport transfers, wedding charter arrangements, and certified wheelchair-accessible medical transport.
+            </p>
+            <p>
+              Given Singapore's exacting standards for transit reliability and stringent Electronic Road Pricing (ERP) gantries, the application required millimeter-accurate route plotting, automated geofence surcharge detection, and seamless zero-failure cashless billing.
+            </p>
+          </section>
+
+          <section class="case-study-section">
+            <h2><i class="fa-solid fa-triangle-exclamation" style="color:var(--accent-amber);"></i> Business Problem &amp; Challenges</h2>
+            <ul class="case-study-list">
+              <li><strong>Precision Geofencing &amp; Toll Calculations:</strong> Standard routing engines struggled with Singapore's complex CBD boundaries, airport surcharge zones, and time-based toll structures.</li>
+              <li><strong>Critical Passenger Accessibility Needs:</strong> Wheelchair-accessible bookings required specific vehicle compatibility checks (hydraulic lift vs. ramp) and certified driver skill validation.</li>
+              <li><strong>Strict Transaction Reliability:</strong> Corporate clients demanded frictionless corporate billing, tokenized credit card transactions, and instant automated digital tax invoices.</li>
+              <li><strong>Real-Time Synchronization:</strong> Minimizing latency between customer dispatch requests and driver telematics to eliminate phantom bookings and reduce pickup wait times.</li>
+            </ul>
+          </section>
+
+          <section class="case-study-section">
+            <h2><i class="fa-solid fa-cubes-stacked" style="color:var(--android-green);"></i> Technical Architecture &amp; Engineering Solution</h2>
+            <p>
+              The application was built from the ground up using <strong>3-Tier Clean Architecture</strong> to isolate UI components, business rules, and external data sources:
+            </p>
+            <ul class="case-study-list">
+              <li><strong>Presentation Layer:</strong> 100% declarative UI built with <code>Jetpack Compose</code> and Material 3 design tokens. State is managed reactively via <code>Kotlin StateFlow</code> and <code>SharedFlow</code>, ensuring zero UI flickers during intense coordinate streaming.</li>
+              <li><strong>Domain Layer:</strong> Pure Kotlin business use cases (e.g., <code>GetLiveRouteUseCase</code>, <code>CalculateGeofencedFareUseCase</code>, <code>ValidateAccessibilityRequirementsUseCase</code>) with zero Android platform dependencies for complete unit test coverage.</li>
+              <li><strong>Data Layer:</strong> Repository pattern combining <code>Retrofit</code> for REST API queries, <code>Room DB</code> for local offline caching of past rides and saved addresses, and <code>HERE Maps Mobile SDK</code> for high-precision turn-by-turn routing and polygon geofence checks.</li>
+              <li><strong>Dependency Injection:</strong> Modular <code>Hilt (Dagger)</code> dependency injection scoping singletons to the application lifecycle and view-models to the navigation graph.</li>
+            </ul>
+          </section>
+
+          <section class="case-study-section">
+            <h2><i class="fa-solid fa-user-check" style="color:var(--accent-purple);"></i> Key Contributions by Rahamath Alikhan</h2>
+            <ul class="case-study-list">
+              <li>Architected the complete Native Android code base in Kotlin following Clean Architecture and MVVM design patterns.</li>
+              <li>Implemented the HERE Maps SDK integration, creating custom vector overlays for dynamic geofence boundaries and real-time car heading interpolation.</li>
+              <li>Integrated Stripe Payment SDK supporting 3D Secure 2.0 (3DS2), Google Pay, and encrypted tokenized card management complying with PCI DSS standards.</li>
+              <li>Developed customer retention and satisfaction flows: driver rating, tip calculation, referral promo vouchers, and in-app customer support chat.</li>
+              <li>Configured Firebase Cloud Messaging (FCM) high-priority data payloads with fallback notification channels for background ride state transitions.</li>
+            </ul>
+          </section>
+
+        </div>
+
+        <!-- Right Sidebar Column -->
+        <aside class="case-study-sidebar">
+          
+          <div class="case-study-sidebar-card">
+            <h3><i class="fa-solid fa-microchip" style="color:var(--android-green);"></i> Technology Stack</h3>
+            <div class="case-study-tech-wrap">
+              <span class="tech-pill">Kotlin</span>
+              <span class="tech-pill">Jetpack Compose</span>
+              <span class="tech-pill">Hilt (Dagger)</span>
+              <span class="tech-pill">Coroutines &amp; Flow</span>
+              <span class="tech-pill">Room Database</span>
+              <span class="tech-pill">HERE Maps SDK</span>
+              <span class="tech-pill">Stripe SDK</span>
+              <span class="tech-pill">Google Pay</span>
+              <span class="tech-pill">Firebase FCM</span>
+              <span class="tech-pill">Retrofit &amp; OkHttp</span>
+            </div>
+          </div>
+
+          <div class="case-study-sidebar-card">
+            <h3><i class="fa-solid fa-list-check" style="color:var(--flutter-cyan);"></i> Architectural Highlights</h3>
+            <ul style="padding-left:1.2rem; color:var(--text-muted); font-size:0.9rem; line-height:1.7;">
+              <li>3-Tier Clean Architecture</li>
+              <li>Unidirectional Data Flow (UDF)</li>
+              <li>Offline-first data persistence</li>
+              <li>Sub-second socket telemetry</li>
+              <li>Zero memory leak navigation</li>
+            </ul>
+          </div>
+
+          <div class="case-study-sidebar-card">
+            <h3><i class="fa-solid fa-briefcase" style="color:var(--accent-amber);"></i> Looking for Similar Expertise?</h3>
+            <p style="color:var(--text-muted); font-size:0.88rem; line-height:1.6; margin-bottom:1.25rem;">
+              Whether building enterprise mobility, real-time map tracking, or resilient cloud-connected apps, let's discuss your engineering goals.
+            </p>
+            <a href="../#contact" class="btn btn-primary btn-sm" style="width:100%;">Get in Touch</a>
+          </div>
+
+        </aside>
+
+      </div>
+
+      <!-- Bottom Project Navigation -->
+      <nav class="project-nav-bar" aria-label="Project navigation">
+        <a href="../#projects" class="btn btn-secondary btn-sm">
+          <i class="fa-solid fa-arrow-left"></i> Back to All Projects
+        </a>
+        <a href="ajman-taxi.html" class="btn btn-outline-flutter btn-sm">
+          Next Case Study: Ajman Taxi &amp; Sixth Limo <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </nav>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2026 Rahamath Alikhan J. All rights reserved. Senior Software Engineer Portfolio.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
+

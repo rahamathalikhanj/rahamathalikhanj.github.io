@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Woye Transport – Ethiopia Ride-Hailing Mobile App Case Study | Rahamath Alikhan</title>
+  <meta name="description" content="Technical case study on Woye Transport: a resilient native Android ride-hailing mobile application tailored for Ethiopia built with Java, Kotlin, Jetpack Compose, and WebSockets.">
+  <meta name="author" content="Rahamath Alikhan J">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="theme-color" content="#0b1220">
+  <link rel="canonical" href="https://rahamathalikhanj.github.io/projects/woye-transport.html">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:site_name" content="Rahamath Alikhan J | Portfolio">
+  <meta property="og:title" content="Woye Transport – Ethiopia Ride-Hailing Mobile App Case Study">
+  <meta property="og:description" content="Resilient urban ride-hailing Android application designed for emerging market mobile ecosystems with low-bandwidth optimization and real-time tracking.">
+  <meta property="og:url" content="https://rahamathalikhanj.github.io/projects/woye-transport.html">
+  <meta property="og:image" content="https://rahamathalikhanj.github.io/assets/ajman-taxi-app.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Woye Transport – Ethiopia Ride-Hailing Mobile App Case Study">
+  <meta name="twitter:description" content="Resilient urban ride-hailing Android application tailored for emerging market mobile ecosystems.">
+  <meta name="twitter:image" content="https://rahamathalikhanj.github.io/assets/ajman-taxi-app.png">
+
+  <!-- JSON-LD Structured Data: Breadcrumbs & TechArticle -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://rahamathalikhanj.github.io/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Projects",
+            "item": "https://rahamathalikhanj.github.io/#projects"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Woye Transport Case Study",
+            "item": "https://rahamathalikhanj.github.io/projects/woye-transport.html"
+          }
+        ]
+      },
+      {
+        "@type": "TechArticle",
+        "@id": "https://rahamathalikhanj.github.io/projects/woye-transport.html#article",
+        "headline": "Woye Transport: Resilient Urban Ride-Hailing for Emerging Markets",
+        "description": "Technical case study detailing architecture, implementation, and low-bandwidth optimization of the native Android Woye Transport application.",
+        "image": "https://rahamathalikhanj.github.io/assets/ajman-taxi-app.png",
+        "author": {
+          "@type": "Person",
+          "@id": "https://rahamathalikhanj.github.io/#person",
+          "name": "Rahamath Alikhan J",
+          "jobTitle": "Senior Software Engineer"
+        },
+        "publisher": {
+          "@type": "Person",
+          "@id": "https://rahamathalikhanj.github.io/#person",
+          "name": "Rahamath Alikhan J"
+        },
+        "mainEntityOfPage": "https://rahamathalikhanj.github.io/projects/woye-transport.html"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to main content</a>
+
+  <!-- Sticky Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="../#hero" class="brand-logo">
+        <div class="brand-avatar-icon">
+          <i class="fa-solid fa-code"></i>
+        </div>
+        <div class="brand-title">
+          <span class="brand-name">Rahamath Alikhan</span>
+          <span class="brand-role"><i class="fa-solid fa-code"></i> Senior Software Engineer</span>
+        </div>
+      </a>
+
+      <ul class="nav-links" id="navLinks" aria-label="Main navigation">
+        <li><a href="../#about" class="nav-link">About</a></li>
+        <li><a href="../#services" class="nav-link">Services</a></li>
+        <li><a href="../#skills" class="nav-link">Skills</a></li>
+        <li><a href="../#projects" class="nav-link active">Projects</a></li>
+        <li><a href="../#experience" class="nav-link">Experience</a></li>
+        <li><a href="../#architecture" class="nav-link">Architecture</a></li>
+        <li><a href="../#cloud-ai" class="nav-link">Cloud &amp; AI</a></li>
+        <li><a href="../#education" class="nav-link">Education</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="../#contact" class="btn btn-primary btn-sm">Hire Me</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    <div class="container">
+      
+      <!-- Breadcrumb Navigation -->
+      <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+        <ol class="breadcrumb-list">
+          <li><a href="../"><i class="fa-solid fa-house"></i> Home</a></li>
+          <li class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></li>
+          <li><a href="../#projects">Projects</a></li>
+          <li class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></li>
+          <li class="breadcrumb-current" aria-current="page">Woye Transport</li>
+        </ol>
+      </nav>
+
+      <!-- Case Study Header -->
+      <header class="case-study-header">
+        <span class="case-study-tag"><i class="fa-brands fa-android"></i> Native Android Ride-Hailing</span>
+        <h1 class="case-study-title">Woye Transport: Resilient Urban Ride-Hailing for Emerging Markets</h1>
+        <p class="section-subtitle" style="text-align:left; margin:0;">On-demand ride-hailing mobile application tailored for Ethiopia, featuring real-time driver tracking, fare calculation, and secure payments.</p>
+
+        <div class="case-study-meta-bar">
+          <div class="case-study-meta-item">
+            <span class="case-study-meta-label">Client</span>
+            <span class="case-study-meta-value">Woye Transport, Ethiopia</span>
+          </div>
+          <div class="case-study-meta-item">
+            <span class="case-study-meta-label">Role</span>
+            <span class="case-study-meta-value">Senior Android Software Engineer</span>
+          </div>
+          <div class="case-study-meta-item">
+            <span class="case-study-meta-label">Platform Stack</span>
+            <span class="case-study-meta-value">Native Java &amp; Jetpack Compose</span>
+          </div>
+          <div class="case-study-meta-item">
+            <span class="case-study-meta-label">Architecture</span>
+            <span class="case-study-meta-value">MVVM + Hilt DI + WebSockets</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Case Study Layout Grid -->
+      <div class="case-study-layout">
+        
+        <!-- Left Main Content Column -->
+        <div class="case-study-main">
+          
+          <div class="case-study-hero-img-box">
+            <img src="../assets/ajman-taxi-app.png" alt="Woye Transport ride hailing application interface showing map tracking, fare options, and driver connection" width="1200" height="630">
+          </div>
+
+          <section class="case-study-section">
+            <h2><i class="fa-solid fa-circle-info" style="color:var(--flutter-cyan);"></i> Project Overview</h2>
+            <p>
+              Woye Transport is an on-demand urban mobility application engineered to serve the rapid transit needs of passengers in Ethiopia. The platform allows riders to request nearby vehicles, receive transparent fare estimates before booking, and monitor their driver's live GPS route en route to pickup.
+            </p>
+            <p>
+              Deploying a high-frequency transit application in emerging African mobile markets requires special consideration for wide-ranging device hardware, high latency on cellular networks, and variable network bandwidth.
+            </p>
+          </section>
+
+          <section class="case-study-section">
+            <h2><i class="fa-solid fa-triangle-exclamation" style="color:var(--accent-amber);"></i> Business Problem &amp; Challenges</h2>
+            <ul class="case-study-list">
+              <li><strong>Bandwidth Constraints &amp; Cellular Fluctuation:</strong> Cellular data networks in urban corridors frequently oscillate between 3G and 4G, demanding compressed data payloads and aggressive request batching.</li>
+              <li><strong>Diverse Android Hardware:</strong> The user demographic spanned diverse Android versions and memory configurations, necessitating a slim APK size and low memory consumption.</li>
+              <li><strong>Real-Time Map Smoothness:</strong> Animating driver positions smoothly despite intermittent GPS telemetry packets without consuming excessive GPU cycles.</li>
+              <li><strong>Localized Payment &amp; Cash Reconciliation:</strong> Seamlessly accommodating cash payment confirmation flows alongside digital payment methods.</li>
+            </ul>
+          </section>
+
+          <section class="case-study-section">
+            <h2><i class="fa-solid fa-cubes-stacked" style="color:var(--android-green);"></i> Technical Architecture &amp; Engineering Solution</h2>
+            <p>
+              The application combined battle-tested core networking with modern Android UI tooling:
+            </p>
+            <ul class="case-study-list">
+              <li><strong>Hybrid Java &amp; Compose Implementation:</strong> Maintained stable, low-overhead Java network and business modules while modernizing the user-facing booking screens using <code>Jetpack Compose</code> for fluid, reactive UI state transitions.</li>
+              <li><strong>Modular Dependency Injection:</strong> Integrated <code>Hilt (Dagger)</code> to manage dependencies cleanly and enable targeted mocking during unit tests.</li>
+              <li><strong>Optimized Socket Streaming:</strong> Built a resilient <code>WebSocket</code> driver tracking client that throttles GPS coordinate ingestion and uses quadratic bezier curve interpolation for silky-smooth vehicle movement.</li>
+              <li><strong>Firebase Real-Time Messaging:</strong> Coupled FCM background triggers with local SQLite caching to preserve trip receipts and booking state across unexpected app terminations.</li>
+            </ul>
+          </section>
+
+          <section class="case-study-section">
+            <h2><i class="fa-solid fa-user-check" style="color:var(--accent-purple);"></i> Key Contributions by Rahamath Alikhan</h2>
+            <ul class="case-study-list">
+              <li>Modernized key booking and checkout screens to declarative Jetpack Compose UI while preserving foundational business logic.</li>
+              <li>Engineered the resilient WebSocket driver position consumer with packet deduplication and coordinate interpolation.</li>
+              <li>Implemented Hilt Dependency Injection across the application to increase testability and decouple network services.</li>
+              <li>Optimized APK size by 28% using ProGuard/R8 shrinking and WebP image assets, improving install conversion on bandwidth-limited networks.</li>
+            </ul>
+          </section>
+
+        </div>
+
+        <!-- Right Sidebar Column -->
+        <aside class="case-study-sidebar">
+          
+          <div class="case-study-sidebar-card">
+            <h3><i class="fa-solid fa-microchip" style="color:var(--android-green);"></i> Technology Stack</h3>
+            <div class="case-study-tech-wrap">
+              <span class="tech-pill">Java &amp; Kotlin</span>
+              <span class="tech-pill">Jetpack Compose</span>
+              <span class="tech-pill">Hilt (Dagger)</span>
+              <span class="tech-pill">MVVM Architecture</span>
+              <span class="tech-pill">WebSockets</span>
+              <span class="tech-pill">Firebase FCM</span>
+              <span class="tech-pill">Google Maps SDK</span>
+              <span class="tech-pill">Retrofit &amp; OkHttp</span>
+            </div>
+          </div>
+
+          <div class="case-study-sidebar-card">
+            <h3><i class="fa-solid fa-list-check" style="color:var(--flutter-cyan);"></i> Architectural Highlights</h3>
+            <ul style="padding-left:1.2rem; color:var(--text-muted); font-size:0.9rem; line-height:1.7;">
+              <li>Low-bandwidth payload compression</li>
+              <li>Smooth GPS trajectory interpolation</li>
+              <li>Lightweight APK footprint</li>
+              <li>Modular Hilt dependency tree</li>
+            </ul>
+          </div>
+
+          <div class="case-study-sidebar-card">
+            <h3><i class="fa-solid fa-briefcase" style="color:var(--accent-amber);"></i> Looking for Similar Expertise?</h3>
+            <p style="color:var(--text-muted); font-size:0.88rem; line-height:1.6; margin-bottom:1.25rem;">
+              Need an engineer with deep expertise in bandwidth-optimized mobile platforms and modern Android architecture?
+            </p>
+            <a href="../#contact" class="btn btn-primary btn-sm" style="width:100%;">Get in Touch</a>
+          </div>
+
+        </aside>
+
+      </div>
+
+      <!-- Bottom Project Navigation -->
+      <nav class="project-nav-bar" aria-label="Project navigation">
+        <a href="fts-fleet-transport.html" class="btn btn-secondary btn-sm">
+          <i class="fa-solid fa-arrow-left"></i> Previous: FTS Pro Fleet Transport
+        </a>
+        <a href="railway-telecom-digitization.html" class="btn btn-outline-flutter btn-sm">
+          Next Case Study: Railway GIS Digitization <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </nav>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2026 Rahamath Alikhan J. All rights reserved. Senior Software Engineer Portfolio.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
+

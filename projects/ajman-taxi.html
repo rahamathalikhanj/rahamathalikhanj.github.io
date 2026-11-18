@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajman Taxi, Sixth Limo & Fytch – UAE Smart Mobility Case Study | Rahamath Alikhan</title>
+  <meta name="description" content="Technical case study on Ajman Taxi, Sixth Limo and Fytch mobility applications engineered for Dubai Technologies using Flutter, Riverpod, BLoC, Google Maps, WebSockets, and CI/CD.">
+  <meta name="author" content="Rahamath Alikhan J">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="theme-color" content="#0b1220">
+  <link rel="canonical" href="https://rahamathalikhanj.github.io/projects/ajman-taxi.html">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:site_name" content="Rahamath Alikhan J | Portfolio">
+  <meta property="og:title" content="Ajman Taxi, Sixth Limo & Fytch – UAE Smart Mobility Case Study">
+  <meta property="og:description" content="Cross-platform Flutter mobility platform delivering on-demand taxi dispatching, scheduled limo charters, and live vehicle telemetry across Dubai and the UAE.">
+  <meta property="og:url" content="https://rahamathalikhanj.github.io/projects/ajman-taxi.html">
+  <meta property="og:image" content="https://rahamathalikhanj.github.io/assets/ajman-taxi-app.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ajman Taxi, Sixth Limo & Fytch – UAE Smart Mobility Case Study">
+  <meta name="twitter:description" content="Cross-platform Flutter mobility platform delivering taxi booking, limo charters, and live telemetry across Dubai and the UAE.">
+  <meta name="twitter:image" content="https://rahamathalikhanj.github.io/assets/ajman-taxi-app.png">
+
+  <!-- JSON-LD Structured Data: Breadcrumbs & TechArticle -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://rahamathalikhanj.github.io/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Projects",
+            "item": "https://rahamathalikhanj.github.io/#projects"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Ajman Taxi Case Study",
+            "item": "https://rahamathalikhanj.github.io/projects/ajman-taxi.html"
+          }
+        ]
+      },
+      {
+        "@type": "TechArticle",
+        "@id": "https://rahamathalikhanj.github.io/projects/ajman-taxi.html#article",
+        "headline": "Ajman Taxi, Sixth Limo & Fytch: UAE Smart Mobility Ecosystem",
+        "description": "Technical case study detailing architecture, implementation, and results of the cross-platform Flutter mobility platform for Dubai Technologies.",
+        "image": "https://rahamathalikhanj.github.io/assets/ajman-taxi-app.png",
+        "author": {
+          "@type": "Person",
+          "@id": "https://rahamathalikhanj.github.io/#person",
+          "name": "Rahamath Alikhan J",
+          "jobTitle": "Senior Software Engineer"
+        },
+        "publisher": {
+          "@type": "Person",
+          "@id": "https://rahamathalikhanj.github.io/#person",
+          "name": "Rahamath Alikhan J"
+        },
+        "mainEntityOfPage": "https://rahamathalikhanj.github.io/projects/ajman-taxi.html"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to main content</a>
+
+  <!-- Sticky Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="../#hero" class="brand-logo">
+        <div class="brand-avatar-icon">
+          <i class="fa-solid fa-code"></i>
+        </div>
+        <div class="brand-title">
+          <span class="brand-name">Rahamath Alikhan</span>
+          <span class="brand-role"><i class="fa-solid fa-code"></i> Senior Software Engineer</span>
+        </div>
+      </a>
+
+      <ul class="nav-links" id="navLinks" aria-label="Main navigation">
+        <li><a href="../#about" class="nav-link">About</a></li>
+        <li><a href="../#services" class="nav-link">Services</a></li>
+        <li><a href="../#skills" class="nav-link">Skills</a></li>
+        <li><a href="../#projects" class="nav-link active">Projects</a></li>
+        <li><a href="../#experience" class="nav-link">Experience</a></li>
+        <li><a href="../#architecture" class="nav-link">Architecture</a></li>
+        <li><a href="../#cloud-ai" class="nav-link">Cloud &amp; AI</a></li>
+        <li><a href="../#education" class="nav-link">Education</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="../#contact" class="btn btn-primary btn-sm">Hire Me</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    <div class="container">
+      
+      <!-- Breadcrumb Navigation -->
+      <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+        <ol class="breadcrumb-list">
+          <li><a href="../"><i class="fa-solid fa-house"></i> Home</a></li>
+          <li class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></li>
+          <li><a href="../#projects">Projects</a></li>
+          <li class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></li>
+          <li class="breadcrumb-current" aria-current="page">Ajman Taxi &amp; Sixth Limo</li>
+        </ol>
+      </nav>
+
+      <!-- Case Study Header -->
+      <header class="case-study-header">
+        <span class="case-study-tag" style="color:var(--flutter-cyan);"><i class="fa-solid fa-feather-pointed"></i> Flutter Cross-Platform Mobility Platform</span>
+        <h1 class="case-study-title">Ajman Taxi, Sixth Limo &amp; Fytch: UAE Smart Mobility Ecosystem</h1>
+        <p class="section-subtitle" style="text-align:left; margin:0;">Enterprise-scale taxi dispatching, scheduled luxury charters, and live GPS telemetry across the United Arab Emirates.</p>
+
+        <div class="case-study-meta-bar">
+          <div class="case-study-meta-item">
+            <span class="case-study-meta-label">Client</span>
+            <span class="case-study-meta-value">Dubai Technologies, UAE</span>
+          </div>
+          <div class="case-study-meta-item">
+            <span class="case-study-meta-label">Role</span>
+            <span class="case-study-meta-value">Senior Software Engineer (Lead Client Role)</span>
+          </div>
+          <div class="case-study-meta-item">
+            <span class="case-study-meta-label">Platform Stack</span>
+            <span class="case-study-meta-value">Flutter, Dart (iOS &amp; Android)</span>
+          </div>
+          <div class="case-study-meta-item">
+            <span class="case-study-meta-label">State Management</span>
+            <span class="case-study-meta-value">Riverpod &amp; BLoC Architecture</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Case Study Layout Grid -->
+      <div class="case-study-layout">
+        
+        <!-- Left Main Content Column -->
+        <div class="case-study-main">
+          
+          <div class="case-study-hero-img-box">
+            <img src="../assets/ajman-taxi-app.png" alt="Ajman Taxi and Sixth Limo mobile application interface showing real-time taxi booking and live map tracking" width="1200" height="630">
+          </div>
+
+          <section class="case-study-section">
+            <h2><i class="fa-solid fa-circle-info" style="color:var(--flutter-cyan);"></i> Project Overview</h2>
+            <p>
+              Engaged by Dubai Technologies in the UAE, this initiative encompassed the design, development, and scaling of three flagship mobility applications: <strong>Ajman Taxi</strong> (government-regulated public taxi hailing), <strong>Sixth Limo</strong> (luxury premium chauffeur booking), and <strong>Fytch</strong> (corporate fleet mobility).
+            </p>
+            <p>
+              Serving a high volume of active riders across Dubai, Sharjah, and Ajman, the system required a shared cross-platform core capable of running with native performance on both Android and iOS devices, handling continuous bi-directional socket telemetry and multi-currency billing.
+            </p>
+          </section>
+
+          <section class="case-study-section">
+            <h2><i class="fa-solid fa-triangle-exclamation" style="color:var(--accent-amber);"></i> Business Problem &amp; Challenges</h2>
+            <ul class="case-study-list">
+              <li><strong>High-Frequency Driver Telemetry:</strong> Managing thousands of simultaneous vehicle GPS updates without UI rendering jank or excessive battery consumption on user devices.</li>
+              <li><strong>Complex Booking Modes:</strong> Seamlessly supporting instant street dispatch, scheduled future rides, multi-destination corporate itineraries, and automated recurring bookings.</li>
+              <li><strong>Multi-Channel Payment Compliance:</strong> Integrating UAE-specific and global payment gateways including Stripe, PayPal, and Google Pay with automated VAT-compliant invoicing.</li>
+              <li><strong>Reliable Cross-Platform Release Cadence:</strong> Delivering bi-weekly production releases across both Google Play and Apple App Store with zero regressions.</li>
+            </ul>
+          </section>
+
+          <section class="case-study-section">
+            <h2><i class="fa-solid fa-cubes-stacked" style="color:var(--android-green);"></i> Technical Architecture &amp; Engineering Solution</h2>
+            <p>
+              To satisfy both extreme responsiveness and unified code maintainability, the application utilized a feature-first modular Flutter architecture:
+            </p>
+            <ul class="case-study-list">
+              <li><strong>State Management Combination:</strong> Leveraged <code>BLoC</code> for transactional, predictable ride state machines (Initial &rarr; Searching &rarr; Dispatched &rarr; In-Trip &rarr; Completed) and <code>Riverpod</code> for scoped dependency management and real-time streaming state.</li>
+              <li><strong>Map Engine &amp; Marker Smoothing:</strong> Built custom smooth marker animation pipelines on top of <code>Google Maps SDK</code> and <code>HERE Maps API</code>, interpolating lat/lng coordinates and bearing angles to ensure vehicle icons glide smoothly along roadways.</li>
+              <li><strong>Real-Time Communications:</strong> High-throughput <code>WebSockets</code> connection layer with automated exponential backoff reconnection, decoupled behind a reactive stream repository.</li>
+              <li><strong>CI/CD Automation:</strong> Configured automated <code>GitLab CI/CD</code> pipelines for static analysis, unit testing, automated Android keystore signing, and staging deployment.</li>
+            </ul>
+          </section>
+
+          <section class="case-study-section">
+            <h2><i class="fa-solid fa-user-check" style="color:var(--accent-purple);"></i> Key Contributions by Rahamath Alikhan</h2>
+            <ul class="case-study-list">
+              <li>Served as Lead Client Software Engineer guiding mobile architectural decisions and technical team synchronization.</li>
+              <li>Designed the core real-time trip tracking engine, cutting coordinate rendering overhead by 40% through throttled stream batching.</li>
+              <li>Integrated Stripe, PayPal, and Google Pay APIs with tokenized card storage and local payment method support.</li>
+              <li>Standardized modular widget libraries and Clean Architecture principles across the development squad.</li>
+              <li>Utilized AI-assisted engineering tools for automated regression analysis, API mock testing, and refactoring legacy modules.</li>
+            </ul>
+          </section>
+
+        </div>
+
+        <!-- Right Sidebar Column -->
+        <aside class="case-study-sidebar">
+          
+          <div class="case-study-sidebar-card">
+            <h3><i class="fa-solid fa-microchip" style="color:var(--android-green);"></i> Technology Stack</h3>
+            <div class="case-study-tech-wrap">
+              <span class="tech-pill">Flutter</span>
+              <span class="tech-pill">Dart</span>
+              <span class="tech-pill">BLoC State</span>
+              <span class="tech-pill">Riverpod</span>
+              <span class="tech-pill">Google Maps SDK</span>
+              <span class="tech-pill">HERE Maps API</span>
+              <span class="tech-pill">WebSockets</span>
+              <span class="tech-pill">Stripe SDK</span>
+              <span class="tech-pill">PayPal SDK</span>
+              <span class="tech-pill">GitLab CI/CD</span>
+            </div>
+          </div>
+
+          <div class="case-study-sidebar-card">
+            <h3><i class="fa-solid fa-list-check" style="color:var(--flutter-cyan);"></i> Architectural Highlights</h3>
+            <ul style="padding-left:1.2rem; color:var(--text-muted); font-size:0.9rem; line-height:1.7;">
+              <li>Cross-platform single codebase</li>
+              <li>BLoC + Riverpod reactive flow</li>
+              <li>Real-time WebSocket telemetry</li>
+              <li>Marker interpolation algorithms</li>
+              <li>Automated GitLab CI release pipeline</li>
+            </ul>
+          </div>
+
+          <div class="case-study-sidebar-card">
+            <h3><i class="fa-solid fa-briefcase" style="color:var(--accent-amber);"></i> Looking for Similar Expertise?</h3>
+            <p style="color:var(--text-muted); font-size:0.88rem; line-height:1.6; margin-bottom:1.25rem;">
+              Need a Senior Engineer to architect large-scale Flutter apps, real-time dispatch systems, or CI/CD pipelines?
+            </p>
+            <a href="../#contact" class="btn btn-primary btn-sm" style="width:100%;">Get in Touch</a>
+          </div>
+
+        </aside>
+
+      </div>
+
+      <!-- Bottom Project Navigation -->
+      <nav class="project-nav-bar" aria-label="Project navigation">
+        <a href="vimo-services.html" class="btn btn-secondary btn-sm">
+          <i class="fa-solid fa-arrow-left"></i> Previous: Vimo Services
+        </a>
+        <a href="roadaider.html" class="btn btn-outline-flutter btn-sm">
+          Next Case Study: Roadaider <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </nav>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2026 Rahamath Alikhan J. All rights reserved. Senior Software Engineer Portfolio.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
+

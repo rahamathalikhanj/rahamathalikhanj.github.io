@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rahamathalikhanj.github.io/sitemap.xml

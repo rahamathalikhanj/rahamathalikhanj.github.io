@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Railway Signal & Telecom Asset Digitization – GIS Mobile Case Study | Rahamath Alikhan</title>
+  <meta name="description" content="Technical case study on GIS asset mapping and telecom equipment digitization for Southern Railway, India using native Android, SQLite, and Google Maps SDK.">
+  <meta name="author" content="Rahamath Alikhan J">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="theme-color" content="#0b1220">
+  <link rel="canonical" href="https://rahamathalikhanj.github.io/projects/railway-telecom-digitization.html">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:site_name" content="Rahamath Alikhan J | Portfolio">
+  <meta property="og:title" content="Railway Signal & Telecom Asset Digitization – GIS Mobile Case Study">
+  <meta property="og:description" content="Mission-critical enterprise GIS mobile application for digitizing railway signal infrastructure, telecom cabling, and station equipment across Southern Railway, India.">
+  <meta property="og:url" content="https://rahamathalikhanj.github.io/projects/railway-telecom-digitization.html">
+  <meta property="og:image" content="https://rahamathalikhanj.github.io/assets/fts-fleet-app.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Railway Signal & Telecom Asset Digitization – GIS Mobile Case Study">
+  <meta name="twitter:description" content="Mission-critical enterprise GIS mobile application for digitizing railway signal infrastructure and telecom assets across Southern Railway, India.">
+  <meta name="twitter:image" content="https://rahamathalikhanj.github.io/assets/fts-fleet-app.png">
+
+  <!-- JSON-LD Structured Data: Breadcrumbs & TechArticle -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://rahamathalikhanj.github.io/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Projects",
+            "item": "https://rahamathalikhanj.github.io/#projects"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Southern Railway Digitization Case Study",
+            "item": "https://rahamathalikhanj.github.io/projects/railway-telecom-digitization.html"
+          }
+        ]
+      },
+      {
+        "@type": "TechArticle",
+        "@id": "https://rahamathalikhanj.github.io/projects/railway-telecom-digitization.html#article",
+        "headline": "Southern Railway: Signal & Telecom GIS Infrastructure Digitization",
+        "description": "Technical case study detailing architecture, GIS spatial mapping, and offline SQLite synchronization of the Southern Railway asset digitization mobile app.",
+        "image": "https://rahamathalikhanj.github.io/assets/fts-fleet-app.png",
+        "author": {
+          "@type": "Person",
+          "@id": "https://rahamathalikhanj.github.io/#person",
+          "name": "Rahamath Alikhan J",
+          "jobTitle": "Senior Software Engineer"
+        },
+        "publisher": {
+          "@type": "Person",
+          "@id": "https://rahamathalikhanj.github.io/#person",
+          "name": "Rahamath Alikhan J"
+        },
+        "mainEntityOfPage": "https://rahamathalikhanj.github.io/projects/railway-telecom-digitization.html"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to main content</a>
+
+  <!-- Sticky Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="../#hero" class="brand-logo">
+        <div class="brand-avatar-icon">
+          <i class="fa-solid fa-code"></i>
+        </div>
+        <div class="brand-title">
+          <span class="brand-name">Rahamath Alikhan</span>
+          <span class="brand-role"><i class="fa-solid fa-code"></i> Senior Software Engineer</span>
+        </div>
+      </a>
+
+      <ul class="nav-links" id="navLinks" aria-label="Main navigation">
+        <li><a href="../#about" class="nav-link">About</a></li>
+        <li><a href="../#services" class="nav-link">Services</a></li>
+        <li><a href="../#skills" class="nav-link">Skills</a></li>
+        <li><a href="../#projects" class="nav-link active">Projects</a></li>
+        <li><a href="../#experience" class="nav-link">Experience</a></li>
+        <li><a href="../#architecture" class="nav-link">Architecture</a></li>
+        <li><a href="../#cloud-ai" class="nav-link">Cloud &amp; AI</a></li>
+        <li><a href="../#education" class="nav-link">Education</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="../#contact" class="btn btn-primary btn-sm">Hire Me</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    <div class="container">
+      
+      <!-- Breadcrumb Navigation -->
+      <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+        <ol class="breadcrumb-list">
+          <li><a href="../"><i class="fa-solid fa-house"></i> Home</a></li>
+          <li class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></li>
+          <li><a href="../#projects">Projects</a></li>
+          <li class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></li>
+          <li class="breadcrumb-current" aria-current="page">Southern Railway Digitization</li>
+        </ol>
+      </nav>
+
+      <!-- Case Study Header -->
+      <header class="case-study-header">
+        <span class="case-study-tag"><i class="fa-solid fa-map-location-dot"></i> Native Android GIS Engineering</span>
+        <h1 class="case-study-title">Southern Railway: Signal &amp; Telecom GIS Infrastructure Digitization</h1>
+        <p class="section-subtitle" style="text-align:left; margin:0;">Specialized mobile solution for digitizing railway signal infrastructure and telecom equipment using GIS location technology and interactive visual asset mapping.</p>
+
+        <div class="case-study-meta-bar">
+          <div class="case-study-meta-item">
+            <span class="case-study-meta-label">Client</span>
+            <span class="case-study-meta-value">Southern Railway, India</span>
+          </div>
+          <div class="case-study-meta-item">
+            <span class="case-study-meta-label">Role</span>
+            <span class="case-study-meta-value">Software Engineer</span>
+          </div>
+          <div class="case-study-meta-item">
+            <span class="case-study-meta-label">Platform Stack</span>
+            <span class="case-study-meta-value">Android Java &amp; GIS Mapping</span>
+          </div>
+          <div class="case-study-meta-item">
+            <span class="case-study-meta-label">Local Data Storage</span>
+            <span class="case-study-meta-value">SQLite Database Offline Sync</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Case Study Layout Grid -->
+      <div class="case-study-layout">
+        
+        <!-- Left Main Content Column -->
+        <div class="case-study-main">
+          
+          <div class="case-study-hero-img-box">
+            <img src="../assets/fts-fleet-app.png" alt="Southern Railway GIS asset mapping and telecom equipment digitization mobile application user interface" width="1200" height="630">
+          </div>
+
+          <section class="case-study-section">
+            <h2><i class="fa-solid fa-circle-info" style="color:var(--flutter-cyan);"></i> Project Overview</h2>
+            <p>
+              Southern Railway operates thousands of route kilometers of railway lines traversing diverse terrains in South India. Historically, critical signal posts, relay interlocking equipment, track circuits, communication repeaters, and optical fiber cabling were tracked via legacy paper registers and fragmented local station blueprints.
+            </p>
+            <p>
+              This enterprise digitization project developed a rugged field mobile application that empowered track engineers to conduct on-site physical audits, capturing sub-meter GPS positions, high-resolution equipment photographs, and maintenance histories into a unified GIS repository.
+            </p>
+          </section>
+
+          <section class="case-study-section">
+            <h2><i class="fa-solid fa-triangle-exclamation" style="color:var(--accent-amber);"></i> Business Problem &amp; Challenges</h2>
+            <ul class="case-study-list">
+              <li><strong>Remote Trackside Isolation:</strong> Long rail corridors pass through dense forests, deep mountain cuttings, and remote rural districts with zero cellular network access.</li>
+              <li><strong>High Spatial Precision Demands:</strong> In railway signaling, a few meters can mean the difference between two separate tracks or switches. Accurate GPS coordinate filtering was mandatory.</li>
+              <li><strong>Complex Asset Hierarchy:</strong> Equipment items are hierarchically related (Division &rarr; Section &rarr; Station &rarr; Cabin &rarr; Relay Rack &rarr; Component), requiring strict relational integrity on mobile devices.</li>
+              <li><strong>Physical Inspection Verification:</strong> Eliminating unverified surveys by enforcing geo-fenced audit proximity checks and timestamped photo proof.</li>
+            </ul>
+          </section>
+
+          <section class="case-study-section">
+            <h2><i class="fa-solid fa-cubes-stacked" style="color:var(--android-green);"></i> Technical Architecture &amp; Engineering Solution</h2>
+            <p>
+              The application was engineered in native Android Java, prioritizing local-first SQLite relational persistence and custom spatial rendering:
+            </p>
+            <ul class="case-study-list">
+              <li><strong>Offline Relational SQLite Engine:</strong> Designed a normalized SQLite database on the mobile client containing station topologies and asset type schemas. Field teams could conduct complete station surveys completely disconnected from the Internet.</li>
+              <li><strong>GIS Visual Mapping Interface:</strong> Extended <code>Google Maps SDK</code> with custom tile overlays and vector polyline layers representing rail track alignments, color-coding signal status, and plotting clickable equipment nodes.</li>
+              <li><strong>GPS Multipath &amp; Accuracy Filtering:</strong> Built an algorithmic coordinate filter that rejected satellite multi-path noise and averaged multiple high-accuracy GPS fixes before approving an asset record save.</li>
+              <li><strong>Batch Synchronization:</strong> Automated two-way sync daemon that detects Wi-Fi or cellular connectivity at divisional headquarters and batch-uploads compressed media and audit logs.</li>
+            </ul>
+          </section>
+
+          <section class="case-study-section">
+            <h2><i class="fa-solid fa-user-check" style="color:var(--accent-purple);"></i> Key Contributions by Rahamath Alikhan</h2>
+            <ul class="case-study-list">
+              <li>Developed the native Android application interface and custom GIS map marker rendering engine.</li>
+              <li>Designed the local relational SQLite database schema, maintaining referential integrity across deeply nested railway asset classes.</li>
+              <li>Implemented the offline-first field survey engine with automatic retry queues and bulk synchronization.</li>
+              <li>Created camera capture modules with automatic GPS metadata and timestamp watermarking for regulatory compliance.</li>
+            </ul>
+          </section>
+
+        </div>
+
+        <!-- Right Sidebar Column -->
+        <aside class="case-study-sidebar">
+          
+          <div class="case-study-sidebar-card">
+            <h3><i class="fa-solid fa-microchip" style="color:var(--android-green);"></i> Technology Stack</h3>
+            <div class="case-study-tech-wrap">
+              <span class="tech-pill">Android Java</span>
+              <span class="tech-pill">Google Maps SDK</span>
+              <span class="tech-pill">GIS Spatial Mapping</span>
+              <span class="tech-pill">SQLite Database</span>
+              <span class="tech-pill">FusedLocationProvider</span>
+              <span class="tech-pill">Offline Sync</span>
+              <span class="tech-pill">REST APIs</span>
+            </div>
+          </div>
+
+          <div class="case-study-sidebar-card">
+            <h3><i class="fa-solid fa-list-check" style="color:var(--flutter-cyan);"></i> Architectural Highlights</h3>
+            <ul style="padding-left:1.2rem; color:var(--text-muted); font-size:0.9rem; line-height:1.7;">
+              <li>GIS spatial map layer plotting</li>
+              <li>Sub-meter GPS fix filtering</li>
+              <li>Offline SQLite relational persistence</li>
+              <li>Field image metadata watermarking</li>
+            </ul>
+          </div>
+
+          <div class="case-study-sidebar-card">
+            <h3><i class="fa-solid fa-briefcase" style="color:var(--accent-amber);"></i> Looking for Similar Expertise?</h3>
+            <p style="color:var(--text-muted); font-size:0.88rem; line-height:1.6; margin-bottom:1.25rem;">
+              Looking to build high-accuracy GIS mapping tools, enterprise field survey software, or offline database systems?
+            </p>
+            <a href="../#contact" class="btn btn-primary btn-sm" style="width:100%;">Get in Touch</a>
+          </div>
+
+        </aside>
+
+      </div>
+
+      <!-- Bottom Project Navigation -->
+      <nav class="project-nav-bar" aria-label="Project navigation">
+        <a href="woye-transport.html" class="btn btn-secondary btn-sm">
+          <i class="fa-solid fa-arrow-left"></i> Previous: Woye Transport
+        </a>
+        <a href="../#projects" class="btn btn-primary btn-sm">
+          Back to All Projects <i class="fa-solid fa-arrow-up"></i>
+        </a>
+      </nav>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2026 Rahamath Alikhan J. All rights reserved. Senior Software Engineer Portfolio.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
+
