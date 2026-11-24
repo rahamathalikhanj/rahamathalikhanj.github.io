@@ -4,6 +4,8 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   initNavbar();
+  initScrollAnimations();
+  initScrollProgress();
   initCodeSandbox();
   initStatsCounter();
   initSkillsSearch();
@@ -11,6 +13,66 @@ document.addEventListener('DOMContentLoaded', () => {
   initModals();
   initAnalyticsTracking();
 });
+
+/* Scroll Progress Bar */
+function initScrollProgress() {
+  const bar = document.createElement('div');
+  bar.className = 'scroll-progress-bar';
+  document.body.prepend(bar);
+
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const percent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = `${Math.min(100, Math.max(0, percent))}%`;
+  }, { passive: true });
+}
+
+/* Scroll-Triggered Staggered Reveal Animations */
+function initScrollAnimations() {
+  const selectors = [
+    '.section-header',
+    '.arch-card',
+    '.service-card',
+    '.product-showcase-card',
+    '.skill-category-card',
+    '.project-card',
+    '.timeline-card',
+    '.edu-card',
+    '.contact-card',
+    '.product-feature-box',
+    '.case-study-sidebar-card',
+    '.case-study-meta-bar',
+    '.product-cta-banner'
+  ];
+
+  const elements = document.querySelectorAll(selectors.join(', '));
+  if (!elements.length) return;
+
+  if (!('IntersectionObserver' in window)) {
+    elements.forEach(el => el.classList.add('is-visible'));
+    return;
+  }
+
+  elements.forEach((el, idx) => {
+    el.classList.add('reveal');
+    const siblingIndex = Array.from(el.parentElement ? el.parentElement.children : []).indexOf(el);
+    if (siblingIndex > 0 && siblingIndex < 6) {
+      el.style.transitionDelay = `${siblingIndex * 75}ms`;
+    }
+  });
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  elements.forEach(el => observer.observe(el));
+}
 
 /* 1. Navbar Scroll & Active Highlights */
 function initNavbar() {
@@ -23,7 +85,7 @@ function initNavbar() {
   window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
       navbar.style.padding = '0.6rem 0';
-      navbar.style.boxShadow = '0 10px 30px rgba(0,0,0,0.5)';
+      navbar.style.boxShadow = '0 8px 24px rgba(15, 23, 42, 0.08)';
     } else {
       navbar.style.padding = '1rem 0';
       navbar.style.boxShadow = 'none';
@@ -65,11 +127,11 @@ function initNavbar() {
         navLinksContainer.style.top = '100%';
         navLinksContainer.style.left = '0';
         navLinksContainer.style.right = '0';
-        navLinksContainer.style.background = 'rgba(6, 9, 19, 0.97)';
+        navLinksContainer.style.background = 'rgba(255, 255, 255, 0.98)';
         navLinksContainer.style.backdropFilter = 'blur(20px)';
         navLinksContainer.style.padding = '1.5rem';
         navLinksContainer.style.gap = '1rem';
-        navLinksContainer.style.borderBottom = '1px solid rgba(148, 163, 184, 0.16)';
+        navLinksContainer.style.borderBottom = '1px solid #E2E8F0'; navLinksContainer.style.boxShadow = '0 12px 24px rgba(15, 23, 42, 0.08)';
       }
     });
   }
@@ -364,7 +426,7 @@ function initModals() {
             ${data.summary}
           </p>
 
-          <h3 style="color:#FFF; font-size:1.1rem; margin-bottom:0.75rem;"><i class="fa-solid fa-list-check" style="color:var(--android-green);"></i> Key Architectural Accomplishments</h3>
+          <h3 style="color:var(--text-main); font-size:1.1rem; margin-bottom:0.75rem;"><i class="fa-solid fa-list-check" style="color:var(--android-green);"></i> Key Architectural Accomplishments</h3>
           <ul style="padding-left:1.25rem; color:var(--text-muted); font-size:0.9rem; line-height:1.7; margin-bottom:1.5rem;">
             ${data.features.map(f => `<li>${f}</li>`).join('')}
           </ul>
