@@ -19,19 +19,19 @@ Google Analytics 4 has been embedded across all pages:
 1. In `index.html`, `products/*.html`, and `projects/*.html`, locate the placeholder:
    ```html
    <!-- Google tag (gtag.js) -->
-   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1DZY78K3N6"></script>
    <script>
      window.dataLayer = window.dataLayer || [];
      function gtag(){dataLayer.push(arguments);}
      gtag('js', new Date());
-     gtag('config', 'G-XXXXXXXXXX', { 'send_page_view': true });
+     gtag('config', 'G-1DZY78K3N6', { 'send_page_view': true });
    </script>
    ```
-2. Replace `G-XXXXXXXXXX` with your actual Google Analytics 4 Measurement ID (from **Google Analytics > Admin > Data Streams > Measurement ID**).
+2. Replace `G-1DZY78K3N6` with your actual Google Analytics 4 Measurement ID (from **Google Analytics > Admin > Data Streams > Measurement ID**).
    You can replace across all files in one terminal command:
    ```bash
-   # Replace G-XXXXXXXXXX with your actual GA4 ID (e.g. G-12345ABCDE)
-   find . -type f -name "*.html" -exec sed -i '' 's/G-XXXXXXXXXX/YOUR_REAL_GA4_ID/g' {} +
+   # Replace G-1DZY78K3N6 with your actual GA4 ID (e.g. G-12345ABCDE)
+   find . -type f -name "*.html" -exec sed -i '' 's/G-1DZY78K3N6/YOUR_REAL_GA4_ID/g' {} +
    ```
 
 ### Custom Conversion Events Tracked via `script.js`
