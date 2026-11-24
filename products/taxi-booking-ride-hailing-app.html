@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>On-Demand Taxi Booking &amp; Ride-Hailing App Solution | Rahamath Alikhan</title>
+  <meta name="description" content="Turnkey smart taxi booking and on-demand ride-hailing mobile application solution built with Flutter (iOS &amp; Android), Kotlin, real-time WebSockets telemetry, Google Maps, and Stripe.">
+  <meta name="keywords" content="taxi booking app, ride hailing software, flutter taxi app, uber clone architecture, on-demand dispatch system, freelance mobile developer, rahamath alikhan">
+  <meta name="author" content="Rahamath Alikhan J">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="theme-color" content="#0b1220">
+  <link rel="canonical" href="https://rahamathalikhanj.github.io/products/taxi-booking-ride-hailing-app.html">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', { 'send_page_view': true });
+  </script>
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="product">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:site_name" content="Rahamath Alikhan J | Software Products &amp; Solutions">
+  <meta property="og:title" content="On-Demand Taxi Booking &amp; Ride-Hailing App Solution">
+  <meta property="og:description" content="Turnkey smart taxi booking and on-demand ride-hailing mobile application solution built with Flutter (iOS &amp; Android), Kotlin, WebSockets, and Stripe.">
+  <meta property="og:url" content="https://rahamathalikhanj.github.io/products/taxi-booking-ride-hailing-app.html">
+  <meta property="og:image" content="https://rahamathalikhanj.github.io/assets/ajman-taxi-app.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="On-Demand Taxi Booking &amp; Ride-Hailing App Solution">
+  <meta name="twitter:description" content="Turnkey smart taxi booking and ride-hailing software solution for iOS &amp; Android.">
+  <meta name="twitter:image" content="https://rahamathalikhanj.github.io/assets/ajman-taxi-app.png">
+
+  <!-- JSON-LD Structured Data: Product & Breadcrumbs -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://rahamathalikhanj.github.io/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Products",
+            "item": "https://rahamathalikhanj.github.io/#products-showcase"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Taxi & Ride-Hailing App Solution",
+            "item": "https://rahamathalikhanj.github.io/products/taxi-booking-ride-hailing-app.html"
+          }
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://rahamathalikhanj.github.io/products/taxi-booking-ride-hailing-app.html#software",
+        "name": "Smart Taxi & On-Demand Ride-Hailing Platform",
+        "applicationCategory": "TravelApplication",
+        "operatingSystem": "Android, iOS, Web",
+        "description": "Production-grade on-demand taxi dispatch and ride-hailing solution featuring customer mobile apps, driver mobile apps, real-time socket tracking, and admin dispatch console.",
+        "image": "https://rahamathalikhanj.github.io/assets/ajman-taxi-app.png",
+        "author": {
+          "@type": "Person",
+          "@id": "https://rahamathalikhanj.github.io/#person",
+          "name": "Rahamath Alikhan J"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "Custom Quote",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "seller": {
+            "@type": "Person",
+            "name": "Rahamath Alikhan J"
+          }
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to main content</a>
+
+  <!-- Sticky Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="../#hero" class="brand-logo">
+        <div class="brand-avatar-icon">
+          <i class="fa-solid fa-code"></i>
+        </div>
+        <div class="brand-title">
+          <span class="brand-name">Rahamath Alikhan</span>
+          <span class="brand-role"><i class="fa-solid fa-code"></i> Senior Software Engineer &amp; Freelancer</span>
+        </div>
+      </a>
+
+      <ul class="nav-links" id="navLinks" aria-label="Main navigation">
+        <li><a href="../#about" class="nav-link">About</a></li>
+        <li><a href="../#services" class="nav-link">Services</a></li>
+        <li><a href="../#products-showcase" class="nav-link active">Products</a></li>
+        <li><a href="../#skills" class="nav-link">Skills</a></li>
+        <li><a href="../#projects" class="nav-link">Projects</a></li>
+        <li><a href="../#experience" class="nav-link">Experience</a></li>
+        <li><a href="../#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="../#contact" class="btn btn-primary btn-sm">Request Demo</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    <div class="container">
+      
+      <!-- Breadcrumb Navigation -->
+      <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+        <ol class="breadcrumb-list">
+          <li><a href="../"><i class="fa-solid fa-house"></i> Home</a></li>
+          <li class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></li>
+          <li><a href="../#products-showcase">Products</a></li>
+          <li class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></li>
+          <li class="breadcrumb-current" aria-current="page">Taxi &amp; Ride-Hailing App</li>
+        </ol>
+      </nav>
+
+      <!-- Product Header -->
+      <header class="case-study-header">
+        <div class="product-badge-strip">
+          <span class="product-pill"><i class="fa-solid fa-taxi"></i> Turnkey Software Solution</span>
+          <span class="product-pill flutter"><i class="fa-solid fa-feather-pointed"></i> Flutter iOS &amp; Android</span>
+          <span class="product-pill cloud"><i class="fa-solid fa-server"></i> FastAPI / Node.js Backend</span>
+          <span class="product-pill ready"><i class="fa-solid fa-bolt"></i> 100% Customizable</span>
+        </div>
+        <h1 class="case-study-title">Smart Taxi &amp; On-Demand Ride-Hailing Platform Solution</h1>
+        <p class="section-subtitle" style="text-align:left; margin:0;">
+          A battle-tested, high-concurrency urban mobility software suite consisting of Customer Booking Apps (iOS &amp; Android), Driver Dispatch Apps, and a Cloud Telematics Control Console.
+        </p>
+
+        <div class="case-study-meta-bar">
+          <div class="case-study-meta-item">
+            <span class="case-study-meta-label">Platforms Supported</span>
+            <span class="case-study-meta-value">iOS, Android, Web Dispatcher</span>
+          </div>
+          <div class="case-study-meta-item">
+            <span class="case-study-meta-label">Primary Tech Stack</span>
+            <span class="case-study-meta-value">Flutter, Dart, BLoC, WebSockets, REST APIs</span>
+          </div>
+          <div class="case-study-meta-item">
+            <span class="case-study-meta-label">Live Proven Deployment</span>
+            <span class="case-study-meta-value">Ajman Taxi &amp; Sixth Limo (Dubai, UAE)</span>
+          </div>
+          <div class="case-study-meta-item">
+            <span class="case-study-meta-label">Deployment Timeline</span>
+            <span class="case-study-meta-value">Turnkey in 2-4 Weeks</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Layout Grid -->
+      <div class="case-study-layout">
+        
+        <!-- Left Column -->
+        <div class="case-study-main">
+          
+          <div class="case-study-hero-img-box">
+            <img src="../assets/ajman-taxi-app.png" alt="Smart taxi and ride hailing application interface showing customer booking map, car category selection, and driver route" width="1200" height="630">
+          </div>
+
+          <section class="case-study-section">
+            <h2><i class="fa-solid fa-star" style="color:var(--accent-amber);"></i> Product Overview &amp; Market Value</h2>
+            <p>
+              The Smart Taxi &amp; On-Demand Ride-Hailing Platform is an enterprise-grade mobile mobility suite designed for transport authorities, private fleet owners, and ride-hailing startups seeking to deploy their own branded Uber/Grab-style platform without multi-year R&amp;D cycles.
+            </p>
+            <p>
+              Engineered with modern Flutter cross-platform architecture and high-throughput real-time socket connections, the system delivers sub-second driver location updates, dynamic surge pricing, multi-currency card processing, and automated digital receipts.
+            </p>
+          </section>
+
+          <section class="case-study-section">
+            <h2><i class="fa-solid fa-layer-group" style="color:var(--flutter-cyan);"></i> Core Ecosystem Modules Included</h2>
+            <div class="product-features-grid">
+              
+              <div class="product-feature-box">
+                <h3><i class="fa-solid fa-mobile-screen" style="color:var(--flutter-cyan);"></i> 1. Rider Passenger App</h3>
+                <p>Instant ride booking, scheduled trips, transparent fare breakdown, multiple vehicle categories (Standard, Executive, Van), live driver tracking, in-app messaging, and Stripe/Google Pay.</p>
+              </div>
+
+              <div class="product-feature-box">
+                <h3><i class="fa-solid fa-id-card" style="color:var(--android-green);"></i> 2. Driver Partner App</h3>
+                <p>One-tap ride acceptance/rejection, turn-by-turn navigation via Google/HERE Maps, trip status switcher, daily earnings dashboard, rating history, and toll reconciliation.</p>
+              </div>
+
+              <div class="product-feature-box">
+                <h3><i class="fa-solid fa-desktop" style="color:var(--accent-purple);"></i> 3. Cloud Dispatcher Console</h3>
+                <p>Real-time vehicle map tracking, manual telephone trip dispatching, geofence boundary configuration, driver verification approval workflows, and automated billing audits.</p>
+              </div>
+
+              <div class="product-feature-box">
+                <h3><i class="fa-solid fa-shield-halved" style="color:var(--accent-amber);"></i> 4. Scalable Backend &amp; APIs</h3>
+                <p>Microservice-ready RESTful APIs with WebSocket clustering, Redis geospatial indexing, PostgreSQL transactional safety, and automated Docker deployment.</p>
+              </div>
+
+            </div>
+          </section>
+
+          <section class="case-study-section">
+            <h2><i class="fa-solid fa-sliders" style="color:var(--android-green);"></i> Technical Specifications</h2>
+            <table class="product-specs-table">
+              <tr>
+                <th>Mobile Framework</th>
+                <td>Flutter 3.x (Single codebase for iOS &amp; Android) with native method channel bindings</td>
+              </tr>
+              <tr>
+                <th>State Management</th>
+                <td>BLoC Pattern (Business Logic Component) + Riverpod for reactive dependency injection</td>
+              </tr>
+              <tr>
+                <th>Mapping &amp; Navigation</th>
+                <td>Google Maps SDK, HERE Maps Mobile SDK, and Mapbox Vector Tiles</td>
+              </tr>
+              <tr>
+                <th>Real-Time Telemetry</th>
+                <td>WebSockets with automatic reconnection, heartbeat pinging, and GPS dead-reckoning</td>
+              </tr>
+              <tr>
+                <th>Payment Gateways</th>
+                <td>Stripe, PayPal, Apple Pay, Google Pay, and localized Cash/Wallet modules</td>
+              </tr>
+              <tr>
+                <th>Cloud &amp; DevOps</th>
+                <td>Docker containerization, Azure App Services / AWS ECS, GitLab CI/CD pipelines</td>
+              </tr>
+            </table>
+          </section>
+
+          <!-- Verified Case Study Reference -->
+          <div style="background: rgba(1, 181, 246, 0.05); border: 1px solid rgba(1, 181, 246, 0.25); border-radius: var(--radius-md); padding: 1.5rem; margin: 2rem 0;">
+            <h3 style="color:#FFF; font-size:1.15rem; margin-bottom:0.5rem;"><i class="fa-solid fa-certificate" style="color:var(--flutter-cyan);"></i> Proven in Production: Dubai Technologies (Ajman Taxi)</h3>
+            <p style="color:var(--text-muted); font-size:0.92rem; line-height:1.6; margin-bottom:1rem;">
+              This exact architecture powers official public taxi hailing and limousine dispatch operations across Dubai and the UAE. Read the complete verified engineering case study to examine the technical benchmarks.
+            </p>
+            <a href="../projects/ajman-taxi.html" class="case-study-page-link">Read Verified Case Study <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+
+          <!-- FAQ Section -->
+          <section class="case-study-section">
+            <h2><i class="fa-solid fa-circle-question" style="color:var(--accent-purple);"></i> Frequently Asked Questions</h2>
+            <div style="display:flex; flex-direction:column; gap:1rem;">
+              <div class="product-feature-box">
+                <h3 style="font-size:1.05rem;">Can the apps be customized with our company branding?</h3>
+                <p>Yes. 100% of the UI design, branding, color tokens, vehicle types, currencies, languages (including RTL Arabic), and logos can be customized to match your corporate identity.</p>
+              </div>
+              <div class="product-feature-box">
+                <h3 style="font-size:1.05rem;">Do you provide deployment support to Apple App Store &amp; Google Play?</h3>
+                <p>Yes. I handle the end-to-end publishing lifecycle: configuring certificates, keystores, privacy manifests, app review compliance, and live production release.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- CTA Banner -->
+          <div class="product-cta-banner">
+            <h2>Ready to Launch Your Taxi or Mobility Platform?</h2>
+            <p>
+              Get in touch to request a live demonstration, explore technical architecture blueprints, or discuss custom requirements for your market.
+            </p>
+            <a href="../#contact" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Request Live Demo &amp; Quote</a>
+          </div>
+
+        </div>
+
+        <!-- Right Column / Sidebar -->
+        <aside class="case-study-sidebar">
+          
+          <div class="case-study-sidebar-card">
+            <h3><i class="fa-solid fa-handshake" style="color:var(--android-green);"></i> Engagement Options</h3>
+            <ul style="padding-left:1.2rem; color:var(--text-muted); font-size:0.9rem; line-height:1.8;">
+              <li><strong>Turnkey Setup:</strong> Branded iOS &amp; Android apps deployed to your cloud in 3 weeks.</li>
+              <li><strong>Custom MVP Build:</strong> Bespoke feature additions, proprietary payment gateway integration.</li>
+              <li><strong>Dedicated Retainer:</strong> Monthly engineering support and continuous feature scaling.</li>
+            </ul>
+            <a href="../#contact" class="btn btn-primary btn-sm" style="width:100%; margin-top:1.25rem;">Discuss Project</a>
+          </div>
+
+          <div class="case-study-sidebar-card">
+            <h3><i class="fa-solid fa-cubes" style="color:var(--flutter-cyan);"></i> Other Product Solutions</h3>
+            <ul style="list-style:none; padding:0; display:flex; flex-direction:column; gap:0.75rem;">
+              <li><a href="limousine-chauffeur-booking-software.html" style="color:var(--text-main); font-size:0.9rem; display:flex; align-items:center; gap:0.5rem;"><i class="fa-solid fa-car" style="color:var(--flutter-cyan);"></i> Limousine Booking Platform</a></li>
+              <li><a href="roadside-assistance-towing-dispatch-system.html" style="color:var(--text-main); font-size:0.9rem; display:flex; align-items:center; gap:0.5rem;"><i class="fa-solid fa-truck-pickup" style="color:var(--android-green);"></i> Roadside Assistance System</a></li>
+              <li><a href="enterprise-fleet-telematics-management-system.html" style="color:var(--text-main); font-size:0.9rem; display:flex; align-items:center; gap:0.5rem;"><i class="fa-solid fa-boxes-stacked" style="color:var(--accent-purple);"></i> Fleet Telematics System</a></li>
+              <li><a href="gis-railway-infrastructure-survey-app.html" style="color:var(--text-main); font-size:0.9rem; display:flex; align-items:center; gap:0.5rem;"><i class="fa-solid fa-map-location-dot" style="color:var(--accent-amber);"></i> GIS Asset Mapping System</a></li>
+              <li><a href="ai-workflow-automation-backend-engine.html" style="color:var(--text-main); font-size:0.9rem; display:flex; align-items:center; gap:0.5rem;"><i class="fa-solid fa-brain" style="color:#38BDF8;"></i> AI Automation Backend</a></li>
+            </ul>
+          </div>
+
+        </aside>
+
+      </div>
+
+      <!-- Navigation Bar -->
+      <nav class="project-nav-bar" aria-label="Product navigation">
+        <a href="../#products-showcase" class="btn btn-secondary btn-sm">
+          <i class="fa-solid fa-arrow-left"></i> Back to Products
+        </a>
+        <a href="limousine-chauffeur-booking-software.html" class="btn btn-outline-flutter btn-sm">
+          Next: Limousine Booking Platform <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </nav>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2026 Rahamath Alikhan J. All rights reserved. Senior Software Engineer &amp; Freelance Developer.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

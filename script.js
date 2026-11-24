@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSkillsSearch();
   initProjectsFilter();
   initModals();
+  initAnalyticsTracking();
 });
 
 /* 1. Navbar Scroll & Active Highlights */
@@ -382,3 +383,57 @@ function initModals() {
     });
   });
 }
+
+/* 7. Google Analytics 4 (gtag.js) Event Tracking */
+function trackEvent(eventName, eventParams) {
+  if (typeof window.gtag === 'function') {
+    window.gtag('event', eventName, eventParams);
+  } else if (window.dataLayer) {
+    window.dataLayer.push({ event: eventName, ...eventParams });
+  }
+}
+
+function initAnalyticsTracking() {
+  // Track Resume Views
+  const openResumeBtn = document.getElementById('openResumeBtn');
+  const heroResumeBtn = document.getElementById('heroResumeBtn');
+  if (openResumeBtn) {
+    openResumeBtn.addEventListener('click', () => trackEvent('view_resume', { location: 'navbar' }));
+  }
+  if (heroResumeBtn) {
+    heroResumeBtn.addEventListener('click', () => trackEvent('view_resume', { location: 'hero' }));
+  }
+
+  // Track Contact CTAs & Lead Generation
+  document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+    link.addEventListener('click', () => trackEvent('generate_lead', { method: 'email', value: link.getAttribute('href') }));
+  });
+  document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+    link.addEventListener('click', () => trackEvent('generate_lead', { method: 'phone', value: link.getAttribute('href') }));
+  });
+  document.querySelectorAll('a[href*="linkedin.com"]').forEach(link => {
+    link.addEventListener('click', () => trackEvent('contact_click', { platform: 'linkedin' }));
+  });
+  document.querySelectorAll('a[href*="github.com"]').forEach(link => {
+    link.addEventListener('click', () => trackEvent('contact_click', { platform: 'github' }));
+  });
+
+  // Track Case Study & Product Clicks
+  document.querySelectorAll('.view-modal-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const proj = btn.getAttribute('data-project');
+      trackEvent('select_content', { content_type: 'case_study_modal', item_id: proj });
+    });
+  });
+  document.querySelectorAll('.case-study-page-link').forEach(link => {
+    link.addEventListener('click', () => {
+      trackEvent('select_content', { content_type: 'case_study_page', url: link.getAttribute('href') });
+    });
+  });
+  document.querySelectorAll('.product-cta, .product-showcase-card a').forEach(link => {
+    link.addEventListener('click', () => {
+      trackEvent('select_content', { content_type: 'product_page', url: link.getAttribute('href') });
+    });
+  });
+}
+

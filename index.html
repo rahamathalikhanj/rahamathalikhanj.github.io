@@ -11,6 +11,15 @@
   <meta name="theme-color" content="#0b1220">
   <link rel="canonical" href="https://rahamathalikhanj.github.io/">
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', { 'send_page_view': true });
+  </script>
+
   <!-- Open Graph / Social Sharing -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_IN">
@@ -193,6 +202,7 @@
       <ul class="nav-links" id="navLinks" aria-label="Main navigation">
         <li><a href="#about" class="nav-link">About</a></li>
         <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#products-showcase" class="nav-link">Products</a></li>
         <li><a href="#skills" class="nav-link">Skills</a></li>
         <li><a href="#projects" class="nav-link">Projects</a></li>
         <li><a href="#experience" class="nav-link">Experience</a></li>
@@ -469,6 +479,147 @@ class RideViewModel @Inject constructor(
             <span style="font-size:0.86rem; color:var(--text-muted);">In-depth review of existing mobile codebases for memory leaks, UI jank, security vulnerabilities, and Clean Architecture.</span>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Solutions Showcase Section -->
+  <section class="section" id="products-showcase" style="background: rgba(0,0,0,0.15);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Software Products &amp; Solutions</span>
+        <h2 class="section-title">Production-Ready Software Platforms</h2>
+        <p class="section-subtitle">Turnkey, battle-tested software suites and custom mobile platforms built for on-demand dispatch, enterprise logistics, GIS asset inspection, and AI automation.</p>
+      </div>
+
+      <div class="products-showcase-grid">
+
+        <!-- Product 1: Taxi Booking & Ride Hailing -->
+        <div class="product-showcase-card">
+          <div class="product-card-top">
+            <div class="product-card-icon flutter"><i class="fa-solid fa-taxi"></i></div>
+            <span class="product-pill flutter">Flutter iOS &amp; Android</span>
+          </div>
+          <h3 class="product-card-title">Smart Taxi &amp; On-Demand Ride-Hailing Platform</h3>
+          <p class="product-card-desc">
+            Complete urban mobility platform comprising Rider Passenger Apps, Driver Partner Apps, Web Dispatcher Console, and sub-second WebSockets tracking.
+          </p>
+          <ul class="product-card-features-list">
+            <li><i class="fa-solid fa-check"></i> Instant &amp; scheduled ride bookings with dynamic surge fares</li>
+            <li><i class="fa-solid fa-check"></i> Real-time driver GPS tracking &amp; Google/HERE Maps routing</li>
+            <li><i class="fa-solid fa-check"></i> Stripe, PayPal, Apple Pay &amp; Google Pay cashless checkout</li>
+          </ul>
+          <div class="product-card-bottom">
+            <span style="font-size:0.8rem; color:var(--text-dim); font-weight:600;"><i class="fa-solid fa-bolt" style="color:var(--accent-amber);"></i> Ready to Deploy</span>
+            <a href="products/taxi-booking-ride-hailing-app.html" class="case-study-page-link">Explore Product <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Product 2: Limousine & Chauffeur -->
+        <div class="product-showcase-card">
+          <div class="product-card-top">
+            <div class="product-card-icon"><i class="fa-solid fa-crown"></i></div>
+            <span class="product-pill">Native Kotlin &amp; Compose</span>
+          </div>
+          <h3 class="product-card-title">Executive Limousine &amp; Accessible Chauffeur Platform</h3>
+          <p class="product-card-desc">
+            Luxury chauffeur reservation suite for corporate accounts, airport transfers with flight tracking, and certified wheelchair-accessible medical transport.
+          </p>
+          <ul class="product-card-features-list">
+            <li><i class="fa-solid fa-check"></i> Flight number linking with automatic delay tracking</li>
+            <li><i class="fa-solid fa-check"></i> HERE Maps polygon geofencing for city ERP toll surcharges</li>
+            <li><i class="fa-solid fa-check"></i> Corporate billing accounts &amp; automated PDF tax invoicing</li>
+          </ul>
+          <div class="product-card-bottom">
+            <span style="font-size:0.8rem; color:var(--text-dim); font-weight:600;"><i class="fa-solid fa-universal-access" style="color:var(--android-green);"></i> Accessible Transport</span>
+            <a href="products/limousine-chauffeur-booking-software.html" class="case-study-page-link">Explore Product <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Product 3: Roadside Assistance -->
+        <div class="product-showcase-card">
+          <div class="product-card-top">
+            <div class="product-card-icon amber"><i class="fa-solid fa-truck-pickup"></i></div>
+            <span class="product-pill ready">Emergency Mobility</span>
+          </div>
+          <h3 class="product-card-title">On-Demand Roadside Assistance &amp; Towing System</h3>
+          <p class="product-card-desc">
+            Emergency motorist rescue platform connecting stranded drivers with tow trucks, fuel delivery, and jump-start technicians with upfront fixed pricing.
+          </p>
+          <ul class="product-card-features-list">
+            <li><i class="fa-solid fa-check"></i> 3-tap emergency dispatch with zero typing required</li>
+            <li><i class="fa-solid fa-check"></i> Live recovery vehicle approach tracking on Google Maps</li>
+            <li><i class="fa-solid fa-check"></i> Stripe escrow pre-authorization holds for fraud prevention</li>
+          </ul>
+          <div class="product-card-bottom">
+            <span style="font-size:0.8rem; color:var(--text-dim); font-weight:600;"><i class="fa-solid fa-battery-half" style="color:var(--accent-amber);"></i> Low-Battery Profile</span>
+            <a href="products/roadside-assistance-towing-dispatch-system.html" class="case-study-page-link">Explore Product <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Product 4: Fleet Logistics -->
+        <div class="product-showcase-card">
+          <div class="product-card-top">
+            <div class="product-card-icon flutter"><i class="fa-solid fa-boxes-stacked"></i></div>
+            <span class="product-pill flutter">Offline Isar NoSQL</span>
+          </div>
+          <h3 class="product-card-title">Enterprise Fleet Logistics &amp; Telemetry Management</h3>
+          <p class="product-card-desc">
+            Industrial fleet management platform built for zero-connectivity operating zones, with multi-level vehicle approval matrices and automated sync queues.
+          </p>
+          <ul class="product-card-features-list">
+            <li><i class="fa-solid fa-check"></i> 100% disconnected offline data entry with instant reads/writes</li>
+            <li><i class="fa-solid fa-check"></i> On-screen digital signature pad for vehicle handovers</li>
+            <li><i class="fa-solid fa-check"></i> Fuel consumption logging, odometer audits &amp; maintenance</li>
+          </ul>
+          <div class="product-card-bottom">
+            <span style="font-size:0.8rem; color:var(--text-dim); font-weight:600;"><i class="fa-solid fa-wifi" style="color:var(--flutter-cyan);"></i> Offline-First Sync</span>
+            <a href="products/enterprise-fleet-telematics-management-system.html" class="case-study-page-link">Explore Product <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Product 5: GIS Railway & Utility Survey -->
+        <div class="product-showcase-card">
+          <div class="product-card-top">
+            <div class="product-card-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+            <span class="product-pill">GIS Spatial SQLite</span>
+          </div>
+          <h3 class="product-card-title">GIS Infrastructure &amp; Field Asset Survey System</h3>
+          <p class="product-card-desc">
+            Specialized field survey app for digitizing railway signaling, telecom cables, and utility infrastructure with sub-meter GPS accuracy.
+          </p>
+          <ul class="product-card-features-list">
+            <li><i class="fa-solid fa-check"></i> Interactive GIS vector overlays representing tracks and lines</li>
+            <li><i class="fa-solid fa-check"></i> Offline relational SQLite database for deep asset trees</li>
+            <li><i class="fa-solid fa-check"></i> Geo-watermarked photo audits with timestamped proof</li>
+          </ul>
+          <div class="product-card-bottom">
+            <span style="font-size:0.8rem; color:var(--text-dim); font-weight:600;"><i class="fa-solid fa-crosshairs" style="color:var(--android-green);"></i> Sub-Meter Accuracy</span>
+            <a href="products/gis-railway-infrastructure-survey-app.html" class="case-study-page-link">Explore Product <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Product 6: AI Automation Backend -->
+        <div class="product-showcase-card">
+          <div class="product-card-top">
+            <div class="product-card-icon cloud"><i class="fa-solid fa-brain"></i></div>
+            <span class="product-pill cloud">FastAPI &bull; Azure Cloud</span>
+          </div>
+          <h3 class="product-card-title">AI-Powered Backend API &amp; Automation Engine</h3>
+          <p class="product-card-desc">
+            Asynchronous cloud backend service uniting high-throughput RESTful/WebSocket APIs with automated Generative AI pipelines and agentic orchestration.
+          </p>
+          <ul class="product-card-features-list">
+            <li><i class="fa-solid fa-check"></i> FastAPI asynchronous endpoints with Redis pub/sub brokers</li>
+            <li><i class="fa-solid fa-check"></i> Automated n8n and Dify workflow pipelines for data processing</li>
+            <li><i class="fa-solid fa-check"></i> Multi-stage Docker containerization with Azure CI/CD</li>
+          </ul>
+          <div class="product-card-bottom">
+            <span style="font-size:0.8rem; color:var(--text-dim); font-weight:600;"><i class="fa-solid fa-robot" style="color:var(--accent-purple);"></i> LLM Integration</span>
+            <a href="products/ai-workflow-automation-backend-engine.html" class="case-study-page-link">Explore Product <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>

@@ -1641,4 +1641,245 @@ footer {
   font-size: 0.92rem;
 }
 
+/* -------------------------------------------------------------
+   PRODUCT SOLUTIONS & GTAG STYLES
+   ------------------------------------------------------------- */
+
+.product-badge-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1.25rem;
+}
+
+.product-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: rgba(0, 200, 83, 0.1);
+  color: var(--android-green);
+  border: 1px solid rgba(0, 200, 83, 0.3);
+}
+
+.product-pill.flutter {
+  background: rgba(1, 181, 246, 0.1);
+  color: var(--flutter-cyan);
+  border-color: rgba(1, 181, 246, 0.3);
+}
+
+.product-pill.cloud {
+  background: rgba(139, 92, 246, 0.1);
+  color: var(--accent-purple);
+  border-color: rgba(139, 92, 246, 0.3);
+}
+
+.product-pill.ready {
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--accent-amber);
+  border-color: rgba(245, 158, 11, 0.3);
+}
+
+.product-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 1.75rem 0 2.5rem;
+}
+
+.product-feature-box {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  transition: all var(--transition-fast);
+}
+
+.product-feature-box:hover {
+  border-color: var(--flutter-cyan);
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.product-feature-box h3 {
+  font-size: 1.15rem;
+  color: #FFF;
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.product-feature-box p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.product-specs-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0 2.5rem;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.product-specs-table th,
+.product-specs-table td {
+  padding: 1rem 1.25rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.92rem;
+}
+
+.product-specs-table th {
+  background: rgba(255, 255, 255, 0.05);
+  color: #FFF;
+  font-weight: 700;
+  width: 32%;
+}
+
+.product-specs-table td {
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--text-muted);
+}
+
+.product-specs-table tr:last-child th,
+.product-specs-table tr:last-child td {
+  border-bottom: none;
+}
+
+.product-cta-banner {
+  background: linear-gradient(135deg, rgba(0, 200, 83, 0.1) 0%, rgba(1, 181, 246, 0.1) 100%);
+  border: 1px solid var(--flutter-cyan);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  margin: 3rem 0;
+  text-align: center;
+  backdrop-filter: blur(16px);
+}
+
+.product-cta-banner h2 {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.product-cta-banner p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  max-width: 650px;
+  margin: 0 auto 1.75rem;
+  line-height: 1.6;
+}
+
+/* Homepage Product Showcase Grid */
+.products-showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.product-showcase-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  backdrop-filter: blur(16px);
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+}
+
+.product-showcase-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--android-green);
+  box-shadow: 0 15px 35px -10px rgba(0, 200, 83, 0.25);
+}
+
+.product-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.product-card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  background: rgba(0, 200, 83, 0.1);
+  color: var(--android-green);
+}
+
+.product-card-icon.flutter {
+  background: rgba(1, 181, 246, 0.1);
+  color: var(--flutter-cyan);
+}
+
+.product-card-icon.cloud {
+  background: rgba(139, 92, 246, 0.1);
+  color: var(--accent-purple);
+}
+
+.product-card-icon.amber {
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--accent-amber);
+}
+
+.product-card-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #FFF;
+}
+
+.product-card-desc {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.product-card-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+}
+
+.product-card-features-list li {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.product-card-features-list li i {
+  color: var(--android-green);
+  font-size: 0.8rem;
+}
+
+.product-card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+  margin-top: auto;
+}
+
 
