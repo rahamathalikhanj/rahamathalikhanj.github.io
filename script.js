@@ -48,7 +48,7 @@ function initNavbar() {
 
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
-      if (window.innerWidth <= 768 && navLinksContainer) {
+      if (window.innerWidth <= 1120 && navLinksContainer) {
         navLinksContainer.style.display = 'none';
       }
     });
@@ -65,9 +65,11 @@ function initNavbar() {
         navLinksContainer.style.top = '100%';
         navLinksContainer.style.left = '0';
         navLinksContainer.style.right = '0';
-        navLinksContainer.style.background = 'rgba(9, 13, 22, 0.95)';
+        navLinksContainer.style.background = 'rgba(6, 9, 19, 0.97)';
+        navLinksContainer.style.backdropFilter = 'blur(20px)';
         navLinksContainer.style.padding = '1.5rem';
-        navLinksContainer.style.borderBottom = '1px solid rgba(255,255,255,0.1)';
+        navLinksContainer.style.gap = '1rem';
+        navLinksContainer.style.borderBottom = '1px solid rgba(148, 163, 184, 0.16)';
       }
     });
   }
