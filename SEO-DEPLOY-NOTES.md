@@ -1,7 +1,7 @@
 # Portfolio SEO, Products & Analytics Deployment Notes
 
 **Author:** Rahamath Alikhan J  
-**Professional Role:** Senior Software Engineer & Freelance Mobile Application Developer  
+**Professional Role:** Senior Software Engineer  
 **Location:** Madurai, Tamil Nadu, India (Serving Global Clients)  
 **Live Canonical Domain:** https://rahamathalikhanj.github.io/  
 **Last Updated:** November 2026  
