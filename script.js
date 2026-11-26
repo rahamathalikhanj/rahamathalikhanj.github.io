@@ -401,6 +401,62 @@ function initModals() {
         'Offline survey mode for field engineers with SQLite local sync.',
         'High accuracy GPS location tag for railway asset logging.'
       ]
+    },
+    tripexl: {
+      title: 'TripeXL.AI™ – Enterprise On-Demand Ride Hailing & Driver Telematics',
+      client: 'Corporate Fleet & Mobility Operators',
+      type: 'Cross-Platform Flutter Mobile Suite + Telematics',
+      img: 'assets/fts-fleet-app.png',
+      url: 'projects/tripexl-fleet.html',
+      summary: 'Enterprise corporate ride-hailing and driver telemetry platform featuring multi-tier managerial approval gates, Uber/Careem-grade live GPS tracking, and mandatory pre-trip odometer inspections.',
+      features: [
+        'Uber/Careem-parity live driver GPS tracking on dispatch with Kalman-smoothed coordinate streams.',
+        'Mandatory pre-trip digital safety checklist and automatic vehicle odometer sync to corporate ERP.',
+        'Approving Authority travel policy workflow with managerial 1-tap Approve/Reject action gates.',
+        'Full multi-stop route scheduling, 5-star trip reviews, and automated expense capture.'
+      ]
+    },
+    logiflow: {
+      title: 'LogiFlow AI™ – Multi-Channel Logistics Operations & RAG CRM Engine',
+      client: 'Global Freight Forwarding & 3PL Supply Chain',
+      type: 'AI Operations Pipeline (pgvector + WhatsApp Cloud API + Next.js)',
+      img: 'website/assets/admin_portal.jpeg',
+      url: 'projects/logiflow-ai.html',
+      summary: 'Multi-channel AI operations pipeline unifying Zybo ERP, Microsoft Outlook Graph API, and WhatsApp Business with pgvector semantic RAG for zero-hallucination quote generation.',
+      features: [
+        'Multi-channel ingestion parsing RFQ emails, packing lists, and MSDS sheets from Outlook & WhatsApp.',
+        'pgvector semantic RAG indexing historical tariff sheets and winning proposals for instant rate drafting.',
+        'Interactive WhatsApp staff execution with inline action buttons ([ Accept ], [ In Progress ], [ Completed ]).',
+        'Executive mobile approval gates on WhatsApp with 1-tap quote dispatch to clients.'
+      ]
+    },
+    edupulse: {
+      title: 'EduPulse™ – Interactive LMS & Student Learning Analytics Dashboard',
+      client: 'Higher Education & EdTech Bootcamps',
+      type: 'Native Android (Jetpack Compose, Kotlin, Target SDK 37)',
+      img: 'website/assets/employee_delivery_management.jpeg',
+      url: 'projects/edupulse-lms.html',
+      summary: 'Modern Native Android learning management dashboard engineered with 100% Jetpack Compose and Kotlin Coroutines Flow for responsive education analytics and offline course delivery.',
+      features: [
+        '100% Jetpack Compose declarative UI with Material 3 theming adhering to Android Target SDK 37.',
+        'Interactive student study streak telemetry, progress heatmaps, and milestone badges.',
+        'ExoPlayer media delivery with variable playback rates, Picture-in-Picture, and offline notes.',
+        'Offline-first Room database replication ensuring uninterrupted course playback.'
+      ]
+    },
+    geminiedge: {
+      title: 'GeminiEdge™ – On-Device Edge GenAI Mobile Suite (Gemini Nano)',
+      client: 'Privacy-Critical Enterprises & Field Operations',
+      type: 'Edge AI Native Android (Gemini Nano & Android AICore)',
+      img: 'assets/avatar.png',
+      url: 'projects/gemini-edge-ai.html',
+      summary: 'Privacy-first, zero-cloud-latency generative AI running 100% locally on Android hardware using Google Gemini Nano foundation model and Android AICore system service.',
+      features: [
+        '100% on-device local inference powered by Google Gemini Nano with zero network dependency.',
+        'Hardware-accelerated NPU/GPU execution with negligible battery consumption.',
+        'Zero data egress security adhering to strict enterprise NDA, GDPR, and HIPAA compliance.',
+        '$0.00 cloud token cost architecture eliminating external API dependencies.'
+      ]
     }
   };
 

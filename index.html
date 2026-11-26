@@ -185,6 +185,46 @@
             {
               "@type": "Offer",
               "itemOffered": {
+                "@type": "SoftwareApplication",
+                "name": "TripeXL.AI™ – Enterprise On-Demand Ride Hailing & Driver Telematics",
+                "applicationCategory": "TravelApplication",
+                "operatingSystem": "Android, iOS",
+                "description": "Corporate ride booking platform featuring multi-tier travel policy approval gates, Uber/Careem-grade real-time driver tracking, and mandatory odometer inspections."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "SoftwareApplication",
+                "name": "LogiFlow AI™ – Logistics Operations & RAG WhatsApp Automation",
+                "applicationCategory": "BusinessApplication",
+                "operatingSystem": "Web, Cloud",
+                "description": "Freight forwarding operations pipeline unifying ERP, Outlook Graph API, and WhatsApp Business with pgvector RAG for zero-hallucination quote generation."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "SoftwareApplication",
+                "name": "EduPulse™ – Interactive LMS & Student Learning Analytics Dashboard",
+                "applicationCategory": "EducationalApplication",
+                "operatingSystem": "Android",
+                "description": "Native Android 15 (Target SDK 37) learning app featuring declarative Jetpack Compose UI, student progression heatmaps, ExoPlayer media streaming, and Room DB sync."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "SoftwareApplication",
+                "name": "GeminiEdge™ – On-Device Edge GenAI Mobile Suite (Gemini Nano)",
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "Android",
+                "description": "Privacy-first, zero-cloud-latency generative AI running 100% locally on Android hardware via Google Gemini Nano and Android AICore with $0.00 cloud token costs."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
                 "@type": "Service",
                 "name": "WhatsApp Customer Communication Alerts & Automation",
                 "description": "Automated WhatsApp Business API notifications, booking/order status alerts, payment confirmations, and multi-channel customer reminders."
@@ -1419,6 +1459,126 @@ class RideViewModel @Inject constructor(
               </a>
             </div>
           </div>
+          <!-- Project 10: TripeXL.AI Corporate Mobility & Telematics -->
+          <article class="project-card" data-category="flutter enterprise">
+            <div class="project-image-wrapper">
+              <img src="assets/fts-fleet-app.png" alt="TripeXL.AI Corporate Ride Hailing and Fleet Telematics UI" width="400" height="220" loading="lazy">
+              <div class="project-badge-overlay"><i class="fa-solid fa-car-side"></i> Mobility &amp; Telematics</div>
+            </div>
+            <div class="project-body">
+              <span class="project-client">Solution: Corporate Mobility Platform</span>
+              <h3 class="project-title">TripeXL.AI™ Fleet &amp; Ride Hailing Platform</h3>
+              <p class="project-description">
+                Enterprise on-demand ride hailing suite with real-time driver telemetry, mandatory pre-trip odometer inspections, and multi-tier travel policy approval gates.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-pill">Flutter</span>
+                <span class="tech-pill">WebSockets</span>
+                <span class="tech-pill">PostGIS</span>
+                <span class="tech-pill">Google Maps</span>
+                <span class="tech-pill">Redis</span>
+              </div>
+              <div class="project-footer">
+                <button class="view-modal-btn" data-project="tripexl" type="button" aria-label="Quick View TripeXL.AI Fleet modal">
+                  <i class="fa-solid fa-eye"></i> Quick View
+                </button>
+                <a href="projects/tripexl-fleet.html" class="case-study-link" aria-label="Read full case study for TripeXL.AI Fleet">
+                  Full Case Study <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 11: LogiFlow AI Logistics CRM & RAG Automation -->
+          <article class="project-card" data-category="enterprise flutter">
+            <div class="project-image-wrapper">
+              <img src="website/assets/admin_portal.jpeg" alt="LogiFlow AI Logistics CRM and Automation Engine UI" width="400" height="220" loading="lazy">
+              <div class="project-badge-overlay" style="color:var(--accent-purple); border-color:rgba(139,92,246,0.4);"><i class="fa-solid fa-network-wired"></i> Logistics AI &amp; RAG</div>
+            </div>
+            <div class="project-body">
+              <span class="project-client">Solution: Freight Operations Automation</span>
+              <h3 class="project-title">LogiFlow AI™ Logistics CRM Engine</h3>
+              <p class="project-description">
+                Multi-channel AI operations pipeline unifying Zybo ERP, Outlook Graph API, and WhatsApp Business with pgvector RAG for zero-hallucination freight rate generation.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-pill">pgvector</span>
+                <span class="tech-pill">PostgreSQL</span>
+                <span class="tech-pill">WhatsApp API</span>
+                <span class="tech-pill">M365 Graph</span>
+                <span class="tech-pill">Next.js 15</span>
+              </div>
+              <div class="project-footer">
+                <button class="view-modal-btn" data-project="logiflow" type="button" aria-label="Quick View LogiFlow AI modal">
+                  <i class="fa-solid fa-eye"></i> Quick View
+                </button>
+                <a href="projects/logiflow-ai.html" class="case-study-link" aria-label="Read full case study for LogiFlow AI">
+                  Full Case Study <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 12: EduPulse LMS & Learning Dashboard -->
+          <article class="project-card" data-category="native">
+            <div class="project-image-wrapper">
+              <img src="website/assets/employee_delivery_management.jpeg" alt="EduPulse LMS Student Learning Analytics Dashboard UI" width="400" height="220" loading="lazy">
+              <div class="project-badge-overlay" style="color:var(--android-green); border-color:rgba(0,200,83,0.3);"><i class="fa-solid fa-graduation-cap"></i> Jetpack Compose</div>
+            </div>
+            <div class="project-body">
+              <span class="project-client">Solution: EdTech Learning Platform</span>
+              <h3 class="project-title">EduPulse™ LMS &amp; Education Dashboard</h3>
+              <p class="project-description">
+                Modern Native Android 15 (Target SDK 37) learning app featuring declarative Jetpack Compose UI, student progression heatmaps, ExoPlayer media streaming, and Room DB sync.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-pill">Kotlin</span>
+                <span class="tech-pill">Jetpack Compose</span>
+                <span class="tech-pill">Android SDK 37</span>
+                <span class="tech-pill">Material 3</span>
+                <span class="tech-pill">Room DB</span>
+              </div>
+              <div class="project-footer">
+                <button class="view-modal-btn" data-project="edupulse" type="button" aria-label="Quick View EduPulse LMS modal">
+                  <i class="fa-solid fa-eye"></i> Quick View
+                </button>
+                <a href="projects/edupulse-lms.html" class="case-study-link" aria-label="Read full case study for EduPulse LMS">
+                  Full Case Study <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 13: GeminiEdge Mobile On-Device GenAI -->
+          <article class="project-card" data-category="native flutter">
+            <div class="project-image-wrapper">
+              <img src="assets/avatar.png" alt="GeminiEdge Mobile On-Device GenAI Gemini Nano UI" width="400" height="220" loading="lazy" style="object-fit:contain; background:#0B0F19; padding:1.5rem;">
+              <div class="project-badge-overlay" style="color:var(--flutter-cyan); border-color:rgba(1,181,246,0.3);"><i class="fa-solid fa-microchip"></i> On-Device AI</div>
+            </div>
+            <div class="project-body">
+              <span class="project-client">Solution: Edge AI Mobile Suite</span>
+              <h3 class="project-title">GeminiEdge™ Mobile On-Device GenAI</h3>
+              <p class="project-description">
+                Privacy-first, zero-cloud-latency generative AI running 100% locally on Android hardware via Google Gemini Nano and Android AICore with $0.00 cloud token costs.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-pill">Gemini Nano</span>
+                <span class="tech-pill">Android AICore</span>
+                <span class="tech-pill">ML Kit</span>
+                <span class="tech-pill">Kotlin</span>
+                <span class="tech-pill">Jetpack Compose</span>
+              </div>
+              <div class="project-footer">
+                <button class="view-modal-btn" data-project="geminiedge" type="button" aria-label="Quick View GeminiEdge Mobile modal">
+                  <i class="fa-solid fa-eye"></i> Quick View
+                </button>
+                <a href="projects/gemini-edge-ai.html" class="case-study-link" aria-label="Read full case study for GeminiEdge Mobile">
+                  Full Case Study <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
         </div>
 
         <!-- Project 10: DoctorHelp Healthcare EHR -->
