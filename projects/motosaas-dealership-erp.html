@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MotoSaaS Automotive Dealership ERP & 3D Showroom Case Study | Rahamath Alikhan</title>
+  <meta name="description" content="Technical case study on MotoSaaS: multi-tenant ASP.NET Core 8 Web API, dual-experience Flutter mobile app, and interactive 3D WebGL vehicle showroom.">
+  <meta name="author" content="Rahamath Alikhan J">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="canonical" href="https://rahamathalikhanj.github.io/projects/motosaas-dealership-erp.html">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1DZY78K3N6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1DZY78K3N6', { 'send_page_view': true });
+  </script>
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:site_name" content="Rahamath Alikhan J | Portfolio">
+  <meta property="og:title" content="MotoSaaS Automotive Dealership ERP & 3D Showroom Case Study">
+  <meta property="og:description" content="Architecting a multi-tenant automotive dealership SaaS with ASP.NET Core 8 Clean Architecture and an interactive 3D glTF vehicle customizer in Flutter.">
+  <meta property="og:url" content="https://rahamathalikhanj.github.io/projects/motosaas-dealership-erp.html">
+  <meta property="og:image" content="https://rahamathalikhanj.github.io/assets/ajman-taxi-app.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MotoSaaS Automotive Dealership ERP & 3D Showroom Case Study">
+  <meta name="twitter:description" content="Architecting a multi-tenant automotive dealership SaaS with ASP.NET Core 8 Clean Architecture and an interactive 3D glTF vehicle customizer in Flutter.">
+  <meta name="twitter:image" content="https://rahamathalikhanj.github.io/assets/ajman-taxi-app.png">
+
+  <!-- JSON-LD Structured Data: Breadcrumbs & TechArticle -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://rahamathalikhanj.github.io/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Projects",
+            "item": "https://rahamathalikhanj.github.io/#projects"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "MotoSaaS: Automotive Dealership ERP & 3D Interactive Showroom",
+            "item": "https://rahamathalikhanj.github.io/projects/motosaas-dealership-erp.html"
+          }
+        ]
+      },
+      {
+        "@type": "TechArticle",
+        "@id": "https://rahamathalikhanj.github.io/projects/motosaas-dealership-erp.html#article",
+        "headline": "MotoSaaS: Automotive Dealership ERP & 3D Interactive Showroom",
+        "description": "Technical case study on MotoSaaS: multi-tenant ASP.NET Core 8 Web API, dual-experience Flutter mobile app, and interactive 3D WebGL vehicle showroom.",
+        "image": "https://rahamathalikhanj.github.io/assets/ajman-taxi-app.png",
+        "author": {
+          "@type": "Person",
+          "@id": "https://rahamathalikhanj.github.io/#person",
+          "name": "Rahamath Alikhan J",
+          "jobTitle": "Senior Software Engineer"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Rahamath Alikhan J"
+        },
+        "datePublished": "2026-11-26",
+        "dateModified": "2026-11-26"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="../styles.css?v=3">
+</head>
+<body>
+  <a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to main content</a>
+
+  <!-- Sticky Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="../#hero" class="brand-logo">
+        <div class="brand-avatar-icon">
+          <i class="fa-solid fa-code"></i>
+        </div>
+        <div class="brand-title">
+          <span class="brand-name">Rahamath Alikhan</span>
+          <span class="brand-role">Senior Software Engineer</span>
+        </div>
+      </a>
+
+      <ul class="nav-links" id="navLinks" aria-label="Main navigation">
+        <li><a href="../#about" class="nav-link">About</a></li>
+        <li><a href="../#services" class="nav-link">Services</a></li>
+        <li><a href="../#products-showcase" class="nav-link">Products</a></li>
+        <li><a href="../#skills" class="nav-link">Skills</a></li>
+        <li><a href="../#projects" class="nav-link active">Projects</a></li>
+        <li><a href="../#experience" class="nav-link">Experience</a></li>
+        <li><a href="../#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="../#contact" class="btn btn-primary btn-sm">Hire Me</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    <div class="container">
+      
+      <!-- Breadcrumb Navigation -->
+      <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+        <ol class="breadcrumb-list">
+          <li><a href="../"><i class="fa-solid fa-house"></i> Home</a></li>
+          <li class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></li>
+          <li><a href="../#projects">Projects</a></li>
+          <li class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></li>
+          <li class="breadcrumb-current" aria-current="page">MotoSaaS: Automotive Dealership ERP & 3D Interactive Showroom</li>
+        </ol>
+      </nav>
+
+      <!-- Case Study Header -->
+      <header class="case-study-header">
+        <span class="case-study-tag" style="color:var(--flutter-cyan);"><i class="fa-solid fa-layer-group"></i> ASP.NET Core 8, Flutter & 3D WebGL Showroom</span>
+        <h1 class="case-study-title">MotoSaaS: Automotive Dealership ERP & 3D Interactive Showroom</h1>
+        <p class="section-subtitle" style="text-align:left; margin:0;">Building a multi-tenant dealership management SaaS with real 3D vehicle visualization, dual-mode customer/staff mobile workflows, and modular Clean Architecture.</p>
+
+        <div class="case-study-meta-bar">
+          <div class="case-study-meta-item">
+            <span class="case-study-meta-label">Client / Ecosystem</span>
+            <span class="case-study-meta-value">Two-Wheeler Dealerships & EV Retailers</span>
+          </div>
+          <div class="case-study-meta-item">
+            <span class="case-study-meta-label">Engineering Role</span>
+            <span class="case-study-meta-value">Principal System Architect & Lead Engineer</span>
+          </div>
+          <div class="case-study-meta-item">
+            <span class="case-study-meta-label">Platform Stack</span>
+            <span class="case-study-meta-value">ASP.NET Core 8 Web API & Flutter (iOS/Android/Web)</span>
+          </div>
+          <div class="case-study-meta-item">
+            <span class="case-study-meta-label">Architecture</span>
+            <span class="case-study-meta-value">Clean Architecture CQRS & Riverpod</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Case Study Layout Grid -->
+      <div class="case-study-layout">
+        
+        <!-- Left Main Content Column -->
+        <div class="case-study-main">
+          
+          <div class="case-study-hero-img-box">
+            <img src="../assets/ajman-taxi-app.png" alt="MotoSaaS 3D bike customizer and dealership management dashboard" width="1200" height="630">
+          </div>
+
+          <section class="case-study-section">
+            <h2><i class="fa-solid fa-circle-info" style="color:var(--flutter-cyan);"></i> Project Overview</h2>
+            <p>MotoSaaS was conceived to solve the massive fragmentation in automobile dealership operations—where sales CRM, service workshop job cards, spare parts inventory, and vehicle test rides were handled across disparate legacy tools. The goal was to build a clean, multi-tenant modular monolith supporting both web and mobile, headlined by an interactive 3D vehicle showroom.</p>
+          </section>
+
+          <section class="case-study-section">
+            <h2><i class="fa-solid fa-triangle-exclamation" style="color:var(--accent-amber);"></i> Engineering Challenges &amp; Bottlenecks</h2>
+            <ul class="case-study-list">
+              <li><strong>Strict Multi-Tenant Isolation:</strong> Enforcing strict tenant data boundaries across manufacturers, independent dealership organizations, and individual physical branches without database bloat.</li><li><strong>Dual Persona Mobile Experience:</strong> Delivering a consumer-facing bike customizer and an authenticated employee staff portal within a single unified Flutter app without security leaks.</li><li><strong>High-Fidelity 3D Rendering on Budget Smartphones:</strong> Rendering realistic 3D glTF models with real-time color shaders on low-end mobile devices without overheating or battery drain.</li>
+            </ul>
+          </section>
+
+          <section class="case-study-section">
+            <h2><i class="fa-solid fa-cubes-stacked" style="color:var(--android-green);"></i> Architecture &amp; Solutions</h2>
+            <ul class="case-study-list">
+              <li><strong>ASP.NET Core 8 Modular Monolith:</strong> Structured around Clean Architecture and CQRS, isolating bounded contexts (Identity, Catalog, Showroom, Service, Inventory) within a single, cost-effective deployable service.</li><li><strong>Multi-Tier 3D Rendering Fallback:</strong> Built a flexible visualization pipeline that loads high-definition WebGL 3D models on capable devices while gracefully falling back to pre-rendered 360-degree image sets on low-RAM phones.</li><li><strong>Dual-Experience Runtime Switching:</strong> Engineered strict runtime profile gating in Flutter, ensuring guests only see sales catalogs while dealership staff gain access to lead registers and job cards upon verified login.</li><li><strong>PostgreSQL Tenant Query Filters:</strong> Configured global Entity Framework Core query filters enforcing tenant-id validation on every database query automatically.</li>
+            </ul>
+          </section>
+
+          <section class="case-study-section">
+            <h2><i class="fa-solid fa-user-check" style="color:var(--accent-purple);"></i> Key Engineering Contributions</h2>
+            <ul class="case-study-list">
+              <li>Authored the complete system architecture, API contracts, and database schema documentation.</li><li>Implemented the core ASP.NET Core 8 Web API with Docker containerization.</li><li>Engineered the Flutter 3D showroom integration and responsive tablet sales kiosk interface.</li><li>Constructed the multi-branch spare parts inventory and service workshop job card engine.</li>
+            </ul>
+          </section>
+
+          <section class="case-study-section">
+            <h2><i class="fa-solid fa-chart-column" style="color:var(--accent-amber);"></i> Key Results &amp; Performance Metrics</h2>
+            <div class="metrics-grid">
+              
+              <div class="metric-card">
+                <div class="metric-value">40% Faster</div>
+                <div class="metric-label">Lead-to-Booking Time</div>
+                <div class="metric-sub">Interactive 3D configuration accelerated customer purchasing decisions.</div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-value">Zero Data Leaks</div>
+                <div class="metric-label">Multi-Tenant Isolation</div>
+                <div class="metric-sub">100% verified tenant data segregation across all API endpoints.</div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-value">60 FPS</div>
+                <div class="metric-label">3D Customizer</div>
+                <div class="metric-sub">Fluid 3D model rotation and variant swapping on mobile viewports.</div>
+              </div>
+            </div>
+          </section>
+
+          <section class="case-study-section">
+            <h2><i class="fa-solid fa-code" style="color:var(--flutter-cyan);"></i> Core Technology Stack</h2>
+            <div class="tech-grid">
+              
+              <div class="tech-item-box">
+                <i class="fa-brands fa-microsoft"></i>
+                <div>
+                  <strong>ASP.NET Core 8</strong>
+                  <p>High-performance modular monolith with Clean Architecture and CQRS.</p>
+                </div>
+              </div>
+              <div class="tech-item-box">
+                <i class="fa-brands fa-flutter"></i>
+                <div>
+                  <strong>Flutter 3.x</strong>
+                  <p>Single codebase for iOS, Android, and web showroom kiosks.</p>
+                </div>
+              </div>
+              <div class="tech-item-box">
+                <i class="fa-solid fa-cube"></i>
+                <div>
+                  <strong>WebGL / glTF 3D</strong>
+                  <p>Interactive 3D vehicle visualizer with dynamic paint shader swaps.</p>
+                </div>
+              </div>
+              <div class="tech-item-box">
+                <i class="fa-solid fa-database"></i>
+                <div>
+                  <strong>PostgreSQL & EF Core</strong>
+                  <p>Multi-tenant database schema with automatic query filtering.</p>
+                </div>
+              </div>
+              <div class="tech-item-box">
+                <i class="fa-brands fa-docker"></i>
+                <div>
+                  <strong>Docker</strong>
+                  <p>Containerized deployment with continuous delivery pipelines.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Commercial Product Link -->
+          <div style="background: rgba(1, 181, 246, 0.05); border: 1px solid rgba(1, 181, 246, 0.25); border-radius: var(--radius-md); padding: 1.5rem; margin: 2rem 0;">
+            <h3 style="color:var(--text-main); font-size:1.15rem; margin-bottom:0.5rem;"><i class="fa-solid fa-box-open" style="color:var(--flutter-cyan);"></i> Looking to Deploy a Similar Solution?</h3>
+            <p style="color:var(--text-muted); font-size:0.92rem; line-height:1.6; margin-bottom:1rem;">
+              This architecture is available as a customizable, white-label commercial software solution. Explore features, deployment timelines, and turnkey pricing.
+            </p>
+            <a href="../products/automotive-dealership-erp-3d-showroom.html" class="case-study-page-link">View Automotive ERP Product <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+
+          <!-- Bottom CTA -->
+          <div class="case-study-cta-box">
+            <h2>Need Senior Mobile &amp; System Architecture for Your Next Initiative?</h2>
+            <p>I help ambitious organizations architect, build, and deploy production-grade mobile platforms and high-throughput backend services.</p>
+            <div class="hero-actions" style="margin-top:1.5rem;">
+              <a href="../#contact" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Get in Touch</a>
+              <a href="../#projects" class="btn btn-secondary"><i class="fa-solid fa-briefcase"></i> View More Case Studies</a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Column / Sidebar -->
+        <aside class="case-study-sidebar">
+          
+          <div class="case-study-sidebar-card">
+            <h3><i class="fa-solid fa-user-tie" style="color:var(--flutter-cyan);"></i> Available for Contract &amp; Consulting</h3>
+            <p style="color:var(--text-muted); font-size:0.9rem; line-height:1.6;">
+              Specializing in Flutter cross-platform architecture, Go microservices, real-time WebSockets, and AI edge computing.
+            </p>
+            <a href="../#contact" class="btn btn-primary btn-sm" style="width:100%; margin-top:1rem;">Hire Rahamath</a>
+          </div>
+
+          <div class="case-study-sidebar-card">
+            <h3><i class="fa-solid fa-folder-open" style="color:var(--accent-amber);"></i> More Case Studies</h3>
+            <ul style="list-style:none; padding:0; display:flex; flex-direction:column; gap:0.75rem;">
+              <li><a href="foodflow-delivery-ecosystem.html" style="color:var(--text-main); font-size:0.9rem; display:flex; align-items:center; gap:0.5rem;"><i class="fa-solid fa-utensils" style="color:var(--accent-amber);"></i> FoodFlow Delivery Suite</a></li>
+              <li><a href="patternpulse-stock-analyzer.html" style="color:var(--text-main); font-size:0.9rem; display:flex; align-items:center; gap:0.5rem;"><i class="fa-solid fa-chart-line" style="color:var(--flutter-cyan);"></i> PatternPulse Stock AI</a></li>
+              <li><a href="tn-now-hyperlocal-platform.html" style="color:var(--text-main); font-size:0.9rem; display:flex; align-items:center; gap:0.5rem;"><i class="fa-solid fa-newspaper" style="color:var(--android-green);"></i> TN NOW Discovery</a></li>
+              <li><a href="doctorhelp-healthcare-ehr.html" style="color:var(--text-main); font-size:0.9rem; display:flex; align-items:center; gap:0.5rem;"><i class="fa-solid fa-user-doctor" style="color:var(--accent-purple);"></i> DoctorHelp Clinic EHR</a></li>
+            </ul>
+          </div>
+
+        </aside>
+
+      </div>
+
+      <!-- Navigation Bar -->
+      <nav class="project-nav-bar" aria-label="Project navigation">
+        <a href="../#projects" class="btn btn-secondary btn-sm">
+          <i class="fa-solid fa-arrow-left"></i> Back to All Projects
+        </a>
+        <a href="../#contact" class="btn btn-outline-flutter btn-sm">
+          Hire Rahamath <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </nav>
+
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <span class="footer-logo">Rahamath Alikhan</span>
+        <p class="footer-tagline">Senior Software Engineer &amp; Mobile Architecture Specialist</p>
+      </div>
+      <div class="footer-links">
+        <a href="../#products-showcase">Products</a>
+        <a href="../#projects">Case Studies</a>
+        <a href="../#contact">Contact</a>
+      </div>
+      <div class="footer-copyright">
+        &copy; 2026 Rahamath Alikhan J. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js?v=3"></script>
+</body>
+</html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TurfMate Sports Arena & Turf Slot Booking SaaS Case Study | Rahamath Alikhan</title>
+  <meta name="description" content="Technical case study on TurfMate: sports arena slot booking SaaS with real-time calendar matrix, Redis distributed locks, and split payment checkout.">
+  <meta name="author" content="Rahamath Alikhan J">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="canonical" href="https://rahamathalikhanj.github.io/projects/turfmate-booking-platform.html">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1DZY78K3N6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1DZY78K3N6', { 'send_page_view': true });
+  </script>
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:site_name" content="Rahamath Alikhan J | Portfolio">
+  <meta property="og:title" content="TurfMate Sports Arena Slot Booking Platform Case Study">
+  <meta property="og:description" content="Building a high-concurrency sports turf booking SaaS with real-time slot scheduling, Redis concurrency locking, and Flutter.">
+  <meta property="og:url" content="https://rahamathalikhanj.github.io/projects/turfmate-booking-platform.html">
+  <meta property="og:image" content="https://rahamathalikhanj.github.io/assets/ajman-taxi-app.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TurfMate Sports Arena Slot Booking Platform Case Study">
+  <meta name="twitter:description" content="Building a high-concurrency sports turf booking SaaS with real-time slot scheduling, Redis concurrency locking, and Flutter.">
+  <meta name="twitter:image" content="https://rahamathalikhanj.github.io/assets/ajman-taxi-app.png">
+
+  <!-- JSON-LD Structured Data: Breadcrumbs & TechArticle -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://rahamathalikhanj.github.io/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Projects",
+            "item": "https://rahamathalikhanj.github.io/#projects"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "TurfMate: Sports Arena & Turf Slot Booking Platform",
+            "item": "https://rahamathalikhanj.github.io/projects/turfmate-booking-platform.html"
+          }
+        ]
+      },
+      {
+        "@type": "TechArticle",
+        "@id": "https://rahamathalikhanj.github.io/projects/turfmate-booking-platform.html#article",
+        "headline": "TurfMate: Sports Arena & Turf Slot Booking Platform",
+        "description": "Technical case study on TurfMate: sports arena slot booking SaaS with real-time calendar matrix, Redis distributed locks, and split payment checkout.",
+        "image": "https://rahamathalikhanj.github.io/assets/ajman-taxi-app.png",
+        "author": {
+          "@type": "Person",
+          "@id": "https://rahamathalikhanj.github.io/#person",
+          "name": "Rahamath Alikhan J",
+          "jobTitle": "Senior Software Engineer"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Rahamath Alikhan J"
+        },
+        "datePublished": "2026-11-26",
+        "dateModified": "2026-11-26"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="../styles.css?v=3">
+</head>
+<body>
+  <a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to main content</a>
+
+  <!-- Sticky Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="../#hero" class="brand-logo">
+        <div class="brand-avatar-icon">
+          <i class="fa-solid fa-code"></i>
+        </div>
+        <div class="brand-title">
+          <span class="brand-name">Rahamath Alikhan</span>
+          <span class="brand-role">Senior Software Engineer</span>
+        </div>
+      </a>
+
+      <ul class="nav-links" id="navLinks" aria-label="Main navigation">
+        <li><a href="../#about" class="nav-link">About</a></li>
+        <li><a href="../#services" class="nav-link">Services</a></li>
+        <li><a href="../#products-showcase" class="nav-link">Products</a></li>
+        <li><a href="../#skills" class="nav-link">Skills</a></li>
+        <li><a href="../#projects" class="nav-link active">Projects</a></li>
+        <li><a href="../#experience" class="nav-link">Experience</a></li>
+        <li><a href="../#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="../#contact" class="btn btn-primary btn-sm">Hire Me</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    <div class="container">
+      
+      <!-- Breadcrumb Navigation -->
+      <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+        <ol class="breadcrumb-list">
+          <li><a href="../"><i class="fa-solid fa-house"></i> Home</a></li>
+          <li class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></li>
+          <li><a href="../#projects">Projects</a></li>
+          <li class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></li>
+          <li class="breadcrumb-current" aria-current="page">TurfMate: Sports Arena & Turf Slot Booking Platform</li>
+        </ol>
+      </nav>
+
+      <!-- Case Study Header -->
+      <header class="case-study-header">
+        <span class="case-study-tag" style="color:var(--flutter-cyan);"><i class="fa-solid fa-layer-group"></i> Sports Tech, Flutter & Real-Time Scheduling</span>
+        <h1 class="case-study-title">TurfMate: Sports Arena & Turf Slot Booking Platform</h1>
+        <p class="section-subtitle" style="text-align:left; margin:0;">Eliminating double-bookings and phone-based slot management with a modern real-time sports facility reservation ecosystem.</p>
+
+        <div class="case-study-meta-bar">
+          <div class="case-study-meta-item">
+            <span class="case-study-meta-label">Client / Ecosystem</span>
+            <span class="case-study-meta-value">Box Cricket & Football Arena Operators</span>
+          </div>
+          <div class="case-study-meta-item">
+            <span class="case-study-meta-label">Engineering Role</span>
+            <span class="case-study-meta-value">Lead Architect & Full-Stack Developer</span>
+          </div>
+          <div class="case-study-meta-item">
+            <span class="case-study-meta-label">Platform Stack</span>
+            <span class="case-study-meta-value">Flutter (iOS, Android & Web) & Node.js Backend</span>
+          </div>
+          <div class="case-study-meta-item">
+            <span class="case-study-meta-label">Architecture</span>
+            <span class="case-study-meta-value">Riverpod, Redis Mutex & WebSockets</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Case Study Layout Grid -->
+      <div class="case-study-layout">
+        
+        <!-- Left Main Content Column -->
+        <div class="case-study-main">
+          
+          <div class="case-study-hero-img-box">
+            <img src="../assets/ajman-taxi-app.png" alt="TurfMate sports slot booking calendar and arena dashboard" width="1200" height="630">
+          </div>
+
+          <section class="case-study-section">
+            <h2><i class="fa-solid fa-circle-info" style="color:var(--flutter-cyan);"></i> Project Overview</h2>
+            <p>TurfMate was created to modernize sports venue operations across urban areas. Turf owners struggled with overlapping phone call bookings, manual cash records, and unutilized off-peak hours. TurfMate introduced an automated digital booking matrix with real-time hold timers and instant split checkout.</p>
+          </section>
+
+          <section class="case-study-section">
+            <h2><i class="fa-solid fa-triangle-exclamation" style="color:var(--accent-amber);"></i> Engineering Challenges &amp; Bottlenecks</h2>
+            <ul class="case-study-list">
+              <li><strong>Simultaneous Checkout Race Conditions:</strong> Multiple players attempting to reserve the exact same Friday night 8 PM slot at the same second.</li><li><strong>Dynamic Weekend vs Weekday Pricing:</strong> Complex hourly rate structures differing between morning, evening floodlight, and weekend prime slots.</li><li><strong>Low Network Connectivity at Venues:</strong> Ensuring arena gatekeepers can verify customer QR codes even during patchy venue cellular reception.</li>
+            </ul>
+          </section>
+
+          <section class="case-study-section">
+            <h2><i class="fa-solid fa-cubes-stacked" style="color:var(--android-green);"></i> Architecture &amp; Solutions</h2>
+            <ul class="case-study-list">
+              <li><strong>Redis Distributed Mutex Locks:</strong> Implemented a 5-minute temporary slot hold in Redis when a user enters checkout, preventing duplicate payments.</li><li><strong>Flexible Dynamic Rate Calculator:</strong> Built an hourly rule engine that computes base price, floodlight surcharges, and discount promo codes on the fly.</li><li><strong>Offline QR Validation:</strong> Issued cryptographically signed JWT tickets that the gatekeeper tablet verifies locally offline without an active internet connection.</li><li><strong>Automated WhatsApp Notifications:</strong> Integrated WhatsApp Business API sending Google Maps venue links, booking pins, and rules of play upon booking confirmation.</li>
+            </ul>
+          </section>
+
+          <section class="case-study-section">
+            <h2><i class="fa-solid fa-user-check" style="color:var(--accent-purple);"></i> Key Engineering Contributions</h2>
+            <ul class="case-study-list">
+              <li>Engineered the Flutter mobile app with custom interactive slot calendar matrix widgets.</li><li>Constructed the Node.js / PostgreSQL booking engine and payment gateway webhooks.</li><li>Designed the venue owner tablet dashboard for walk-in management and cash accounting.</li>
+            </ul>
+          </section>
+
+          <section class="case-study-section">
+            <h2><i class="fa-solid fa-chart-column" style="color:var(--accent-amber);"></i> Key Results &amp; Performance Metrics</h2>
+            <div class="metrics-grid">
+              
+              <div class="metric-card">
+                <div class="metric-value">0 Overlaps</div>
+                <div class="metric-label">Booking Race Safeguard</div>
+                <div class="metric-sub">Eliminated double-booking incidents completely via Redis locks.</div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-value">30% Increase</div>
+                <div class="metric-label">Off-Peak Revenue</div>
+                <div class="metric-sub">Dynamic hourly pricing incentivized weekday and morning bookings.</div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-value">3-Tap</div>
+                <div class="metric-label">Checkout Speed</div>
+                <div class="metric-sub">From app launch to confirmed court slot in under 45 seconds.</div>
+              </div>
+            </div>
+          </section>
+
+          <section class="case-study-section">
+            <h2><i class="fa-solid fa-code" style="color:var(--flutter-cyan);"></i> Core Technology Stack</h2>
+            <div class="tech-grid">
+              
+              <div class="tech-item-box">
+                <i class="fa-brands fa-flutter"></i>
+                <div>
+                  <strong>Flutter 3.x</strong>
+                  <p>Interactive player booking and venue owner mobile experience.</p>
+                </div>
+              </div>
+              <div class="tech-item-box">
+                <i class="fa-solid fa-server"></i>
+                <div>
+                  <strong>Node.js & Redis</strong>
+                  <p>High-concurrency booking engine with distributed lock safeguards.</p>
+                </div>
+              </div>
+              <div class="tech-item-box">
+                <i class="fa-solid fa-database"></i>
+                <div>
+                  <strong>PostgreSQL</strong>
+                  <p>Relational persistence for venues, slots, customers, and bookings.</p>
+                </div>
+              </div>
+              <div class="tech-item-box">
+                <i class="fa-brands fa-whatsapp"></i>
+                <div>
+                  <strong>Meta Cloud API</strong>
+                  <p>Instant booking confirmation tickets and payment reminders.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Commercial Product Link -->
+          <div style="background: rgba(1, 181, 246, 0.05); border: 1px solid rgba(1, 181, 246, 0.25); border-radius: var(--radius-md); padding: 1.5rem; margin: 2rem 0;">
+            <h3 style="color:var(--text-main); font-size:1.15rem; margin-bottom:0.5rem;"><i class="fa-solid fa-box-open" style="color:var(--flutter-cyan);"></i> Looking to Deploy a Similar Solution?</h3>
+            <p style="color:var(--text-muted); font-size:0.92rem; line-height:1.6; margin-bottom:1rem;">
+              This architecture is available as a customizable, white-label commercial software solution. Explore features, deployment timelines, and turnkey pricing.
+            </p>
+            <a href="../products/sports-arena-turf-booking-platform.html" class="case-study-page-link">View Turf Booking Product <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+
+          <!-- Bottom CTA -->
+          <div class="case-study-cta-box">
+            <h2>Need Senior Mobile &amp; System Architecture for Your Next Initiative?</h2>
+            <p>I help ambitious organizations architect, build, and deploy production-grade mobile platforms and high-throughput backend services.</p>
+            <div class="hero-actions" style="margin-top:1.5rem;">
+              <a href="../#contact" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Get in Touch</a>
+              <a href="../#projects" class="btn btn-secondary"><i class="fa-solid fa-briefcase"></i> View More Case Studies</a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Column / Sidebar -->
+        <aside class="case-study-sidebar">
+          
+          <div class="case-study-sidebar-card">
+            <h3><i class="fa-solid fa-user-tie" style="color:var(--flutter-cyan);"></i> Available for Contract &amp; Consulting</h3>
+            <p style="color:var(--text-muted); font-size:0.9rem; line-height:1.6;">
+              Specializing in Flutter cross-platform architecture, Go microservices, real-time WebSockets, and AI edge computing.
+            </p>
+            <a href="../#contact" class="btn btn-primary btn-sm" style="width:100%; margin-top:1rem;">Hire Rahamath</a>
+          </div>
+
+          <div class="case-study-sidebar-card">
+            <h3><i class="fa-solid fa-folder-open" style="color:var(--accent-amber);"></i> More Case Studies</h3>
+            <ul style="list-style:none; padding:0; display:flex; flex-direction:column; gap:0.75rem;">
+              <li><a href="foodflow-delivery-ecosystem.html" style="color:var(--text-main); font-size:0.9rem; display:flex; align-items:center; gap:0.5rem;"><i class="fa-solid fa-utensils" style="color:var(--accent-amber);"></i> FoodFlow Delivery Suite</a></li>
+              <li><a href="patternpulse-stock-analyzer.html" style="color:var(--text-main); font-size:0.9rem; display:flex; align-items:center; gap:0.5rem;"><i class="fa-solid fa-chart-line" style="color:var(--flutter-cyan);"></i> PatternPulse Stock AI</a></li>
+              <li><a href="tn-now-hyperlocal-platform.html" style="color:var(--text-main); font-size:0.9rem; display:flex; align-items:center; gap:0.5rem;"><i class="fa-solid fa-newspaper" style="color:var(--android-green);"></i> TN NOW Discovery</a></li>
+              <li><a href="doctorhelp-healthcare-ehr.html" style="color:var(--text-main); font-size:0.9rem; display:flex; align-items:center; gap:0.5rem;"><i class="fa-solid fa-user-doctor" style="color:var(--accent-purple);"></i> DoctorHelp Clinic EHR</a></li>
+            </ul>
+          </div>
+
+        </aside>
+
+      </div>
+
+      <!-- Navigation Bar -->
+      <nav class="project-nav-bar" aria-label="Project navigation">
+        <a href="../#projects" class="btn btn-secondary btn-sm">
+          <i class="fa-solid fa-arrow-left"></i> Back to All Projects
+        </a>
+        <a href="../#contact" class="btn btn-outline-flutter btn-sm">
+          Hire Rahamath <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </nav>
+
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <span class="footer-logo">Rahamath Alikhan</span>
+        <p class="footer-tagline">Senior Software Engineer &amp; Mobile Architecture Specialist</p>
+      </div>
+      <div class="footer-links">
+        <a href="../#products-showcase">Products</a>
+        <a href="../#projects">Case Studies</a>
+        <a href="../#contact">Contact</a>
+      </div>
+      <div class="footer-copyright">
+        &copy; 2026 Rahamath Alikhan J. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js?v=3"></script>
+</body>
+</html>
