@@ -420,7 +420,7 @@ function initModals() {
       title: 'LogiFlow AI™ – Multi-Channel Logistics Operations & RAG CRM Engine',
       client: 'Global Freight Forwarding & 3PL Supply Chain',
       type: 'AI Operations Pipeline (pgvector + WhatsApp Cloud API + Next.js)',
-      img: 'website/assets/admin_portal.jpeg',
+      img: 'assets/fts-fleet-app.png',
       url: 'projects/logiflow-ai.html',
       summary: 'Multi-channel AI operations pipeline unifying Zybo ERP, Microsoft Outlook Graph API, and WhatsApp Business with pgvector semantic RAG for zero-hallucination quote generation.',
       features: [
@@ -434,7 +434,7 @@ function initModals() {
       title: 'EduPulse™ – Interactive LMS & Student Learning Analytics Dashboard',
       client: 'Higher Education & EdTech Bootcamps',
       type: 'Native Android (Jetpack Compose, Kotlin, Target SDK 37)',
-      img: 'website/assets/employee_delivery_management.jpeg',
+      img: 'assets/vimo-app.png',
       url: 'projects/edupulse-lms.html',
       summary: 'Modern Native Android learning management dashboard engineered with 100% Jetpack Compose and Kotlin Coroutines Flow for responsive education analytics and offline course delivery.',
       features: [
@@ -448,7 +448,7 @@ function initModals() {
       title: 'GeminiEdge™ – On-Device Edge GenAI Mobile Suite (Gemini Nano)',
       client: 'Privacy-Critical Enterprises & Field Operations',
       type: 'Edge AI Native Android (Gemini Nano & Android AICore)',
-      img: 'assets/avatar.png',
+      img: 'assets/vimo-app.png',
       url: 'projects/gemini-edge-ai.html',
       summary: 'Privacy-first, zero-cloud-latency generative AI running 100% locally on Android hardware using Google Gemini Nano foundation model and Android AICore system service.',
       features: [
