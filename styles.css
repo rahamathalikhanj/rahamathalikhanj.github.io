@@ -421,10 +421,7 @@ header.navbar {
 
 /* Hero Section with Staggered Entrance */
 .hero {
-  padding: 8.5rem 0 5rem;
-  min-height: 92vh;
-  display: flex;
-  align-items: center;
+  padding: 5.5rem 0 3.5rem;
   position: relative;
 }
 
