@@ -116,6 +116,20 @@ function initNavbar() {
     });
   });
 
+  // Dedicated smooth scroll for all "Hire Me" contact links
+  document.querySelectorAll('a[href="#contact"]').forEach(anchor => {
+    anchor.addEventListener('click', (e) => {
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        e.preventDefault();
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+        if (window.innerWidth <= 1120 && navLinksContainer) {
+          navLinksContainer.style.display = 'none';
+        }
+      }
+    });
+  });
+
   if (mobileToggle) {
     mobileToggle.addEventListener('click', () => {
       if (navLinksContainer.style.display === 'flex') {
