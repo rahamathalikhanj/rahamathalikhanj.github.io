@@ -2,7 +2,7 @@
 
 > Available for freelance & contract software projects across all budgets—from affordable starter websites & solo-founder MVPs to high-concurrency enterprise mobile apps, MQTT fleet telemetry, ERPs, and AI automation.
 
-- Website: https://rahamathalikhanj.github.io/
+- Website: https://www.rahamathalikhan.com/
 - Email: rahamathalikhanj@gmail.com
 - WhatsApp / Phone: +91-8015581405
 - LinkedIn: https://www.linkedin.com/in/rahamath-ali-khan
@@ -25,13 +25,13 @@
 - **AI & Automation**: LLM APIs (Gemini, OpenAI), pgvector RAG, On-Device Gemini Nano & ONNX Runtime, WhatsApp Business Cloud API, n8n, Dify.
 
 ## Flagship Products & Case Studies
-- **Ominaigo™ / GoLog Transit & MQTT Fleet Telemetry**: https://rahamathalikhanj.github.io/projects/ominaigo-transit-telemetry.html | Product: https://rahamathalikhanj.github.io/products/ominaigo-fleet-telemetry-suite.html
-- **Ajman Taxi & Sixth Limo (Dubai, UAE)**: https://rahamathalikhanj.github.io/projects/ajman-taxi.html | Product: https://rahamathalikhanj.github.io/products/taxi-booking-ride-hailing-app.html
-- **Vimo Services Limousine & Accessible Transport (Singapore)**: https://rahamathalikhanj.github.io/projects/vimo-services.html | Product: https://rahamathalikhanj.github.io/products/limousine-chauffeur-booking-software.html
-- **TripeXL.AI Corporate Mobility & Telematics**: https://rahamathalikhanj.github.io/projects/tripexl-corporate-mobility.html | Product: https://rahamathalikhanj.github.io/products/corporate-fleet-dispatch-driver-telematics.html
-- **LogiFlow AI Logistics CRM & RAG Engine**: https://rahamathalikhanj.github.io/projects/logiflow-logistics-crm.html | Product: https://rahamathalikhanj.github.io/products/ai-logistics-crm-operations-engine.html
-- **FoodFlow 4-in-1 On-Demand Delivery Suite**: https://rahamathalikhanj.github.io/projects/foodflow-delivery-ecosystem.html | Product: https://rahamathalikhanj.github.io/products/on-demand-food-delivery-multi-app-ecosystem.html
-- **DoctorHelp Healthcare EHR & Telemedicine**: https://rahamathalikhanj.github.io/projects/doctorhelp-healthcare-ehr.html | Product: https://rahamathalikhanj.github.io/products/telemedicine-clinic-patient-management-system.html
-- **TurfMate Sports Arena Booking Platform**: https://rahamathalikhanj.github.io/projects/turfmate-booking-platform.html | Product: https://rahamathalikhanj.github.io/products/sports-arena-turf-booking-platform.html
-- **QuickCart Hyperlocal Quick-Commerce App**: https://rahamathalikhanj.github.io/projects/hyperlocal-quick-commerce.html | Product: https://rahamathalikhanj.github.io/products/quick-commerce-hyperlocal-retail-app.html
-- **Full Sitemap**: https://rahamathalikhanj.github.io/sitemap.xml
+- **Ominaigo™ / GoLog Transit & MQTT Fleet Telemetry**: https://www.rahamathalikhan.com/projects/ominaigo-transit-telemetry.html | Product: https://www.rahamathalikhan.com/products/ominaigo-fleet-telemetry-suite.html
+- **Ajman Taxi & Sixth Limo (Dubai, UAE)**: https://www.rahamathalikhan.com/projects/ajman-taxi.html | Product: https://www.rahamathalikhan.com/products/taxi-booking-ride-hailing-app.html
+- **Vimo Services Limousine & Accessible Transport (Singapore)**: https://www.rahamathalikhan.com/projects/vimo-services.html | Product: https://www.rahamathalikhan.com/products/limousine-chauffeur-booking-software.html
+- **TripeXL.AI Corporate Mobility & Telematics**: https://www.rahamathalikhan.com/projects/tripexl-corporate-mobility.html | Product: https://www.rahamathalikhan.com/products/corporate-fleet-dispatch-driver-telematics.html
+- **LogiFlow AI Logistics CRM & RAG Engine**: https://www.rahamathalikhan.com/projects/logiflow-logistics-crm.html | Product: https://www.rahamathalikhan.com/products/ai-logistics-crm-operations-engine.html
+- **FoodFlow 4-in-1 On-Demand Delivery Suite**: https://www.rahamathalikhan.com/projects/foodflow-delivery-ecosystem.html | Product: https://www.rahamathalikhan.com/products/on-demand-food-delivery-multi-app-ecosystem.html
+- **DoctorHelp Healthcare EHR & Telemedicine**: https://www.rahamathalikhan.com/projects/doctorhelp-healthcare-ehr.html | Product: https://www.rahamathalikhan.com/products/telemedicine-clinic-patient-management-system.html
+- **TurfMate Sports Arena Booking Platform**: https://www.rahamathalikhan.com/projects/turfmate-booking-platform.html | Product: https://www.rahamathalikhan.com/products/sports-arena-turf-booking-platform.html
+- **QuickCart Hyperlocal Quick-Commerce App**: https://www.rahamathalikhan.com/projects/hyperlocal-quick-commerce.html | Product: https://www.rahamathalikhan.com/products/quick-commerce-hyperlocal-retail-app.html
+- **Full Sitemap**: https://www.rahamathalikhan.com/sitemap.xml

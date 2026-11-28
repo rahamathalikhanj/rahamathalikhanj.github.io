@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://rahamathalikhanj.github.io/sitemap.xml
+Sitemap: https://www.rahamathalikhan.com/sitemap.xml
