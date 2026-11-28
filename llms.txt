@@ -1,0 +1,37 @@
+# Rahamath Alikhan J — Senior Software Engineer & Freelance Developer
+
+> Available for freelance & contract software projects across all budgets—from affordable starter websites & solo-founder MVPs to high-concurrency enterprise mobile apps, MQTT fleet telemetry, ERPs, and AI automation.
+
+- Website: https://rahamathalikhanj.github.io/
+- Email: rahamathalikhanj@gmail.com
+- WhatsApp / Phone: +91-7904582853
+- LinkedIn: https://linkedin.com/in/rahamath-ali-khan
+- GitHub: https://github.com/rahamathalikhanj
+- Base Location: Madurai, Tamil Nadu, India
+
+## Regions Served
+- **Gulf (GCC) Countries**: United Arab Emirates (Dubai, Abu Dhabi, Sharjah, Ajman), Saudi Arabia (Riyadh, Jeddah, Dammam), Qatar (Doha), Kuwait (Kuwait City), Oman (Muscat), Bahrain (Manama). Full RTL Arabic UI and regional payment gateway support (Telr, Tap, Moyasar, Stripe).
+- **India**: All 38 districts of Tamil Nadu (Chennai, Madurai, Coimbatore, Tiruchirappalli, Salem, Tirunelveli, Erode, Tiruppur, Vellore, Thanjavur, and more) plus Bengaluru and pan-India.
+- **Global Remote**: Singapore, United Kingdom (UK), United States (USA), Canada, Australia, Germany, Malaysia, and worldwide.
+
+## Engagement Models (Low to High Budget)
+1. **Starter (Individuals & Small Businesses)**: Affordable SEO websites, landing pages, clinic/shop sites, WhatsApp customer alerts, Flutter/Android bug fixes, and Play Store / App Store publishing (5–10 days).
+2. **Growth (Startups & SMEs)**: Cross-platform Flutter (iOS & Android) MVPs, web admin dashboards, REST APIs, and turnkey white-label taxi, delivery, turf booking, or e-commerce apps (2–4 weeks).
+3. **Enterprise (Companies & Agencies)**: High-concurrency microservices (.NET Core 8, Go, FastAPI, Node.js), MQTT IoT fleet telemetry, PostgreSQL 16, AI/RAG pipelines (pgvector, n8n, Dify), and dedicated monthly retainers.
+
+## Core Technical Stack
+- **Mobile**: Flutter (Riverpod, BLoC, Hive, Isar DB), Native Android (Kotlin, Jetpack Compose, Java, Hilt, Room), iOS.
+- **Backend & Cloud**: C# .NET Core 8, Go 1.22+, Python FastAPI, Node.js, MQTT (TLS QoS 1), WebSockets, PostgreSQL 16, MongoDB, Redis, Docker, Azure, CI/CD.
+- **AI & Automation**: LLM APIs (Gemini, OpenAI), pgvector RAG, On-Device Gemini Nano & ONNX Runtime, WhatsApp Business Cloud API, n8n, Dify.
+
+## Flagship Products & Case Studies
+- **Ominaigo™ / GoLog Transit & MQTT Fleet Telemetry**: https://rahamathalikhanj.github.io/projects/ominaigo-transit-telemetry.html | Product: https://rahamathalikhanj.github.io/products/ominaigo-fleet-telemetry-suite.html
+- **Ajman Taxi & Sixth Limo (Dubai, UAE)**: https://rahamathalikhanj.github.io/projects/ajman-taxi.html | Product: https://rahamathalikhanj.github.io/products/taxi-booking-ride-hailing-app.html
+- **Vimo Services Limousine & Accessible Transport (Singapore)**: https://rahamathalikhanj.github.io/projects/vimo-services.html | Product: https://rahamathalikhanj.github.io/products/limousine-chauffeur-booking-software.html
+- **TripeXL.AI Corporate Mobility & Telematics**: https://rahamathalikhanj.github.io/projects/tripexl-corporate-mobility.html | Product: https://rahamathalikhanj.github.io/products/corporate-fleet-dispatch-driver-telematics.html
+- **LogiFlow AI Logistics CRM & RAG Engine**: https://rahamathalikhanj.github.io/projects/logiflow-logistics-crm.html | Product: https://rahamathalikhanj.github.io/products/ai-logistics-crm-operations-engine.html
+- **FoodFlow 4-in-1 On-Demand Delivery Suite**: https://rahamathalikhanj.github.io/projects/foodflow-delivery-ecosystem.html | Product: https://rahamathalikhanj.github.io/products/on-demand-food-delivery-multi-app-ecosystem.html
+- **DoctorHelp Healthcare EHR & Telemedicine**: https://rahamathalikhanj.github.io/projects/doctorhelp-healthcare-ehr.html | Product: https://rahamathalikhanj.github.io/products/telemedicine-clinic-patient-management-system.html
+- **TurfMate Sports Arena Booking Platform**: https://rahamathalikhanj.github.io/projects/turfmate-booking-platform.html | Product: https://rahamathalikhanj.github.io/products/sports-arena-turf-booking-platform.html
+- **QuickCart Hyperlocal Quick-Commerce App**: https://rahamathalikhanj.github.io/projects/hyperlocal-quick-commerce.html | Product: https://rahamathalikhanj.github.io/products/quick-commerce-hyperlocal-retail-app.html
+- **Full Sitemap**: https://rahamathalikhanj.github.io/sitemap.xml

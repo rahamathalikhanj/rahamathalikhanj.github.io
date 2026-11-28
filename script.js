@@ -435,7 +435,7 @@ function initModals() {
       client: 'Corporate Fleet & Mobility Operators',
       type: 'Cross-Platform Flutter Mobile Suite + Telematics',
       img: 'assets/fts-fleet-app.png',
-      url: 'projects/tripexl-fleet.html',
+      page: 'projects/tripexl-corporate-mobility.html',
       summary: 'Enterprise corporate ride-hailing and driver telemetry platform featuring multi-tier managerial approval gates, Uber/Careem-grade live GPS tracking, and mandatory pre-trip odometer inspections.',
       features: [
         'Uber/Careem-parity live driver GPS tracking on dispatch with Kalman-smoothed coordinate streams.',
@@ -449,7 +449,7 @@ function initModals() {
       client: 'Global Freight Forwarding & 3PL Supply Chain',
       type: 'AI Operations Pipeline (pgvector + WhatsApp Cloud API + Next.js)',
       img: 'assets/fts-fleet-app.png',
-      url: 'projects/logiflow-ai.html',
+      page: 'projects/logiflow-logistics-crm.html',
       summary: 'Multi-channel AI operations pipeline unifying Zybo ERP, Microsoft Outlook Graph API, and WhatsApp Business with pgvector semantic RAG for zero-hallucination quote generation.',
       features: [
         'Multi-channel ingestion parsing RFQ emails, packing lists, and MSDS sheets from Outlook & WhatsApp.',
@@ -463,7 +463,7 @@ function initModals() {
       client: 'Higher Education & EdTech Bootcamps',
       type: 'Native Android (Jetpack Compose, Kotlin, Target SDK 37)',
       img: 'assets/vimo-app.png',
-      url: 'projects/edupulse-lms.html',
+      page: '#contact',
       summary: 'Modern Native Android learning management dashboard engineered with 100% Jetpack Compose and Kotlin Coroutines Flow for responsive education analytics and offline course delivery.',
       features: [
         '100% Jetpack Compose declarative UI with Material 3 theming adhering to Android Target SDK 37.',
@@ -477,7 +477,7 @@ function initModals() {
       client: 'Privacy-Critical Enterprises & Field Operations',
       type: 'Edge AI Native Android (Gemini Nano & Android AICore)',
       img: 'assets/vimo-app.png',
-      url: 'projects/gemini-edge-ai.html',
+      page: 'products/ai-workflow-automation-backend-engine.html',
       summary: 'Privacy-first, zero-cloud-latency generative AI running 100% locally on Android hardware using Google Gemini Nano foundation model and Android AICore system service.',
       features: [
         '100% on-device local inference powered by Google Gemini Nano with zero network dependency.',
