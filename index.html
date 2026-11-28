@@ -366,7 +366,7 @@
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <link rel="stylesheet" href="styles.css?v=5">
+  <link rel="stylesheet" href="styles.css?v=6">
 </head>
 
 <body>
@@ -2215,6 +2215,84 @@ class RideViewModel @Inject constructor(
             <span><strong>Based in Madurai, Tamil Nadu, India</strong> — Partnering with clients across UAE (Dubai, Abu Dhabi), Saudi Arabia (Riyadh, Jeddah), Qatar (Doha), Kuwait, Oman, Bahrain, Singapore, UK, USA, Canada, Australia, and all 38 districts of Tamil Nadu.</span>
           </div>
 
+          <!-- Project Enquiry Form (Saves to Google Sheets) -->
+          <form id="enquiryForm" class="enquiry-form" novalidate>
+            <div class="enquiry-grid">
+              <div class="form-group">
+                <label for="enqName">Full Name *</label>
+                <input type="text" id="enqName" name="name" placeholder="Your name or company name" required>
+              </div>
+              <div class="form-group">
+                <label for="enqEmail">Email Address *</label>
+                <input type="email" id="enqEmail" name="email" placeholder="you@company.com" required>
+              </div>
+              <div class="form-group">
+                <label for="enqPhone">WhatsApp / Phone *</label>
+                <input type="tel" id="enqPhone" name="phone" placeholder="+91 / +971 / +966 / +1 ..." required>
+              </div>
+              <div class="form-group">
+                <label for="enqCountry">Country / Region</label>
+                <select id="enqCountry" name="country">
+                  <option value="India">India (Tamil Nadu / Pan-India)</option>
+                  <option value="UAE">United Arab Emirates (Dubai / Abu Dhabi)</option>
+                  <option value="Saudi Arabia">Saudi Arabia (Riyadh / Jeddah)</option>
+                  <option value="Qatar">Qatar (Doha)</option>
+                  <option value="Kuwait">Kuwait</option>
+                  <option value="Oman">Oman (Muscat)</option>
+                  <option value="Bahrain">Bahrain (Manama)</option>
+                  <option value="Singapore">Singapore</option>
+                  <option value="United Kingdom">United Kingdom (UK)</option>
+                  <option value="United States">United States (USA)</option>
+                  <option value="Canada">Canada</option>
+                  <option value="Australia">Australia</option>
+                  <option value="Other">Other Country</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="enqClientType">I am an</label>
+                <select id="enqClientType" name="client_type">
+                  <option value="Individual / Solo Founder">Individual / Solo Founder</option>
+                  <option value="Small Business / Shop / Clinic">Small Business / Shop / Clinic</option>
+                  <option value="Startup">Startup</option>
+                  <option value="Enterprise / Company">Enterprise / Company</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="enqProjectType">Project Type</label>
+                <select id="enqProjectType" name="project_type">
+                  <option value="Website / Landing Page">Website / Landing Page</option>
+                  <option value="Flutter Mobile App (iOS & Android)">Flutter Mobile App (iOS &amp; Android)</option>
+                  <option value="Taxi / Fleet / Delivery Platform">Taxi / Fleet / Delivery Platform</option>
+                  <option value="Custom ERP / Backend / API">Custom ERP / Backend / API</option>
+                  <option value="AI Automation / WhatsApp Bot">AI Automation / WhatsApp Bot</option>
+                  <option value="App Bug Fix / Maintenance">App Bug Fix / Maintenance</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-top: 1rem;">
+              <label for="enqBudget">Estimated Budget</label>
+              <select id="enqBudget" name="budget">
+                <option value="Starter / Small Budget">Starter / Small Budget (Website, Fixes, Alerts)</option>
+                <option value="Growth / Startup MVP">Growth / Startup MVP (Mobile App + Admin)</option>
+                <option value="Enterprise / Full Platform">Enterprise / Full Platform / Retainer</option>
+                <option value="Not Sure - Need Quote">Not Sure — Send Me a Free Quote</option>
+              </select>
+            </div>
+
+            <div class="form-group" style="margin-top: 1rem;">
+              <label for="enqMessage">Project Details *</label>
+              <textarea id="enqMessage" name="message" rows="4" placeholder="Briefly describe what you want to build, your timeline, or any reference app/website..." required></textarea>
+            </div>
+
+            <div style="margin-top: 1.25rem; display: flex; flex-direction: column; align-items: center; gap: 0.75rem;">
+              <button type="submit" id="enqSubmitBtn" class="btn btn-primary" style="width: 100%; max-width: 340px; padding: 0.9rem 1.5rem; font-size: 0.98rem;">
+                <i class="fa-solid fa-paper-plane"></i> Send Project Enquiry
+              </button>
+              <div id="enqStatus" class="form-status" role="status" aria-live="polite"></div>
+            </div>
+          </form>
+
           <div class="contact-links">
             <a href="mailto:rahamathalikhanj@gmail.com?subject=Freelance%20Project%20Inquiry%20-%20Rahamath%20Alikhan" class="contact-item" style="background: linear-gradient(135deg, #0284C7 0%, #2563EB 100%); color: #ffffff; border: none;" aria-label="Send email inquiry to Rahamath Alikhan">
               <i class="fa-solid fa-envelope"></i> rahamathalikhanj@gmail.com
@@ -2312,7 +2390,7 @@ class RideViewModel @Inject constructor(
     </div>
   </div>
 
-  <script src="script.js?v=5"></script>
+  <script src="script.js?v=6"></script>
 </body>
 
 </html>

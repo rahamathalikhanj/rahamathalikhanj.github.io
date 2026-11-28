@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSkillsSearch();
   initProjectsFilter();
   initModals();
+  initEnquiryForm();
   initAnalyticsTracking();
 });
 
@@ -539,6 +540,82 @@ function trackEvent(eventName, eventParams) {
   } else if (window.dataLayer) {
     window.dataLayer.push({ event: eventName, ...eventParams });
   }
+}
+
+/* 7. Project Enquiry Form -> Google Sheets Webhook */
+function initEnquiryForm() {
+  const form = document.getElementById('enquiryForm');
+  if (!form) return;
+
+  // Paste your deployed Google Apps Script Web App URL here:
+  const GOOGLE_SHEET_WEBHOOK_URL = '';
+
+  const submitBtn = document.getElementById('enqSubmitBtn');
+  const statusEl = document.getElementById('enqStatus');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const payload = {
+      timestamp: new Date().toISOString(),
+      name: document.getElementById('enqName').value.trim(),
+      email: document.getElementById('enqEmail').value.trim(),
+      phone: document.getElementById('enqPhone').value.trim(),
+      country: document.getElementById('enqCountry').value,
+      client_type: document.getElementById('enqClientType').value,
+      project_type: document.getElementById('enqProjectType').value,
+      budget: document.getElementById('enqBudget').value,
+      message: document.getElementById('enqMessage').value.trim(),
+      source: window.location.href
+    };
+
+    if (!payload.name || !payload.email || !payload.phone || !payload.message) {
+      statusEl.className = 'form-status error';
+      statusEl.textContent = 'Please fill in all required fields (*).';
+      return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending Enquiry...';
+    statusEl.className = 'form-status';
+    statusEl.textContent = '';
+
+    try {
+      if (GOOGLE_SHEET_WEBHOOK_URL) {
+        await fetch(GOOGLE_SHEET_WEBHOOK_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify(payload)
+        });
+
+        statusEl.className = 'form-status success';
+        statusEl.textContent = 'Thank you! Your enquiry has been saved. I will contact you within 24 hours.';
+        form.reset();
+      } else {
+        // Fallback to pre-filled WhatsApp until Google Sheet webhook URL is added
+        const waText = `New Project Enquiry:%0AName: ${encodeURIComponent(payload.name)}%0AEmail: ${encodeURIComponent(payload.email)}%0APhone: ${encodeURIComponent(payload.phone)}%0ACountry: ${encodeURIComponent(payload.country)}%0AClient: ${encodeURIComponent(payload.client_type)}%0AProject: ${encodeURIComponent(payload.project_type)}%0ABudget: ${encodeURIComponent(payload.budget)}%0ADetails: ${encodeURIComponent(payload.message)}`;
+        window.open(`https://wa.me/918015581405?text=${waText}`, '_blank', 'noopener');
+        statusEl.className = 'form-status success';
+        statusEl.textContent = 'Opening WhatsApp with your enquiry details...';
+      }
+
+      if (typeof trackEvent === 'function') {
+        trackEvent('generate_lead', {
+          method: GOOGLE_SHEET_WEBHOOK_URL ? 'google_sheet_form' : 'whatsapp_form_fallback',
+          project_type: payload.project_type,
+          budget: payload.budget,
+          country: payload.country
+        });
+      }
+    } catch (err) {
+      statusEl.className = 'form-status error';
+      statusEl.textContent = 'Could not submit right now. Please message directly on WhatsApp (+91 80155 81405).';
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send Project Enquiry';
+    }
+  });
 }
 
 function initAnalyticsTracking() {
