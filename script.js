@@ -416,6 +416,20 @@ function initModals() {
         'High accuracy GPS location tag for railway asset logging.'
       ]
     },
+    ominaigo: {
+      title: 'Ominaigo™ / GoLog – Enterprise Transit & MQTT Fleet Telemetry',
+      client: 'Ominaigo / GoLog Transit & Logistics (GCC & Global)',
+      type: 'Flutter Driver App + MQTT IoT + .NET Core 8 Microservices',
+      img: 'assets/ajman-taxi-app.png',
+      page: 'projects/ominaigo-transit-telemetry.html',
+      summary: 'High-concurrency ride-hailing and delivery dispatch suite combining a 120Hz Flutter Driver App (Riverpod 2.5, Hive offline storage), TLS MQTT QoS 1 IoT vehicle telemetry ingestion, .NET Core 8 worker microservices, and 500+ Sqitch-governed PostgreSQL 16 routines.',
+      features: [
+        'TLS-secured MQTT QoS 1 telemetry ingestion (single ping, offline location_batch, vehicle status ACKs) persisted to MongoDB.',
+        'Flutter Driver Companion App with Riverpod 2.5, Hive offline caching, background GPS service, and RTL Arabic/English localization.',
+        'C# .NET Core 8 Clean Architecture background workers in Docker Alpine with automated unit test suites.',
+        '500+ PostgreSQL 16 stored procedures and functions governed via Sqitch deploy/verify/revert migrations.'
+      ]
+    },
     tripexl: {
       title: 'TripeXL.AI™ – Enterprise On-Demand Ride Hailing & Driver Telematics',
       client: 'Corporate Fleet & Mobility Operators',
